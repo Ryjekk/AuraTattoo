@@ -1,0 +1,80 @@
+@use "../abstracts/reset";
+@use "../abstracts/variables" as *; // Import variables
+
+body {
+  font-family: map-get($fonts, body), Arial, Helvetica, sans-serif; // Use body font for body text
+  line-height: 1.6;
+  color: map-get($colors, dark-gray); // Use the text color
+  background-color: map-get($colors, light-gray); // Use the background color
+  --webkit-font-smoothing: antialiased;
+  --moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: map-get($fonts, heading); // Use heading font for headings
+  font-weight: 700; // Use bold weight for headings
+}
+
+h1 {
+  @include responsive-font(2rem); // Responsive font size for h1
+}
+
+h2 {
+  @include responsive-font(1.5rem); // Responsive font size for h2
+}
+
+p {
+  margin-bottom: map-get($spacing, medium); // Use medium padding for spacing
+}
+
+a {
+  color: map-get($colors, ecru); // Use link color
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+button {
+  background-color: map-get($colors, moss); // Use primary color for button
+  color: map-get($colors, ecru);
+  border: none;
+  padding: map-get($spacing, small) map-get($spacing, medium); // Use small padding for top/bottom and medium for left/right
+  border-radius: map-get($radius, small); // Use small border radius
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: map-get(
+      $colors,
+      secondary
+    ); // Use secondary color on hover
+  }
+}
+
+// Example of using shadow
+.card {
+  background-color: #fff; // White background for card
+  border: 1px solid map-get($colors, border); // Border using defined color
+  box-shadow: map-get($shadows, light); // Apply light shadow
+  border-radius: map-get($radius, medium); // Apply medium radius
+  padding: map-get($spacing, large); // Apply lg spacing
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

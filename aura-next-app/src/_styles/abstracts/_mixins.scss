@@ -1,0 +1,41 @@
+@use "../abstracts//variables" as var;
+
+//mobile first approach
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: map-get(var.$breakpoints, small)) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (min-width: map-get(var.$breakpoints, medium)) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (min-width: map-get(var.$breakpoints, large)) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (min-width: map-get(var.$breakpoints, xlarge)) {
+      @content;
+    }
+  }
+}
+
+@mixin content-wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding-inline: map-get(var.$spacing, large);
+
+  @include respond(md) {
+    max-width: map-get(var.$breakpoints, medium);
+  }
+
+  @include respond(lg) {
+    max-width: map-get(var.$breakpoints, large);
+  }
+
+  @include respond(xl) {
+    max-width: map-get(var.$breakpoints, xlarge);
+  }
+}

@@ -1,0 +1,80 @@
+/* _variables.scss */
+
+// Font Definitions
+$fonts: (
+  heading: var(--font-heading),
+  // Font for headings
+  body: var(--font-body),
+  // Default font for body text
+);
+
+// Color Definitions
+$colors: (
+  black: rgba(6, 5, 7, 1),
+  moss: rgba(58, 70, 27, 1),
+  umber: rgba(132, 128, 115, 1),
+  coffee: rgba(99, 76, 58, 1),
+  dark-gray: rgba(89, 90, 89, 1),
+  light-gray: rgba(202, 209, 215, 1),
+  ecru: rgba(192, 172, 114, 1),
+  silver: rgba(178, 178, 178, 1),
+);
+
+// Spacing Definitions
+$spacing: (
+  small: 0.5rem,
+  // Small spacing
+  medium: 1rem,
+  // Medium spacing
+  large: 1.5rem,
+  // Large spacing
+  xlarge: 2rem,
+  // Extra large spacing
+);
+
+// Border Radius Definitions
+$radius: (
+  small: 0.25rem,
+  // Small radius
+  medium: 0.5rem,
+  // Medium radius
+  large: 1rem,
+  // Large radius
+  pill: 50rem,
+  // Pill-shaped radius
+);
+
+// Shadow Definitions
+$shadows: (
+  light: 0 2px 10px rgba(0, 0, 0, 0.1),
+  // Light shadow
+  medium: 0 4px 15px rgba(0, 0, 0, 0.2),
+  // Medium shadow
+  heavy: 0 8px 25px rgba(0, 0, 0, 0.3),
+  // Heavy shadow
+);
+
+// Breakpoint Definitions
+$breakpoints: (
+  small: 576px,
+  // Small devices (phones)
+  medium: 768px,
+  // Medium devices (tablets)
+  large: 992px,
+  // Large devices (desktops)
+  xlarge: 1200px,
+  // Extra large devices (large desktops)
+);
+
+// Mixin for Responsive Font Sizes
+@mixin responsive-font($size) {
+  font-size: $size;
+
+  @media (min-width: map-get($breakpoints, medium)) {
+    font-size: $size * 1.1; // Increase font size for medium devices
+  }
+
+  @media (min-width: map-get($breakpoints, large)) {
+    font-size: $size * 1.2; // Further increase font size for large devices
+  }
+}
