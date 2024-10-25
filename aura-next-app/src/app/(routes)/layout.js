@@ -1,18 +1,18 @@
-import { Yeseva_One, Josefin_Sans } from "next/font/google";
+import { Lato, Outfit } from "next/font/google";
 import "@styles/main.scss";
 // import { Button } from "@components/";
 import Header from "@components/header/Header";
 import Footer from "@components/footer/Footer";
-const title_font = Yeseva_One({
+const title_font = Lato({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["100", "300", "400", "700"],
   variable: "--font-heading",
   display: "swap",
 });
 
-const body_font = Josefin_Sans({
+const body_font = Outfit({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["100", "200", "300", "400"],
   variable: "--font-body",
   display: "swap",
 });
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
     <html lang='en' className={`${title_font.variable} ${body_font.variable}`}>
       <body className='main-wrapper'>
         <Header />
-        {children}
+        <main className='content-wrapper'>{children}</main>
         <Footer />
       </body>
     </html>

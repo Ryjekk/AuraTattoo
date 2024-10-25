@@ -41,12 +41,14 @@
   }
 
   &__content {
-    @include m.content-wrapper;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    @include m.content-margin;
 
+    & {
+      align-items: center;
+      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+    }
     @include m.respond(sm) {
       flex-direction: row;
     }

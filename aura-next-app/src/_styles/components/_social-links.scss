@@ -3,7 +3,6 @@
 .social-links {
   display: flex;
   gap: map-get(v.$spacing, small);
-  margin-top: map-get(v.$spacing, large);
 }
 
 .social-link {

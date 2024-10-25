@@ -1,5 +1,12 @@
+@use "../abstracts/mixins" as m;
 .main-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.content-wrapper {
+  margin-top: 5rem;
+
+  @include m.content-margin;
 }

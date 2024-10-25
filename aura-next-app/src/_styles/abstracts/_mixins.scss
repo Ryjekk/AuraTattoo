@@ -22,10 +22,15 @@
   }
 }
 
-@mixin content-wrapper {
-  max-width: 80rem;
-  margin: 0 auto;
-  padding-inline: map-get(var.$spacing, large);
+@mixin content-margin {
+  & {
+    max-width: 24rem;
+    margin-inline: auto;
+    padding-inline: map-get(var.$spacing, large);
+  }
+  @include respond(sm) {
+    max-width: map-get(var.$breakpoints, small);
+  }
 
   @include respond(md) {
     max-width: map-get(var.$breakpoints, medium);
