@@ -46,7 +46,8 @@
     background: map-get(v.$colors, black);
   }
 
-  &__links {
+  &__links,
+  .social-links {
     display: none;
 
     @include m.respond(sm) {
@@ -76,15 +77,6 @@
 
     @include m.respond(sm) {
       display: none;
-    }
-  }
-  .social-links {
-    display: none;
-
-    @include m.respond(sm) {
-      display: flex;
-      align-items: center;
-      gap: map-get(v.$spacing, medium);
     }
   }
 

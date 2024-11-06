@@ -1,37 +1,13 @@
 "use client";
 
-import { useState } from "react";
-import {
-  motion,
-  useScroll,
-  useMotionValueEvent,
-  AnimatePresence,
-} from "framer-motion";
-import { Navigation } from "./Navigation";
+import { motion, AnimatePresence } from "framer-motion";
+import { useScrollShizzle } from "@hooks/useScrollShizzle";
+import { Navigation } from "@components/header/Navigation";
 import SocialLinks from "@components/shared/socialLinks/SocialLinks";
-import { MobileNavigation } from "./MobileNavigation";
+import { MobileNavigation } from "@components/header/mobile/MobileNavigation";
 
 export default function Header() {
-  const { scrollY } = useScroll();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [hidden, setHidden] = useState(false);
-  useMotionValueEvent(
-    scrollY,
-    "change",
-    (latestScrollY) => {
-      const prevScrollY = scrollY.getPrevious();
-      if (
-        latestScrollY > prevScrollY &&
-        latestScrollY > 150 &&
-        !mobileMenuOpen
-      ) {
-        setHidden(true);
-      } else {
-        setHidden(false);
-      }
-    },
-    [setHidden]
-  );
+  const { hidden, mobileMenuOpen, setMobileMenuOpen } = useScrollShizzle();
 
   return (
     <motion.nav
