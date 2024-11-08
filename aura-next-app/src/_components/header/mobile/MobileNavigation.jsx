@@ -5,11 +5,7 @@ import {
   mobileListVariants,
   mobileMenuVariants,
 } from "@components/header/animations";
-const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "Residents", href: "/about" },
-  { name: "Contact", href: "/contact" },
-];
+import { navLinks } from "@utils/navLinks";
 
 export const MobileNavigation = () => (
   <motion.div

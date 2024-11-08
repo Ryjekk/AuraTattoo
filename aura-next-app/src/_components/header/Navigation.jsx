@@ -1,11 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-
-const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "Residents", href: "/about" },
-  { name: "Contact", href: "/contact" },
-];
+import { navLinks } from "@utils/navLinks";
 
 export const Navigation = () => (
   <motion.ul className='nav__links'>

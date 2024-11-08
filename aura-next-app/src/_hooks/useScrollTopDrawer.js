@@ -1,7 +1,7 @@
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { useState } from "react";
 
-export const useScrollShizzle = () => {
+export const useScrollTopDrawer = () => {
   const { scrollY } = useScroll();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hidden, setHidden] = useState(false);

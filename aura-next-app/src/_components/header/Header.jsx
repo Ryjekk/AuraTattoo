@@ -1,13 +1,13 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useScrollShizzle } from "@hooks/useScrollShizzle";
+import { useScrollTopDrawer } from "@hooks/useScrollTopDrawer";
 import { Navigation } from "@components/header/Navigation";
 import SocialLinks from "@components/shared/socialLinks/SocialLinks";
 import { MobileNavigation } from "@components/header/mobile/MobileNavigation";
 
 export default function Header() {
-  const { hidden, mobileMenuOpen, setMobileMenuOpen } = useScrollShizzle();
+  const { hidden, mobileMenuOpen, setMobileMenuOpen } = useScrollTopDrawer();
 
   return (
     <motion.nav

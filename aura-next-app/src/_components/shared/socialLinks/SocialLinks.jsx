@@ -1,5 +1,5 @@
 import React from "react";
-import SocialLink from "@components/shared/socialLinks/SocialLink";
+import SocialLink from "@components/shared/socialLinks/socialLink/SocialLink";
 
 const SocialLinks = () => {
   return (
