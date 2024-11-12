@@ -1,0 +1,66 @@
+@use "../abstracts/variables" as var;
+
+//mobile first approach
+
+@mixin respond($breakpoint) {
+  $breakpoints: (
+    sm: small,
+    md: medium,
+    lg: large,
+    xl: xlarge,
+  ); // Map of aliases to map keys
+  $breakpoint-key: map-get($breakpoints, $breakpoint);
+  $breakpoint-value: if(
+    $breakpoint-key,
+    map-get(var.$breakpoints, $breakpoint-key),
+    null
+  );
+
+  @if $breakpoint-value {
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint #{$breakpoint} not found in var.$breakpoints.";
+  }
+  // @if $breakpoint == sm {
+  //   @media (min-width: map-get(var.$breakpoints, small)) {
+  //     @content;
+  //   }
+  // } @else if $breakpoint == md {
+  //   @media (min-width: map-get(var.$breakpoints, medium)) {
+  //     @content;
+  //   }
+  // } @else if $breakpoint == lg {
+  //   @media (min-width: map-get(var.$breakpoints, large)) {
+  //     @content;
+  //   }
+  // } @else if $breakpoint == xl {
+  //   @media (min-width: map-get(var.$breakpoints, xlarge)) {
+  //     @content;
+  //   }
+  // }
+}
+
+@mixin content-margin {
+  & {
+    max-width: 24rem;
+    margin-inline: auto;
+    padding-inline: map-get(var.$spacing, large);
+  }
+  @include respond(sm) {
+    max-width: map-get(var.$breakpoints, small);
+  }
+
+  @include respond(md) {
+    max-width: map-get(var.$breakpoints, medium);
+  }
+
+  @include respond(lg) {
+    max-width: map-get(var.$breakpoints, large);
+  }
+
+  @include respond(xl) {
+    max-width: map-get(var.$breakpoints, xlarge);
+  }
+}

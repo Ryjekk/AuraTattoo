@@ -1,0 +1,112 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.nav {
+  background-color: map-get(v.$colors, black);
+  color: #fff;
+  padding: map-get(v.$spacing, medium) map-get(v.$spacing, large);
+  text-align: center;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  box-shadow: map-get(v.$shadows, medium);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include m.respond(sm) {
+    text-align: left;
+  }
+
+  button {
+    outline: none;
+    border: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: pointer;
+    position: absolute;
+    top: 1.25rem;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+    z-index: 4;
+  }
+
+  .background {
+    position: absolute;
+    top: 0;
+    right: 40rem;
+    bottom: 0;
+    width: 100vw;
+    z-index: 3;
+    background: map-get(v.$colors, black);
+  }
+
+  &__links,
+  .social-links {
+    display: none;
+
+    @include m.respond(sm) {
+      display: flex;
+      align-items: center;
+      gap: map-get(v.$spacing, medium);
+    }
+  }
+  &__link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: inline;
+    align-self: center;
+    justify-self: center;
+    @include m.respond(sm) {
+      align-self: flex-start;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__mobile-toggle {
+    display: block;
+    z-index: 4;
+
+    @include m.respond(sm) {
+      display: none;
+    }
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: map-get(v.$colors, black);
+    z-index: 4;
+    padding: map-get(v.$spacing, large);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: map-get(v.$spacing, medium);
+    color: #fff;
+    transform-origin: top right;
+
+    @include m.respond(sm) {
+      display: none;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: map-get(v.$spacing, medium);
+      z-index: 4;
+    }
+  }
+}
