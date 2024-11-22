@@ -11,17 +11,20 @@ $fonts: (
 // Color Definitions
 $colors: (
   black: rgba(6, 5, 7, 1),
-  moss: rgba(58, 70, 27, 1),
+  moss: rgba(64, 70, 61, 1),
   umber: rgba(132, 128, 115, 1),
   coffee: rgba(99, 76, 58, 1),
   dark-gray: rgba(89, 90, 89, 1),
   light-gray: rgba(202, 209, 215, 1),
   ecru: rgba(192, 172, 114, 1),
   silver: rgba(178, 178, 178, 1),
+  white: rgba(255, 255, 255, 1),
 );
 
 // Spacing Definitions
 $spacing: (
+  none: 0,
+  // No spacing
   small: 0.5rem,
   // Small spacing
   medium: 1rem,
@@ -76,5 +79,14 @@ $breakpoints: (
 
   @media (min-width: map-get($breakpoints, large)) {
     font-size: $size * 1.2; // Further increase font size for large devices
+  }
+}
+
+// Mixin for Responsive bottom margin
+@mixin content-margin {
+  margin: map-get($spacing, large) 0;
+
+  @media (min-width: map-get($breakpoints, medium)) {
+    margin: map-get($spacing, xlarge) 0; // Increase margin for medium devices
   }
 }

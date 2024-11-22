@@ -1,5 +1,5 @@
 import SocialLinks from "@components/shared/socialLinks/SocialLinks";
-
+import Button from "@components/button/Button";
 export default function Footer() {
   return (
     <footer aria-labelledby='footer-heading' className='footer'>
@@ -15,8 +15,8 @@ export default function Footer() {
           <p>Skipholt 15, 105 Reykjavik</p>
         </address>
         <div className='footer__links'>
-          <button>Pre Appointment Info</button>
-          <button>Tattoo Aftercare Info</button>
+          <Button link='/'>Pre-Appointment Info</Button>
+          <Button link='/'>Tattoo Aftercare Info</Button>
         </div>
       </div>
       <div className='footer__legal'>
