@@ -12,16 +12,22 @@
   @include m.content-margin;
 }
 
-.two-column {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+.section {
+  padding-block: max(5rem, 10vh);
 
-  @include m.respond(md) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  &__gift-card {
+    background-color: map-get(v.$colors, light-gray);
   }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
 
+    @include m.respond(md) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
   &__column {
     text-align: center;
     display: flex;
@@ -35,13 +41,5 @@
       display: flex;
       align-items: flex-start;
     }
-  }
-}
-
-.section {
-  padding-block: max(5rem, 10vh);
-
-  &__gift-card {
-    background-color: map-get(v.$colors, light-gray);
   }
 }
