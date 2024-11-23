@@ -3,10 +3,10 @@
 @use "sass:color";
 .btn {
   padding: 10px 40px;
-  border: 1px solid map-get(v.$colors, umber);
   cursor: pointer;
-  // font-weight: 700;
   transition: all 0.3s;
+  width: 100%;
+  font-weight: 400;
 
   &:focus,
   &:hover {
@@ -19,15 +19,11 @@
 
   &__primary {
     color: map-get(v.$colors, black);
-    border-radius: map-get(v.$radius, none);
+    border-radius: map-get(v.$radius, small);
     border: 2px solid map-get(v.$colors, black);
-    width: 100%;
-    font-weight: 400;
     position: relative;
-    display: block;
     overflow: hidden;
     z-index: 2;
-    border-radius: map-get(v.$radius, small);
 
     @include m.respond(sm) {
       width: auto;
@@ -40,8 +36,7 @@
       width: 100%;
       height: 100%;
       z-index: -1;
-      top: 0;
-      left: 0;
+      inset: 0;
       transform: translateX(-100%);
       transition: transform 0.3s;
       background-color: map-get(v.$colors, black);
@@ -65,14 +60,46 @@
   }
 
   &__secondary {
-    background-color: transparent;
     color: map-get(v.$colors, umber);
     border-radius: map-get(v.$radius, small);
+    border: 2px solid map-get(v.$colors, umber);
+    position: relative;
+    display: block;
+    overflow: hidden;
+    z-index: 2;
 
-    &:hover,
-    &:focus {
+    @include m.respond(sm) {
+      width: auto;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      transition: transform 0.3s;
       background-color: map-get(v.$colors, umber);
+    }
+
+    &:hover {
       color: map-get(v.$colors, white);
+      &:before {
+        transform: translateX(0);
+      }
+    }
+    &:focus {
+      color: map-get(v.$colors, white);
+      &:before {
+        transform: translateX(0);
+        opacity: 0.9;
+        outline: 2px solid map-get(v.$colors, umber);
+        outline-offset: -2px;
+      }
     }
   }
 }
