@@ -22,7 +22,7 @@ h6 {
 }
 
 h1 {
-  @include responsive-font(2rem); // Responsive font size for h1
+  @include responsive-font(2rem);
 }
 
 h2 {
@@ -40,23 +40,6 @@ a {
   &:hover,
   &:focus {
     text-decoration: underline;
-  }
-}
-
-button {
-  background-color: map-get($colors, moss); // Use primary color for button
-  color: map-get($colors, ecru);
-  border: none;
-  padding: map-get($spacing, small) map-get($spacing, medium); // Use small padding for top/bottom and medium for left/right
-  border-radius: map-get($radius, small); // Use small border radius
-  cursor: pointer;
-  transition: background-color 0.3s;
-
-  &:hover {
-    background-color: map-get(
-      $colors,
-      secondary
-    ); // Use secondary color on hover
   }
 }
 
