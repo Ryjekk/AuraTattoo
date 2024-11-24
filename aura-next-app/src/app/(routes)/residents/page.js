@@ -2,7 +2,7 @@ import ArtistsList from "@components/artists/ArtistsList";
 import { residents } from "@utils/residents";
 export default function ResidentsPage() {
   return (
-    <main className='page'>
+    <div className='content-wrapper'>
       <h1>Meet Our Residents</h1>
       <p>
         Welcome to our enigmatic tattoo sanctuary, where skin becomes a living
@@ -30,6 +30,6 @@ export default function ResidentsPage() {
         and every finished piece a unique reflection of you.
       </p>
       <ArtistsList artists={residents} />
-    </main>
+    </div>
   );
 }
