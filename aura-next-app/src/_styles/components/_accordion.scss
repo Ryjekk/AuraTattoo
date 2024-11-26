@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
+@use "sass:color";
+.accordion {
+  &__item {
+    overflow: hidden;
+    border-top: 1px solid f.get-color(umber, 0.4);
+  }
+
+  &__header {
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__panel {
+    padding: 20px;
+
+    @include m.respond(sm) {
+      padding: 20px 40px;
+    }
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-block-end: clamp(0.5rem, 2vw, 1rem);
+    }
+
+    ul,
+    ol {
+      list-style-type: "-     ";
+    }
+  }
+}

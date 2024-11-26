@@ -2,8 +2,8 @@ import Button from "@components/button/Button";
 import Image from "next/image";
 export default function GiftCard() {
   return (
-    <div className='section section__gift-card'>
-      <div className='section__content content-wrapper'>
+    <section className='section section__gift-card'>
+      <div className='section__content content-center'>
         <div className='section__column'>
           <Image
             src='/aura-logo.jpg'
@@ -28,6 +28,6 @@ export default function GiftCard() {
           <Button link='/contact'>Purchase a Gift Card</Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
