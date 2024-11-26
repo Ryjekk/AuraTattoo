@@ -78,6 +78,13 @@
     @include m.respond(sm) {
       display: none;
     }
+
+    &__line {
+      width: 30px;
+      height: 2px;
+      background: #fff;
+      margin: 5px;
+    }
   }
 
   .mobile-menu {
