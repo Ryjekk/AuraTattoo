@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
     <html lang='en' className={`${title_font.variable} ${body_font.variable}`}>
       <body className='main-wrapper'>
         <Header />
-        <main>{children}</main>
+        <main className='content-wrapper'>{children}</main>
         <Footer />
       </body>
     </html>
