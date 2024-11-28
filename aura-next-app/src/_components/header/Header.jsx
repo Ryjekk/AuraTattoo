@@ -5,12 +5,18 @@ import { useScrollTopDrawer } from "@hooks/useScrollTopDrawer";
 import { Navigation } from "@components/header/Navigation";
 import SocialLinks from "@components/shared/socialLinks/SocialLinks";
 import { MobileNavigation } from "@components/header/mobile/MobileNavigation";
-
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { HamburgerToggle } from "./mobile/HamburgerToggle";
 export default function Header() {
   const { hidden, mobileMenuOpen, setMobileMenuOpen } = useScrollTopDrawer();
-
+  const pathname = usePathname();
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [pathname]);
   return (
     <motion.nav
+      key={`nav-${hidden}`}
       initial={false}
       animate={hidden ? "hidden" : "visible"}
       variants={{
@@ -24,14 +30,12 @@ export default function Header() {
       <Navigation />
       <SocialLinks />
       <AnimatePresence>
-        {mobileMenuOpen && <MobileNavigation />}
+        <MobileNavigation mobileMenuOpen={mobileMenuOpen} />
       </AnimatePresence>
-      <div
-        className='nav__mobile-toggle'
-        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-      >
-        Menu
-      </div>
+      <HamburgerToggle
+        mobileMenuOpen={mobileMenuOpen}
+        setMobileMenuOpen={setMobileMenuOpen}
+      />
     </motion.nav>
   );
 }

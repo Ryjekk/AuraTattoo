@@ -1,0 +1,9 @@
+@use "./variables" as v;
+
+@function get-color($color, $opacity: 1) {
+  @if map-has-key(v.$colors, $color) {
+    @return transparentize(map-get(v.$colors, $color), 1- $opacity);
+  } @else {
+    @return #f0f;
+  }
+}
