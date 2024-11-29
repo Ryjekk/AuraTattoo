@@ -1,0 +1,137 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.contact {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    text-align: center;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-block: map-get(v.$spacing, large);
+    text-align: center;
+
+    @include m.respond(sm) {
+      max-width: map-get(v.$breakpoints, small);
+      text-align: left;
+      justify-content: space-evenly;
+      padding-block: map-get(v.$spacing, large);
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-block: map-get(v.$spacing, large);
+
+    @include m.respond(md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-block: map-get(v.$spacing, large);
+
+    @include m.respond(sm) {
+      max-width: map-get(v.$breakpoints, small);
+    }
+
+    @include m.respond(md) {
+      max-width: map-get(v.$breakpoints, medium);
+    }
+
+    @include m.respond(lg) {
+      max-width: map-get(v.$breakpoints, large);
+    }
+
+    &__names {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include m.respond(md) {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: map-get(v.$spacing, large);
+
+        .contact__form__input-group {
+          margin-block-end: 0;
+        }
+      }
+    }
+
+    &__input-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-block: map-get(v.$spacing, small);
+
+      @include m.respond(sm) {
+        align-items: flex-start;
+      }
+
+      label {
+        margin-block: map-get(v.$spacing, small);
+        font-size: map-get(v.$font-sizes, small);
+        span {
+          color: map-get(v.$colors, error);
+        }
+      }
+      &:nth-of-type(4) {
+        margin-block-end: map-get(v.$spacing, large);
+      }
+    }
+
+    &__input,
+    &__textarea {
+      width: 100%;
+      padding-block: map-get(v.$spacing, small);
+      padding-inline: map-get(v.$spacing, medium);
+      border-radius: map-get(v.$radius, small);
+      border: 1px solid transparent;
+      background-color: transparentize(map-get(v.$colors, ecru), 0.6);
+
+      &:focus {
+        outline: none;
+        border: 1px solid map-get(v.$colors, umber);
+      }
+      &:invalid {
+        border: 1px solid map-get(v.$colors, error);
+      }
+    }
+
+    &__textarea {
+      resize: none;
+      // margin-block-end: map-get(v.$spacing, large);
+    }
+
+    &__error-box {
+      height: map-get(v.$font-sizes, small);
+    }
+    &__error {
+      color: map-get(v.$colors, error);
+      font-size: map-get(v.$font-sizes, small);
+    }
+
+    &__button {
+      margin-block: map-get(v.$spacing, small);
+      padding-block: map-get(v.$spacing, small);
+      padding-inline: map-get(v.$spacing, medium);
+      border: 1px solid map-get(v.$colors, primary);
+      border-radius: map-get(v.$radius, small);
+      background-color: map-get(v.$colors, primary);
+      color: map-get(v.$colors, white);
+      cursor: pointer;
+    }
+  }
+}
