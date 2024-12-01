@@ -115,11 +115,17 @@
       // margin-block-end: map-get(v.$spacing, large);
     }
 
-    &__error-box {
+    &__error-box,
+    &__submit-status {
       height: map-get(v.$font-sizes, small);
     }
-    &__error {
+    &__error,
+    &__submit-status__message--error {
       color: map-get(v.$colors, error);
+      font-size: map-get(v.$font-sizes, small);
+    }
+    &__submit-status__message--success {
+      color: map-get(v.$colors, success);
       font-size: map-get(v.$font-sizes, small);
     }
 
