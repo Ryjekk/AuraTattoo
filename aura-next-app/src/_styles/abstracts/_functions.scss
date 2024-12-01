@@ -1,8 +1,9 @@
 @use "./variables" as v;
+@use "sass:color";
 
 @function get-color($color, $opacity: 1) {
   @if map-has-key(v.$colors, $color) {
-    @return transparentize(map-get(v.$colors, $color), 1- $opacity);
+    @return color.adjust(map-get(v.$colors, $color), $alpha: -$opacity);
   } @else {
     @return #f0f;
   }
