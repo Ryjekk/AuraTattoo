@@ -1,6 +1,7 @@
 "use client";
-import React from "react";
-import { useForm, getF } from "react-hook-form";
+import { useRef, useState } from "react";
+import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
   const {
@@ -9,13 +10,42 @@ export default function ContactForm() {
     formState: { errors },
   } = useForm();
 
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const form = useRef();
   const onSubmit = (data) => {
-    console.log(errors);
-    console.log(data);
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+        form.current,
+        { publicKey: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY }
+      )
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setSubmitStatus({
+            type: "success",
+            message: "Your message has been sent successfully!",
+          });
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          setSubmitStatus({
+            type: "error",
+            message:
+              "There was an error sending your message. Please try again later.",
+          });
+        }
+      );
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className='contact__form'>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className='contact__form'
+      ref={form}
+    >
       <div className='contact__form__names'>
         <div className='contact__form__input-group'>
           <label htmlFor='firstName'>
@@ -132,6 +162,19 @@ export default function ContactForm() {
       <button type='submit' className='btn btn__secondary'>
         Submit
       </button>
+      <div className='contact__form__submit-status'>
+        {submitStatus && (
+          <span
+            className={`contact__form__submit-status__message ${
+              submitStatus.type === "success"
+                ? "contact__form__submit-status__message--success"
+                : "contact__form__submit-status__message--error"
+            }`}
+          >
+            {submitStatus.message}
+          </span>
+        )}
+      </div>
     </form>
   );
 }
