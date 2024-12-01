@@ -8,6 +8,7 @@ import { MobileNavigation } from "@components/header/mobile/MobileNavigation";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { HamburgerToggle } from "./mobile/HamburgerToggle";
+import Logo from "./Logo";
 export default function Header() {
   const { hidden, mobileMenuOpen, setMobileMenuOpen } = useScrollTopDrawer();
   const pathname = usePathname();
@@ -15,27 +16,26 @@ export default function Header() {
     setMobileMenuOpen(false);
   }, [pathname]);
   return (
-    <motion.nav
-      key={`nav-${hidden}`}
-      initial={false}
-      animate={hidden ? "hidden" : "visible"}
-      variants={{
-        visible: { y: 0 },
-        hidden: { y: "-100%" },
-      }}
-      transition={{ duration: 0.35, ease: "easeInOut" }}
-      className='nav'
-    >
-      <div>Logo placeholder</div>
-      <Navigation />
-      <SocialLinks />
-      <AnimatePresence>
+    <AnimatePresence>
+      <motion.nav
+        initial={false}
+        animate={hidden ? "hidden" : "visible"}
+        variants={{
+          visible: { y: 0 },
+          hidden: { y: "-100%" },
+        }}
+        transition={{ duration: 0.35, ease: "easeInOut" }}
+        className='nav'
+      >
+        <Logo />
+        <Navigation />
+        <SocialLinks />
         <MobileNavigation mobileMenuOpen={mobileMenuOpen} />
-      </AnimatePresence>
-      <HamburgerToggle
-        mobileMenuOpen={mobileMenuOpen}
-        setMobileMenuOpen={setMobileMenuOpen}
-      />
-    </motion.nav>
+        <HamburgerToggle
+          mobileMenuOpen={mobileMenuOpen}
+          setMobileMenuOpen={setMobileMenuOpen}
+        />
+      </motion.nav>
+    </AnimatePresence>
   );
 }
