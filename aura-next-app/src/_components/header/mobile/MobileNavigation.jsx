@@ -24,16 +24,14 @@ export const MobileNavigation = ({ mobileMenuOpen }) => {
       variants={mobileMenuVariants}
     >
       <motion.ul className='nav__links' variants={mobileListVariants}>
-        {navLinks.map((i) =>
-          !isSelected(i) ? (
-            <MobileLink
-              key={i.name}
-              name={i.name}
-              href={i.href}
-              isSelected={isSelected}
-            />
-          ) : null
-        )}
+        {navLinks.map((i) => (
+          <MobileLink
+            key={i.name}
+            name={i.name}
+            href={i.href}
+            isSelected={isSelected(i)}
+          />
+        ))}
       </motion.ul>
     </motion.div>
   );

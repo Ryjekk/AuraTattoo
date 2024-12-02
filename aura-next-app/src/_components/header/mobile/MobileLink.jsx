@@ -1,20 +1,18 @@
 import { motion } from "framer-motion";
 import { mobileLinkVariants } from "@components/header/animations";
-import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
-const MobileLink = ({ name, href }) => {
-  const pathname = usePathname();
-  const [activePath, setActivePath] = useState(pathname);
-  useEffect(() => {
-    setActivePath(pathname);
-  }, [pathname]);
-  const isSelected = (link) => link.href === activePath;
-  return (
+const MobileLink = ({ name, href, isSelected }) => {
+  return isSelected ? (
     <motion.li className='nav__link' variants={mobileLinkVariants}>
-      <Link href={href} aria-disabled={isSelected({ href }) ? true : false}>
-        {name}
-      </Link>
+      {name}
+      <motion.div
+        className='nav__link__active-indicator'
+        layoutId='indicator'
+      ></motion.div>
+    </motion.li>
+  ) : (
+    <motion.li className='nav__link' variants={mobileLinkVariants}>
+      <Link href={href}>{name}</Link>
     </motion.li>
   );
 };
