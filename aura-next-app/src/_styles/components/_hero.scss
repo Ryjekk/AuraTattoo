@@ -1,5 +1,6 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
 .hero {
   position: relative;
   width: 100%;
@@ -18,10 +19,10 @@
   &__content {
     position: relative;
     z-index: 1;
-    color: transparentize(map-get(v.$colors, white), 0.1);
+    color: f.get-color(white, 0.1);
     padding: clamp(2rem, 5vw, 8rem);
     max-width: min(90%, 1200px);
-    background-color: transparentize(map-get(v.$colors, umber), 0.6);
+    background-color: f.get-color(umber, 0.6);
     backdrop-filter: blur(4px);
     margin-block: max(20%, 100px);
     margin-inline: auto;

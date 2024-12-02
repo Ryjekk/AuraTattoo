@@ -1,10 +1,10 @@
 @use "../abstracts/reset";
-@use "../abstracts/variables" as *; // Import variables
+@use "../abstracts/variables" as *;
 
 body {
-  font-family: map-get($fonts, body), Arial, Helvetica, sans-serif; // Use body font for body text
+  font-family: map-get($fonts, body), Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  color: map-get($colors, dark-gray); // Use the text color
+  color: map-get($colors, dark-gray);
   background-color: #fff;
   --webkit-font-smoothing: antialiased;
   --moz-osx-font-smoothing: grayscale;
@@ -16,8 +16,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: map-get($fonts, heading); // Use heading font for headings
-  font-weight: 800; // Use bold weight for headings
+  font-family: map-get($fonts, heading);
+  font-weight: 800;
 }
 
 h1 {
@@ -25,30 +25,25 @@ h1 {
 }
 
 h2 {
-  @include responsive-font(1.5rem); // Responsive font size for h2
+  @include responsive-font(1.5rem);
 }
 
 p {
-  margin-bottom: map-get($spacing, medium); // Use medium padding for spacing
+  margin-bottom: map-get($spacing, medium);
 }
 
 a {
-  color: map-get($colors, ecru); // Use link color
+  color: map-get($colors, white);
   text-decoration: none;
-
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
 }
 
 // Example of using shadow
 .card {
-  background-color: #fff; // White background for card
-  border: 1px solid map-get($colors, border); // Border using defined color
-  box-shadow: map-get($shadows, light); // Apply light shadow
-  border-radius: map-get($radius, medium); // Apply medium radius
-  padding: map-get($spacing, large); // Apply lg spacing
+  background-color: #fff;
+  border: 1px solid map-get($colors, border);
+  box-shadow: map-get($shadows, light);
+  border-radius: map-get($radius, medium);
+  padding: map-get($spacing, large);
 }
 .sr-only {
   position: absolute;

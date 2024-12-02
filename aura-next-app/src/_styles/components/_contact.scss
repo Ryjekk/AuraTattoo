@@ -1,5 +1,6 @@
 @use "../abstracts/mixins" as m;
 @use "../abstracts/variables" as v;
+@use "../abstracts/functions" as f;
 
 .contact {
   display: flex;
@@ -99,7 +100,7 @@
       padding-inline: map-get(v.$spacing, medium);
       border-radius: map-get(v.$radius, small);
       border: 1px solid transparent;
-      background-color: transparentize(map-get(v.$colors, ecru), 0.6);
+      background-color: f.get-color(ecru, 0.6);
 
       &:focus {
         outline: none;
