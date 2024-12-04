@@ -1,0 +1,6 @@
+@use "../abstracts/functions" as *;
+
+.artists {
+  background-color: get-color(white, 0);
+  padding-block-start: 10rem;
+}

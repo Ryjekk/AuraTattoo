@@ -2,16 +2,17 @@
 
 // Font Definitions
 $fonts: (
-  heading: var(--font-heading),
+  heading: var(--font-orpheous),
   // Font for headings
-  body: var(--font-body),
+  body: var(--font-garamond),
   // Default font for body text
 );
 
 //Font Sizes
 $font-sizes: (
-  small: clamp(0.875rem, 1.5vw, 1rem),
+  xsmall: clamp(0.75rem, 1.5vw, 0.875rem),
   // Small font size
+  small: clamp(0.875rem, 1.5vw, 1rem),
   medium: clamp(1rem, 1.5vw, 1.25rem),
   // Medium font size
   large: clamp(1.25rem, 1.5vw, 1.5rem),
@@ -88,7 +89,8 @@ $breakpoints: (
   font-size: $size;
 
   @media (min-width: map-get($breakpoints, medium)) {
-    font-size: $size * 1.1; // Increase font size for medium devices
+    font-size: $size * 1.1;
+    // Increase font size for medium devices
   }
 
   @media (min-width: map-get($breakpoints, large)) {
