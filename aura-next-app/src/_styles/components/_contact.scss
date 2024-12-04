@@ -3,11 +3,17 @@
 @use "../abstracts/functions" as f;
 
 .contact {
-  display: flex;
-  flex-direction: column;
-
+  background-color: map-get(v.$colors, white);
+  padding-block-start: 8rem;
+  padding-block-end: 5rem;
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
   &__header {
     text-align: center;
+    color: f.get-color(umber, 0);
+    font-weight: normal;
   }
 
   &__info {
@@ -82,8 +88,8 @@
       }
 
       label {
-        margin-block: map-get(v.$spacing, small);
-        font-size: map-get(v.$font-sizes, small);
+        // margin-block: map-get(v.$spacing, small);
+        font-size: map-get(v.$font-sizes, xsmall);
         span {
           color: map-get(v.$colors, error);
         }

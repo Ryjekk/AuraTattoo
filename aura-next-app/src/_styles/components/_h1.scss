@@ -1,0 +1,12 @@
+@use "../abstracts/functions" as f;
+
+.headline {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  line-height: 1.2;
+  color: f.get-color(umber, 0);
+  text-align: center;
+
+  &--white {
+    color: f.get-color(white, 0);
+  }
+}

@@ -12,8 +12,6 @@ export const Navigation = () => {
   }, [pathname]);
 
   const [activePath, setActivePath] = useState(pathname);
-  console.log("activePath", activePath);
-  console.log("pathname", pathname);
   const isSelected = (link) => link.href === activePath;
 
   return (

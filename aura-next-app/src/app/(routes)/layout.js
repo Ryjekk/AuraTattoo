@@ -1,19 +1,19 @@
 import { Cormorant_Garamond, EB_Garamond } from "next/font/google";
 import "@styles/main.scss";
-// import { Button } from "@components/";
+import localFont from "next/font/local";
 import Header from "@components/header/Header";
 import Footer from "@components/footer/Footer";
-const title_font = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "700"],
-  variable: "--font-heading",
+
+const OrpheusPro = localFont({
+  src: "../fonts/OrpheusPro-regular.otf",
+  weight: "100 300 400 600",
+  variable: "--font-orpheous",
   display: "swap",
 });
-
-const body_font = EB_Garamond({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-body",
+const AGaramondPro = localFont({
+  src: "../fonts/AGaramondPro-Regular.otf",
+  weight: "400",
+  variable: "--font-garamond",
   display: "swap",
 });
 export const metadata = {
@@ -23,7 +23,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en' className={`${title_font.variable} ${body_font.variable}`}>
+    <html
+      lang='en'
+      className={`${OrpheusPro.variable} ${AGaramondPro.variable}`}
+    >
       <body className='main-wrapper'>
         <Header />
         <main className='content-wrapper'>{children}</main>

@@ -37,9 +37,8 @@
     }
 
     p {
-      font-size: clamp(1rem, 2vw, 1.5rem);
+      font-size: map-get(v.$font-sizes, small);
       line-height: 1.4;
-      font-weight: 300;
     }
   }
 }
