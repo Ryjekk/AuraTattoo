@@ -46,7 +46,7 @@
   & {
     max-width: 24rem;
     margin-inline: auto;
-    padding-inline: map-get(var.$spacing, large);
+    padding-inline: map-get(var.$spacing, medium);
   }
   @include respond(sm) {
     max-width: map-get(var.$breakpoints, small);

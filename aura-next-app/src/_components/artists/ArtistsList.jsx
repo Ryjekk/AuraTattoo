@@ -1,11 +1,13 @@
-import ArtistCard from "@components/artists/artistCard/ArtistCard";
-
-export default function ArtistsList({ artists }) {
+import ResidentCard from "@components/artists/residentCard/ResidentCard";
+import GuestCard from "@components/artists/guestCard/GuestCard";
+export default function ArtistsList({ artists, isGuest = false }) {
   return (
     <section className='section artists-list content-center'>
-      {artists.map((artist) => (
-        <ArtistCard key={artist.name} artist={artist} />
-      ))}
+      {isGuest
+        ? artists.map((artist) => <GuestCard key={artist.id} artist={artist} />)
+        : artists.map((artist) => (
+            <ResidentCard key={artist.id} artist={artist} />
+          ))}
     </section>
   );
 }

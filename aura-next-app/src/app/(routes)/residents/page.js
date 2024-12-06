@@ -1,11 +1,13 @@
 import ArtistsList from "@components/artists/ArtistsList";
 import H1 from "@components/h1/H1";
-import { residents } from "@utils/residents";
-export default function ResidentsPage() {
+// import { residents } from "@utils/residents";
+import getResidents from "@services/getResidents";
+export default async function ResidentsPage() {
+  const residents = await getResidents();
   return (
     <div className='artists'>
       <H1>Resident Artists</H1>
-      <ArtistsList artists={residents} />
+      {residents ? <ArtistsList artists={residents} /> : null}
     </div>
   );
 }
