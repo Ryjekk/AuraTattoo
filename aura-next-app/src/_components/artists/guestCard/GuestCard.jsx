@@ -28,7 +28,7 @@ export default function GuestCard({ artist }) {
         <Markdown className='artist-card__bio'>{about}</Markdown>
         <p className='artist-card__date'>Guest spot dates: {date}</p>
         <p className='artist-card__booking-details'>{bookingDetails}</p>
-        <Button link={instagramLink} target='blank' type='primary'>
+        <Button link={instagramLink} target='blank' color='black'>
           @{name}
         </Button>
       </div>

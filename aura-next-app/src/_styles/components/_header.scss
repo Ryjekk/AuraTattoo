@@ -5,12 +5,13 @@
 .nav {
   background-color: map-get(v.$colors, black);
   color: #fff;
-  padding: map-get(v.$spacing, medium) map-get(v.$spacing, large);
+  padding: map-get(v.$spacing, large) map-get(v.$spacing, large);
   text-align: center;
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 5;
   width: 100%;
-  box-shadow: map-get(v.$shadows, medium);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,32 +20,10 @@
     text-align: left;
   }
 
-  button {
-    outline: none;
-    border: none;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    cursor: pointer;
-    position: absolute;
-    top: 1.25rem;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: transparent;
-    z-index: 4;
-  }
-
-  .background {
-    position: absolute;
-    top: 0;
-    right: 40rem;
-    bottom: 0;
-    width: 100vw;
-    z-index: 3;
-    background: map-get(v.$colors, black);
+  .logo {
+    text-transform: uppercase;
+    font-size: map-get(v.$font-sizes, large);
+    font-family: map-get(v.$fonts, heading);
   }
 
   &__links,
@@ -59,11 +38,7 @@
   }
   &__link {
     position: relative;
-    text-decoration: none;
     transition: color 0.3s;
-    display: inline;
-    align-self: center;
-    justify-self: center;
     @include m.respond(sm) {
       align-self: flex-start;
     }
@@ -78,7 +53,7 @@
     &__active-indicator {
       position: absolute;
       display: block;
-      height: 8%;
+      height: 0.02rem;
       position: absolute;
       background-color: f.get-color(white, 0.3);
       bottom: 10%;

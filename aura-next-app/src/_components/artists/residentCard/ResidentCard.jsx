@@ -14,7 +14,7 @@ export default function ResidentCard({ artist }) {
       />
       <div className='artist-card__content'>
         <Markdown className='artist-card__bio'>{about}</Markdown>
-        <Button link={instagramLink} target='blank' type='primary'>
+        <Button link={instagramLink} target='blank' color='black'>
           {name}
         </Button>
       </div>

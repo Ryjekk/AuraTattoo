@@ -3,9 +3,20 @@
 @use "../abstracts/functions" as f;
 .hero {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  min-height: 100vh;
   overflow: hidden;
+
+  &--mini {
+    max-height: 50vh;
+  }
+
+  &--full {
+    max-height: 100vh;
+  }
 
   &__bg {
     position: absolute;
@@ -17,28 +28,35 @@
   }
 
   &__content {
-    position: relative;
     z-index: 1;
-    color: f.get-color(white, 0.1);
-    padding: clamp(2rem, 5vw, 8rem);
-    max-width: min(90%, 1200px);
-    background-color: f.get-color(umber, 0.6);
-    backdrop-filter: blur(4px);
-    margin-block: max(20%, 100px);
-    margin-inline: auto;
+    color: f.get-color(white, 0.2);
+    max-width: min(90%, 70rem);
+    padding-inline: 1.5rem;
+    padding-block: 3rem;
+    margin-block: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    // mix-blend-mode: luminosity;
+
+    @include m.respond(sm) {
+      padding-inline: 4.5rem;
+    }
+
+    &--overlay {
+      background-color: f.get-color(umber, 0.7);
+      backdrop-filter: blur(4px);
+    }
     h1 {
       font-size: clamp(2.5rem, 5vw, 4rem);
-      margin-bottom: 1rem;
     }
 
     p {
-      font-size: map-get(v.$font-sizes, small);
-      line-height: 1.4;
+      font-size: map-get(v.$font-sizes, medium);
+      line-height: 1.6;
+      letter-spacing: 0.02rem;
     }
   }
 }

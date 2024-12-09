@@ -9,7 +9,7 @@ import H1 from "@components/h1/H1";
 
 export default function FAQSection() {
   return (
-    <section className='section1'>
+    <section className='section'>
       <H1 white>FAQ</H1>
       <div className='content-center section'>
         <Accordion>

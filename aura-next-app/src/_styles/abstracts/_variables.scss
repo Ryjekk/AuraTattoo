@@ -17,7 +17,7 @@ $font-sizes: (
   // Medium font size
   large: clamp(1.25rem, 1.5vw, 1.5rem),
   // Large font size
-  xlarge: clamp(1.5rem, 1.5vw, 1.75rem),
+  xlarge: clamp(1.5rem, 2.5vw, 2.2rem),
   // Extra large font size
 );
 
@@ -48,6 +48,7 @@ $spacing: (
   // Large spacing
   xlarge: 6rem,
   // Extra large spacing
+  xxlarge: 12rem,
 );
 
 // Border Radius Definitions

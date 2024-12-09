@@ -8,6 +8,8 @@ export default function Hero({
   backgroundSrc,
   fallbackImageSrc,
   priority = false,
+  mini = false,
+  withOverlay = false,
 }) {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
@@ -23,8 +25,13 @@ export default function Hero({
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
+  const heroClasses = mini ? "hero hero--mini" : "hero hero--full";
+  const contentClasses = withOverlay
+    ? "hero__content hero__content--overlay"
+    : "hero__content";
+
   return (
-    <section className='hero'>
+    <section className={heroClasses}>
       {backgroundType === "image" && (
         <Image
           src={backgroundSrc}
@@ -57,7 +64,7 @@ export default function Hero({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className='hero__content'
+          className={contentClasses}
         >
           {children}
         </motion.div>

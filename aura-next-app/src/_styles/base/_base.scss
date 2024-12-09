@@ -8,6 +8,8 @@ body {
   background-color: map-get($colors, moss);
   --webkit-font-smoothing: antialiased;
   --moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
   font-weight: normal;
 }
 
@@ -37,14 +39,6 @@ a {
   text-decoration: none;
 }
 
-// Example of using shadow
-.card {
-  background-color: #fff;
-  border: 1px solid map-get($colors, border);
-  box-shadow: map-get($shadows, light);
-  border-radius: map-get($radius, medium);
-  padding: map-get($spacing, large);
-}
 .sr-only {
   position: absolute;
   width: 1px;

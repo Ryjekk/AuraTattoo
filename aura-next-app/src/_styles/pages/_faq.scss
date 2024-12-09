@@ -2,6 +2,7 @@
 @use "../abstracts/mixins" as m;
 @use "../abstracts/functions" as f;
 .faq {
+  mix-blend-mode: luminosity;
   background-color: map-get(v.$colors, moss);
   color: map-get(v.$colors, white);
   padding: 10rem 0;

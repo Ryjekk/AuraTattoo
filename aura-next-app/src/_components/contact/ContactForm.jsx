@@ -159,7 +159,7 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <button type='submit' className='btn btn__secondary'>
+      <button type='submit' className='btn btn__umber'>
         Submit
       </button>
       <div className='contact__form__submit-status'>

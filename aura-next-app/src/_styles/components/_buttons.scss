@@ -1,11 +1,19 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
 @use "sass:color";
 .btn {
   padding: 10px 40px;
   cursor: pointer;
   transition: all 0.3s;
+  border-radius: map-get(v.$radius, small);
   width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  @include m.respond(sm) {
+    width: auto;
+  }
 
   &:focus,
   &:hover {
@@ -16,17 +24,75 @@
     transform: translateY(2px);
   }
 
-  &__primary {
-    color: map-get(v.$colors, black);
-    border-radius: map-get(v.$radius, small);
-    border: 2px solid map-get(v.$colors, black);
-    position: relative;
-    overflow: hidden;
-    z-index: 2;
+  &__umber {
+    color: map-get(v.$colors, umber);
+    background-color: transparent;
+    border: 2px solid map-get(v.$colors, umber);
 
-    @include m.respond(sm) {
-      width: auto;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      inset: 0;
+      transform: translateX(-100%);
+      transition: transform 0.3s;
+      background-color: map-get(v.$colors, umber);
     }
+
+    &:hover {
+      color: map-get(v.$colors, white);
+      &:before {
+        transform: translateX(0);
+      }
+    }
+    &:focus {
+      color: map-get(v.$colors, white);
+      &:before {
+        transform: translateX(0);
+        opacity: 0.9;
+      }
+    }
+  }
+
+  &__white {
+    color: map-get(v.$colors, white);
+    border: 1px solid f.get-color(white, 0.3);
+    background-color: transparent;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      inset: 0;
+      transform: translateX(-100%);
+      transition: transform 0.3s;
+      background-color: map-get(v.$colors, white);
+    }
+
+    &:hover {
+      color: map-get(v.$colors, umber);
+      &:before {
+        transform: translateX(0);
+      }
+    }
+    &:focus {
+      color: map-get(v.$colors, white);
+      &:before {
+        transform: translateX(0);
+        opacity: 0.9;
+      }
+    }
+  }
+  &__black {
+    color: map-get(v.$colors, black);
+    border: 2px solid map-get(v.$colors, black);
+    background-color: transparent;
 
     &::before {
       content: "";
@@ -48,57 +114,10 @@
       }
     }
     &:focus {
-      color: map-get(v.$colors, white);
+      color: map-get(v.$colors, black);
       &:before {
         transform: translateX(0);
         opacity: 0.9;
-        outline: 2px solid map-get(v.$colors, umber);
-        outline-offset: -2px;
-      }
-    }
-  }
-
-  &__secondary {
-    color: map-get(v.$colors, umber);
-    border-radius: map-get(v.$radius, small);
-    border: 2px solid map-get(v.$colors, umber);
-    position: relative;
-    display: block;
-    overflow: hidden;
-    z-index: 2;
-    background-color: transparent;
-
-    @include m.respond(sm) {
-      width: auto;
-    }
-
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      top: 0;
-      left: 0;
-      transform: translateX(-100%);
-      transition: transform 0.3s;
-      background-color: map-get(v.$colors, umber);
-    }
-
-    &:hover {
-      color: map-get(v.$colors, white);
-      &:before {
-        transform: translateX(0);
-      }
-    }
-    &:focus {
-      color: map-get(v.$colors, white);
-      &:before {
-        transform: translateX(0);
-        opacity: 0.9;
-        outline: 2px solid map-get(v.$colors, umber);
-        outline-offset: -2px;
       }
     }
   }
