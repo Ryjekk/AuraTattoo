@@ -1,3 +1,8 @@
+import Link from "next/link";
 export default function Logo() {
-  return <span className='logo'>Aura</span>;
+  return (
+    <Link className='logo' href='/'>
+      Aura
+    </Link>
+  );
 }

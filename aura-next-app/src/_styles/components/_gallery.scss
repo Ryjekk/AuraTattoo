@@ -1,0 +1,95 @@
+@use "../abstracts/variables" as v;
+
+.gallery {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5rem;
+  background-color: map-get(v.$colors, white);
+  padding-block: 10rem;
+
+  &__header {
+    font-size: map-get(v.$font-sizes, xlarge);
+    font-family: map-get(v.$fonts, heading);
+    text-transform: uppercase;
+    color: map-get(v.$colors, umber);
+    text-align: center;
+    line-height: 0;
+  }
+
+  &__carousel {
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    overflow: scroll;
+
+    &-container {
+      width: 100vw;
+      overflow: scroll;
+      position: relative;
+      height: 30rem;
+      scrollbar-color: transparent transparent;
+    }
+  }
+
+  &__card {
+    position: relative;
+    overflow: hidden;
+    width: 30rem;
+    height: 30rem;
+  }
+  &__image {
+    object-fit: cover;
+    transition: transform 0.5s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__video-container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  &__video {
+    position: relative;
+    z-index: 3;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+  }
+  &__overlay {
+    &-container {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 3;
+    }
+    &-bg {
+      position: absolute;
+      background-color: rgba(0, 0, 0);
+      // opacity: 0.5;
+      pointer-events: none;
+      height: 100%;
+      width: 100%;
+    }
+    &-text {
+      position: relative;
+      z-index: 4;
+      color: map-get(v.$colors, white);
+      font-size: map-get(v.$font-sizes, small);
+      font-family: map-get(v.$fonts, heading);
+      text-transform: uppercase;
+    }
+  }
+}

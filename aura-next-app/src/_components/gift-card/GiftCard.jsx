@@ -8,7 +8,7 @@ export default function GiftCard() {
           <Image
             src='/aura-logo.jpg'
             alt='Aura Logo'
-            width={390}
+            width={340}
             height={480}
           />
         </div>

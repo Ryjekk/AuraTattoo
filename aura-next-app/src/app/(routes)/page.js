@@ -1,7 +1,12 @@
 import Button from "@components/button/Button";
+import Gallery from "@components/gallery/Gallery";
 import GiftCard from "@components/gift-card/GiftCard";
 import Hero from "@components/hero/Hero";
-export default function Home() {
+import getInstagramSnaps from "@services/getInstagramSnaps";
+
+export default async function Home() {
+  const instagramSnaps = await getInstagramSnaps();
+
   return (
     <main>
       <Hero
@@ -48,6 +53,7 @@ export default function Home() {
           Artists
         </Button>
       </Hero>
+      <Gallery instagramSnaps={instagramSnaps} />
       <GiftCard />
     </main>
   );
