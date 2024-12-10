@@ -31,7 +31,7 @@ export default async function Home() {
           Artists
         </Button>
       </Hero>
-      <Hero
+      {/* <Hero
         content={"# Home Page"}
         backgroundType={"video"}
         backgroundSrc={"video-mini.mp4"}
@@ -52,7 +52,7 @@ export default async function Home() {
         <Button link='/contact' text='Contact Us'>
           Artists
         </Button>
-      </Hero>
+      </Hero> */}
       <Gallery instagramSnaps={instagramSnaps} />
       <GiftCard />
     </main>

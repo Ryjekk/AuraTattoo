@@ -39,15 +39,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // mix-blend-mode: luminosity;
+    mix-blend-mode: luminosity;
 
     @include m.respond(sm) {
       padding-inline: 4.5rem;
     }
 
     &--overlay {
-      background-color: f.get-color(umber, 0.7);
-      backdrop-filter: blur(4px);
+      background-color: f.get-color(umber, 0.6);
+      // backdrop-filter: blur(1px);
     }
     h1 {
       font-size: clamp(2.5rem, 5vw, 4rem);

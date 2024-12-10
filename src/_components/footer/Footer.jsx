@@ -14,10 +14,6 @@ export default function Footer() {
 
           <p>Skipholt 15, 105 Reykjavik</p>
         </address>
-        <div className='footer__links'>
-          <Button link='/'>Pre-Appointment Info</Button>
-          <Button link='/'>Tattoo Aftercare Info</Button>
-        </div>
       </div>
       <div className='footer__legal'>
         <p>© 2024 Aura Tattoo</p>

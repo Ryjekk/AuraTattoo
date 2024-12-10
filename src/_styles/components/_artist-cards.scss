@@ -6,6 +6,7 @@
   grid-template-columns: 1fr;
   margin-inline: auto;
   justify-content: center;
+  justify-items: center;
   gap: map-get(v.$spacing, xlarge);
 
   @include m.respond(sm) {
@@ -28,6 +29,7 @@
   gap: map-get(v.$spacing, medium);
   text-align: center;
   max-width: 20rem;
+  justify-self: center;
 
   &__img {
     width: 100%;
