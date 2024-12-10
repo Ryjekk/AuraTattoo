@@ -1,14 +1,18 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
 @use "../abstracts/functions" as f;
-.faq {
+.vacancy {
   mix-blend-mode: luminosity;
-  background-color: map-get(v.$colors, moss);
-  color: map-get(v.$colors, white);
+  background-color: map-get(v.$colors, white);
+  color: map-get(v.$colors, umber);
   padding-block-start: 10rem;
   padding-block-end: 4rem;
   height: 100%;
 
+  h1 {
+    color: map-get(v.$colors, umber);
+    mix-blend-mode: luminosity;
+  }
   h2 {
     text-align: center;
     margin-bottom: clamp(2rem, 5vw, 6rem);
