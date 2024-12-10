@@ -1,29 +1,30 @@
 @use "../abstracts/_variables.scss" as v;
 @use "../abstracts/mixins.scss" as m;
 @use "../abstracts/functions.scss" as f;
+@use "sass:map";
 .vision {
   @include m.respond(sm) {
-    padding-inline: map-get(v.$spacing, xlarge);
+    padding-inline: map.get(v.$spacing, xlarge);
   }
   @include m.respond(lg) {
-    padding-inline: map-get(v.$spacing, xxlarge);
+    padding-inline: map.get(v.$spacing, xxlarge);
   }
   h2 {
     text-align: left;
-    font-size: map-get(v.$font-sizes, medium);
-    font-family: map-get(v.$fonts, body);
+    font-size: map.get(v.$font-sizes, medium);
+    font-family: map.get(v.$fonts, body);
   }
   blockquote {
     p {
       color: f.get-color(white, 0.25);
     }
-    font-family: map-get(v.$fonts, heading);
-    font-size: map-get(v.$font-sizes, large);
+    font-family: map.get(v.$fonts, heading);
+    font-size: map.get(v.$font-sizes, large);
     line-height: 1.4;
     margin-block-start: 2rem;
     margin-block-end: 2rem;
     @include m.respond(lg) {
-      font-size: map-get(v.$font-sizes, xlarge);
+      font-size: map.get(v.$font-sizes, xlarge);
     }
   }
 }

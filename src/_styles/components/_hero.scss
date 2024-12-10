@@ -1,6 +1,7 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
 @use "../abstracts/functions" as f;
+@use "sass:map";
 .hero {
   position: relative;
   display: flex;
@@ -54,7 +55,7 @@
     }
 
     p {
-      font-size: map-get(v.$font-sizes, medium);
+      font-size: map.get(v.$font-sizes, medium);
       line-height: 1.6;
       letter-spacing: 0.02rem;
     }

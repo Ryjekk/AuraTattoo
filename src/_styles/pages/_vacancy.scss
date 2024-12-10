@@ -1,16 +1,17 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
 @use "../abstracts/functions" as f;
+@use "sass:map";
 .vacancy {
   mix-blend-mode: luminosity;
-  background-color: map-get(v.$colors, white);
-  color: map-get(v.$colors, umber);
+  background-color: map.get(v.$colors, white);
+  color: map.get(v.$colors, umber);
   padding-block-start: 10rem;
   padding-block-end: 4rem;
   height: 100%;
 
   h1 {
-    color: map-get(v.$colors, umber);
+    color: map.get(v.$colors, umber);
     mix-blend-mode: luminosity;
   }
   h2 {

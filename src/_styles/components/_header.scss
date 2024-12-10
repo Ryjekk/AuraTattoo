@@ -1,11 +1,11 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
 @use "../abstracts/functions" as f;
-
+@use "sass:map";
 .nav {
-  background-color: map-get(v.$colors, black);
+  background-color: map.get(v.$colors, black);
   color: #fff;
-  padding: map-get(v.$spacing, large) map-get(v.$spacing, large);
+  padding: map.get(v.$spacing, large) map.get(v.$spacing, large);
   text-align: center;
   position: fixed;
   top: 0;
@@ -22,8 +22,8 @@
 
   .logo {
     text-transform: uppercase;
-    font-size: map-get(v.$font-sizes, large);
-    font-family: map-get(v.$fonts, heading);
+    font-size: map.get(v.$font-sizes, large);
+    font-family: map.get(v.$fonts, heading);
   }
 
   &__links,
@@ -33,7 +33,7 @@
     @include m.respond(sm) {
       display: flex;
       align-items: center;
-      gap: map-get(v.$spacing, medium);
+      gap: map.get(v.$spacing, medium);
     }
   }
   &__link {
@@ -83,14 +83,14 @@
     right: 0;
     width: 100vw;
     height: 100vh;
-    background: map-get(v.$colors, black);
+    background: map.get(v.$colors, black);
     z-index: 4;
-    padding: map-get(v.$spacing, large);
+    padding: map.get(v.$spacing, large);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: map-get(v.$spacing, medium);
+    gap: map.get(v.$spacing, medium);
     color: #fff;
     transform-origin: top right;
 
@@ -102,7 +102,7 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: map-get(v.$spacing, medium);
+      gap: map.get(v.$spacing, medium);
       z-index: 4;
     }
   }

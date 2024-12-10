@@ -2,8 +2,9 @@
 @use "../abstracts/mixins" as m;
 @use "../abstracts/functions" as f;
 @use "sass:color";
+@use "sass:map";
 .accordion {
-  font-family: map-get(v.$fonts, heading);
+  font-family: map.get(v.$fonts, heading);
   &__item {
     overflow: hidden;
     border-top: 1px solid f.get-color(umber, 0.4);
@@ -13,7 +14,7 @@
     padding: 20px;
     cursor: pointer;
     transition: background-color 0.15s ease-in-out;
-    font-family: map-get(v.$fonts, heading);
+    font-family: map.get(v.$fonts, heading);
     display: flex;
     justify-content: space-between;
   }

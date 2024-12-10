@@ -1,19 +1,19 @@
 @use "../abstracts/variables" as v;
-
+@use "sass:map";
 .gallery {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 5rem;
-  background-color: map-get(v.$colors, white);
+  background-color: map.get(v.$colors, white);
   padding-block: 10rem;
 
   &__header {
-    font-size: map-get(v.$font-sizes, xlarge);
-    font-family: map-get(v.$fonts, heading);
+    font-size: map.get(v.$font-sizes, xlarge);
+    font-family: map.get(v.$fonts, heading);
     text-transform: uppercase;
-    color: map-get(v.$colors, umber);
+    color: map.get(v.$colors, umber);
     text-align: center;
     line-height: 0;
   }
@@ -86,9 +86,9 @@
     &-text {
       position: relative;
       z-index: 4;
-      color: map-get(v.$colors, white);
-      font-size: map-get(v.$font-sizes, small);
-      font-family: map-get(v.$fonts, heading);
+      color: map.get(v.$colors, white);
+      font-size: map.get(v.$font-sizes, small);
+      font-family: map.get(v.$fonts, heading);
       text-transform: uppercase;
     }
   }

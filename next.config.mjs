@@ -4,7 +4,12 @@ const nextConfig = {
     silenceDeprecations: ["legacy-js-api"], // suppress deprecation warning temporarily [https://github.com/sass/dart-sass/issues/2352]
   },
   images: {
-    domains: ["eu-west-2.graphassets.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "eu-west-2.graphassets.com",
+      },
+    ],
   },
 };
 

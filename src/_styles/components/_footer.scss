@@ -1,25 +1,25 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
-
+@use "sass:map";
 .footer {
-  background-color: map-get(v.$colors, moss);
-  color: map-get(v.$colors, light-gray);
+  background-color: map.get(v.$colors, moss);
+  color: map.get(v.$colors, light-gray);
   margin-top: auto;
-  padding: map-get(v.$spacing, large) 0 0 0;
+  padding: map.get(v.$spacing, large) 0 0 0;
   &__contact-info {
     font-style: normal;
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: map-get(v.$spacing, medium);
+    gap: map.get(v.$spacing, medium);
 
     @include m.respond(sm) {
       text-align: left;
-      padding: map-get(v.$spacing, large) 0;
+      padding: map.get(v.$spacing, large) 0;
     }
 
     & > a {
-      color: map-get(v.$colors, light-gray);
+      color: map.get(v.$colors, light-gray);
       text-decoration: none;
       transition: color, 0.3s;
       display: inline;
@@ -61,8 +61,8 @@
   &__links {
     display: flex;
     flex-direction: column;
-    gap: map-get(v.$spacing, medium);
-    padding: map-get(v.$spacing, large) 0;
+    gap: map.get(v.$spacing, medium);
+    padding: map.get(v.$spacing, large) 0;
   }
   &__legal {
     font-size: small;

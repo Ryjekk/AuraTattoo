@@ -1,14 +1,15 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/functions" as f;
+@use "sass:map";
 .our-story {
   :not(h1) {
     color: f.get-color(white, 0.4);
   }
   section:nth-of-type(3) {
     p {
-      font-size: map-get(v.$font-sizes, medium);
+      font-size: map.get(v.$font-sizes, medium);
       line-height: 1.7;
-      margin-bottom: map-get(v.$spacing, large);
+      margin-bottom: map.get(v.$spacing, large);
     }
   }
 }

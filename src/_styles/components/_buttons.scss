@@ -2,11 +2,12 @@
 @use "../abstracts/mixins" as m;
 @use "../abstracts/functions" as f;
 @use "sass:color";
+@use "sass:map";
 .btn {
   padding: 10px 40px;
   cursor: pointer;
   transition: all 0.3s;
-  border-radius: map-get(v.$radius, small);
+  border-radius: map.get(v.$radius, small);
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -25,9 +26,9 @@
   }
 
   &__umber {
-    color: map-get(v.$colors, umber);
+    color: map.get(v.$colors, umber);
     background-color: transparent;
-    border: 2px solid map-get(v.$colors, umber);
+    border: 2px solid map.get(v.$colors, umber);
 
     &::before {
       content: "";
@@ -39,17 +40,17 @@
       inset: 0;
       transform: translateX(-100%);
       transition: transform 0.3s;
-      background-color: map-get(v.$colors, umber);
+      background-color: map.get(v.$colors, umber);
     }
 
     &:hover {
-      color: map-get(v.$colors, white);
+      color: map.get(v.$colors, white);
       &:before {
         transform: translateX(0);
       }
     }
     &:focus {
-      color: map-get(v.$colors, white);
+      color: map.get(v.$colors, white);
       &:before {
         transform: translateX(0);
         opacity: 0.9;
@@ -58,7 +59,7 @@
   }
 
   &__white {
-    color: map-get(v.$colors, white);
+    color: map.get(v.$colors, white);
     border: 1px solid f.get-color(white, 0.3);
     background-color: transparent;
 
@@ -72,17 +73,17 @@
       inset: 0;
       transform: translateX(-100%);
       transition: transform 0.3s;
-      background-color: map-get(v.$colors, white);
+      background-color: map.get(v.$colors, white);
     }
 
     &:hover {
-      color: map-get(v.$colors, umber);
+      color: map.get(v.$colors, umber);
       &:before {
         transform: translateX(0);
       }
     }
     &:focus {
-      color: map-get(v.$colors, white);
+      color: map.get(v.$colors, white);
       &:before {
         transform: translateX(0);
         opacity: 0.9;
@@ -90,8 +91,8 @@
     }
   }
   &__black {
-    color: map-get(v.$colors, black);
-    border: 2px solid map-get(v.$colors, black);
+    color: map.get(v.$colors, black);
+    border: 2px solid map.get(v.$colors, black);
     background-color: transparent;
 
     &::before {
@@ -104,17 +105,17 @@
       inset: 0;
       transform: translateX(-100%);
       transition: transform 0.3s;
-      background-color: map-get(v.$colors, black);
+      background-color: map.get(v.$colors, black);
     }
 
     &:hover {
-      color: map-get(v.$colors, white);
+      color: map.get(v.$colors, white);
       &:before {
         transform: translateX(0);
       }
     }
     &:focus {
-      color: map-get(v.$colors, black);
+      color: map.get(v.$colors, black);
       &:before {
         transform: translateX(0);
         opacity: 0.9;

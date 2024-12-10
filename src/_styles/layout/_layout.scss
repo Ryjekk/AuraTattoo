@@ -1,5 +1,6 @@
 @use "../abstracts/mixins" as m;
 @use "../abstracts/variables" as v;
+@use "sass:map";
 .main-wrapper {
   display: flex;
   flex-direction: column;
@@ -19,7 +20,7 @@
   padding-block: max(5rem, 10vh);
 
   &__gift-card {
-    background-color: map-get(v.$colors, sand);
+    background-color: map.get(v.$colors, sand);
   }
   &__content {
     display: flex;

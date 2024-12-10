@@ -1,5 +1,5 @@
 @use "../abstracts/variables" as var;
-
+@use "sass:map";
 //mobile first approach
 
 @mixin respond($breakpoint) {
@@ -9,10 +9,10 @@
     lg: large,
     xl: xlarge,
   ); // Map of aliases to map keys
-  $breakpoint-key: map-get($breakpoints, $breakpoint);
+  $breakpoint-key: map.get($breakpoints, $breakpoint);
   $breakpoint-value: if(
     $breakpoint-key,
-    map-get(var.$breakpoints, $breakpoint-key),
+    map.get(var.$breakpoints, $breakpoint-key),
     null
   );
 
@@ -24,19 +24,19 @@
     @warn "Breakpoint #{$breakpoint} not found in var.$breakpoints.";
   }
   // @if $breakpoint == sm {
-  //   @media (min-width: map-get(var.$breakpoints, small)) {
+  //   @media (min-width: map.get(var.$breakpoints, small)) {
   //     @content;
   //   }
   // } @else if $breakpoint == md {
-  //   @media (min-width: map-get(var.$breakpoints, medium)) {
+  //   @media (min-width: map.get(var.$breakpoints, medium)) {
   //     @content;
   //   }
   // } @else if $breakpoint == lg {
-  //   @media (min-width: map-get(var.$breakpoints, large)) {
+  //   @media (min-width: map.get(var.$breakpoints, large)) {
   //     @content;
   //   }
   // } @else if $breakpoint == xl {
-  //   @media (min-width: map-get(var.$breakpoints, xlarge)) {
+  //   @media (min-width: map.get(var.$breakpoints, xlarge)) {
   //     @content;
   //   }
   // }
@@ -46,21 +46,21 @@
   & {
     max-width: 24rem;
     margin-inline: auto;
-    padding-inline: map-get(var.$spacing, medium);
+    padding-inline: map.get(var.$spacing, medium);
   }
   @include respond(sm) {
-    max-width: map-get(var.$breakpoints, small);
+    max-width: map.get(var.$breakpoints, small);
   }
 
   @include respond(md) {
-    max-width: map-get(var.$breakpoints, medium);
+    max-width: map.get(var.$breakpoints, medium);
   }
 
   @include respond(lg) {
-    max-width: map-get(var.$breakpoints, large);
+    max-width: map.get(var.$breakpoints, large);
   }
 
   @include respond(xl) {
-    max-width: map-get(var.$breakpoints, xlarge);
+    max-width: map.get(var.$breakpoints, xlarge);
   }
 }

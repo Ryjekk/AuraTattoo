@@ -1,11 +1,11 @@
 @use "../abstracts/reset";
 @use "../abstracts/variables" as *;
-
+@use "sass:map";
 body {
-  font-family: map-get($fonts, body), Arial, Helvetica, sans-serif;
+  font-family: map.get($fonts, body), Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  color: map-get($colors, dark-gray);
-  background-color: map-get($colors, moss);
+  color: map.get($colors, dark-gray);
+  background-color: map.get($colors, moss);
   --webkit-font-smoothing: antialiased;
   --moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -19,7 +19,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: map-get($fonts, heading);
+  font-family: map.get($fonts, heading);
 }
 
 h1 {
@@ -31,11 +31,11 @@ h2 {
 }
 
 p {
-  margin-bottom: map-get($spacing, medium);
+  margin-bottom: map.get($spacing, medium);
 }
 
 a {
-  color: map-get($colors, white);
+  color: map.get($colors, white);
   text-decoration: none;
 }
 

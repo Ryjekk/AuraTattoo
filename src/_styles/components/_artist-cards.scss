@@ -1,23 +1,23 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
-
+@use "sass:map";
 .artists-list {
   display: grid;
   grid-template-columns: 1fr;
   margin-inline: auto;
   justify-content: center;
   justify-items: center;
-  gap: map-get(v.$spacing, xlarge);
+  gap: map.get(v.$spacing, xlarge);
 
   @include m.respond(sm) {
-    gap: map-get(v.$spacing, large);
+    gap: map.get(v.$spacing, large);
     grid-template-columns: repeat(2, 1fr);
   }
   @include m.respond(md) {
-    gap: map-get(v.$spacing, xlarge);
+    gap: map.get(v.$spacing, xlarge);
   }
   @include m.respond(lg) {
-    gap: map-get(v.$spacing, xlarge);
+    gap: map.get(v.$spacing, xlarge);
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -26,7 +26,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: map-get(v.$spacing, medium);
+  gap: map.get(v.$spacing, medium);
   text-align: center;
   max-width: 20rem;
   justify-self: center;
@@ -36,14 +36,14 @@
     height: auto;
     object-fit: cover;
     aspect-ratio: 1;
-    margin-bottom: map-get(v.$spacing, medium);
+    margin-bottom: map.get(v.$spacing, medium);
     @include m.respond(sm) {
       aspect-ratio: 2/3;
     }
   }
 
   &__content {
-    font-size: map-get(v.$font-sizes, xsmall);
+    font-size: map.get(v.$font-sizes, xsmall);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -53,7 +53,7 @@
   &__bio {
     a {
       margin-top: auto;
-      color: map-get(v.$colors, umber);
+      color: map.get(v.$colors, umber);
       text-decoration: none;
       transition: all 0.3s ease;
       &:hover {

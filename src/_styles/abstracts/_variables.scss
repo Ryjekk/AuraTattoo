@@ -1,5 +1,5 @@
 /* _variables.scss */
-
+@use "sass:map";
 // Font Definitions
 $fonts: (
   heading: var(--font-orpheous),
@@ -90,21 +90,21 @@ $breakpoints: (
 @mixin responsive-font($size) {
   font-size: $size;
 
-  @media (min-width: map-get($breakpoints, medium)) {
+  @media (min-width: map.get($breakpoints, medium)) {
     font-size: $size * 1.1;
     // Increase font size for medium devices
   }
 
-  @media (min-width: map-get($breakpoints, large)) {
+  @media (min-width: map.get($breakpoints, large)) {
     font-size: $size * 1.2; // Further increase font size for large devices
   }
 }
 
 // Mixin for Responsive bottom margin
 @mixin content-margin {
-  margin: map-get($spacing, large) 0;
+  margin: map.get($spacing, large) 0;
 
-  @media (min-width: map-get($breakpoints, medium)) {
-    margin: map-get($spacing, xlarge) 0; // Increase margin for medium devices
+  @media (min-width: map.get($breakpoints, medium)) {
+    margin: map.get($spacing, xlarge) 0; // Increase margin for medium devices
   }
 }
