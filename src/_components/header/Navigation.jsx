@@ -17,7 +17,7 @@ export const Navigation = () => {
   return (
     <motion.ul className='nav__links'>
       {navLinks.map((link) => (
-        <motion.div key={link.name} className='nav__link'>
+        <motion.li key={link.name} className='nav__link'>
           <Link href={link.href}>{link.name}</Link>
           {isSelected(link) && (
             <motion.div
@@ -25,7 +25,7 @@ export const Navigation = () => {
               layoutId='indicator'
             ></motion.div>
           )}
-        </motion.div>
+        </motion.li>
       ))}
     </motion.ul>
   );

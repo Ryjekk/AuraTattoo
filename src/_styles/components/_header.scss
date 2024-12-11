@@ -29,11 +29,15 @@
   &__links,
   .social-links {
     display: none;
+    list-style: none;
 
     @include m.respond(sm) {
       display: flex;
       align-items: center;
       gap: map.get(v.$spacing, medium);
+    }
+    @include m.respond(md) {
+      gap: map.get(v.$spacing, large);
     }
   }
   &__link {
