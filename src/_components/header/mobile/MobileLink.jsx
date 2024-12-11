@@ -6,8 +6,8 @@ const MobileLink = ({ name, href, isSelected }) => {
     <motion.li className='nav__link' variants={mobileLinkVariants}>
       {name}
       <motion.div
-        className='nav__link__active-indicator'
-        layoutId='indicator'
+        className='nav__link__active-indicator--mobile'
+        layoutId='indicator-mobile'
       ></motion.div>
     </motion.li>
   ) : (

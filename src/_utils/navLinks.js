@@ -4,6 +4,6 @@ export const navLinks = [
   { name: "Residents", href: "/residents" },
   { name: "Guests", href: "/guests" },
   { name: "Contact", href: "/contact" },
-  { name: "FAQ", href: "/faq" },
   { name: "Vacancy", href: "/vacancy" },
+  { name: "FAQ", href: "/faq" },
 ];

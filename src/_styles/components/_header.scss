@@ -50,7 +50,8 @@
       }
     }
 
-    &__active-indicator {
+    &__active-indicator,
+    &__active-indicator--mobile {
       position: absolute;
       display: block;
       height: 0.02rem;
