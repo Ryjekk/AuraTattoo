@@ -11,7 +11,7 @@ export default async function Home() {
     <main>
       <Hero
         backgroundType={"image"}
-        backgroundSrc={"/main-bg-img.jpeg"}
+        backgroundSrc={"/main-bg-img.webp"}
         withOverlay={true}
       >
         <p>
