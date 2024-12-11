@@ -106,13 +106,13 @@
       padding-inline: map.get(v.$spacing, medium);
       border-radius: map.get(v.$radius, small);
       border: 1px solid transparent;
-      background-color: f.get-color(ecru, 0.6);
+      background-color: f.get-color(sand, 0);
 
       &:focus {
         outline: none;
         border: 1px solid map.get(v.$colors, umber);
       }
-      &:invalid {
+      &--error {
         border: 1px solid map.get(v.$colors, error);
       }
     }

@@ -52,7 +52,9 @@ export default function ContactForm() {
             First Name <span>*</span>
           </label>
           <input
-            className='contact__form__input'
+            className={`contact__form__input ${
+              errors.firstName ? "contact__form__input--error" : ""
+            }`}
             id='firstName'
             type='text'
             {...register("firstName", { required: "First Name is required" })}
@@ -73,7 +75,9 @@ export default function ContactForm() {
             Last Name <span>*</span>
           </label>
           <input
-            className='contact__form__input'
+            className={`contact__form__input ${
+              errors.lastName ? "contact__form__input--error" : ""
+            }`}
             id='lastName'
             type='text'
             {...register("lastName", { required: "Last Name is required" })}
@@ -95,7 +99,9 @@ export default function ContactForm() {
           Email <span>*</span>
         </label>
         <input
-          className='contact__form__input'
+          className={`contact__form__input ${
+            errors.email ? "contact__form__input--error" : ""
+          }`}
           id='email'
           type='email'
           {...register("email", {
@@ -122,7 +128,9 @@ export default function ContactForm() {
           Subject <span>*</span>
         </label>
         <input
-          className='contact__form__input'
+          className={`contact__form__input ${
+            errors.subject ? "contact__form__input--error" : ""
+          }`}
           id='subject'
           type='text'
           {...register("subject", { required: "Subject is required" })}
@@ -143,7 +151,9 @@ export default function ContactForm() {
           Message <span>*</span>
         </label>
         <textarea
-          className='contact__form__textarea'
+          className={`contact__form__textarea ${
+            errors.message ? "contact__form__textarea--error" : ""
+          }`}
           id='message'
           rows='6'
           {...register("message", { required: "Message is required" })}
