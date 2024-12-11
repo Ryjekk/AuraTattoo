@@ -10,7 +10,7 @@ import H1 from "@components/h1/H1";
 export default function VacancySection() {
   return (
     <section className='section'>
-      <H1 white> Vacancies at Aura</H1>
+      <H1> Vacancies at Aura</H1>
       <div className='content-center section'>
         <Accordion color={"umber"}>
           {auraReykjavikPositions.map((vacancies, index) => (

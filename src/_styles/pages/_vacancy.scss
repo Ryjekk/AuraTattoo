@@ -5,14 +5,13 @@
 .vacancy {
   mix-blend-mode: luminosity;
   background-color: map.get(v.$colors, white);
-  color: map.get(v.$colors, umber);
+  color: map.get(v.$colors, moss);
   padding-block-start: 10rem;
   padding-block-end: 4rem;
   height: 100%;
 
   h1 {
     color: map.get(v.$colors, umber);
-    mix-blend-mode: luminosity;
   }
   h2 {
     text-align: center;

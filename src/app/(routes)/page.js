@@ -13,6 +13,7 @@ export default async function Home() {
         backgroundType={"image"}
         backgroundSrc={"/main-bg-img.webp"}
         withOverlay={true}
+        priority={true}
       >
         <p>
           Aura Reykjavik is a contemporary tattoo studio situated in the heart

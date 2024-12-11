@@ -53,9 +53,10 @@
   &__bio {
     a {
       margin-top: auto;
-      color: map.get(v.$colors, umber);
-      text-decoration: none;
+      color: map.get(v.$colors, moss);
+      text-decoration: underline;
       transition: all 0.3s ease;
+      font-style: bold;
       &:hover {
         opacity: 0.8;
       }

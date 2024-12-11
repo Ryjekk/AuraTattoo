@@ -6,10 +6,10 @@ export default function GiftCard() {
       <div className='section__content content-center'>
         <div className='section__column'>
           <Image
-            src='/aura-logo.jpg'
+            src='/aura-logo.webp'
             alt='Aura Logo'
             width={340}
-            height={480}
+            height={484}
           />
         </div>
 

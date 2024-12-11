@@ -7,7 +7,8 @@ export default function Home() {
       <Hero
         content={"# Home Page"}
         backgroundType={"image"}
-        backgroundSrc={"/main-bg-img.jpeg"}
+        backgroundSrc={"/main-bg-img.webp"}
+        priority={true}
         mini={true}
         withOverlay={false}
       >

@@ -20,6 +20,7 @@ h4,
 h5,
 h6 {
   font-family: map.get($fonts, heading);
+  font-weight: 400;
 }
 
 h1 {

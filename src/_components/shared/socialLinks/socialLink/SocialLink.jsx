@@ -58,6 +58,7 @@ const SocialLink = ({ name, href }) => {
         social-link
         social-link--${iconName}
       `}
+      aria-label={`go to our ${name}`}
     >
       {icon}
     </a>

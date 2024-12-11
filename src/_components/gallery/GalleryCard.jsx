@@ -14,7 +14,11 @@ export default function GalleryCard({ instagramSnap }) {
       onHoverStart={() => setShowOverlay(true)}
       onHoverEnd={() => setShowOverlay(false)}
     >
-      <Link href={instagramLink} target='_blank'>
+      <Link
+        href={instagramLink}
+        target='_blank'
+        aria-label={`View on Instagram: ${alt}`}
+      >
         <AnimatePresence>
           {showOverlay && (
             <motion.div
@@ -53,8 +57,8 @@ export default function GalleryCard({ instagramSnap }) {
           <Image
             src={withVideo ? videoPlaceholder.url : image.url}
             alt={alt}
-            width={600}
-            height={600}
+            width={500}
+            height={500}
             className='gallery__image'
           />
         )}
