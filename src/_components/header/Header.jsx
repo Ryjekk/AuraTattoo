@@ -14,7 +14,7 @@ export default function Header() {
   const pathname = usePathname();
   useEffect(() => {
     setMobileMenuOpen(false);
-  }, [pathname]);
+  }, [pathname, setMobileMenuOpen]);
   return (
     <AnimatePresence>
       <motion.nav

@@ -17,20 +17,20 @@ export default function Home() {
       <section className='section content-center'>
         <h2 className='sr-only'>About Aura Tattoo Studio</h2>
 
-        <h3 className='sr-only'>Aura's Origins</h3>
+        <h3 className='sr-only'>{`Aura's Origins`}</h3>
         <p>
-          Aura is a unique place on Reykjavik's tattoo scene, born from the
+          {` Aura is a unique place on Reykjavik's tattoo scene, born from the
           vision of artist Anna, known by her pseudonym, Serene Nero (formerly
           Ethereal Tattoo). Driven by a desire for peace and a more intimate
           creative environment, Anna set out on her own path in late 2019. She
           established a small, personal space where she worked solo, inviting
           people into her world of meaningful exchanges, shared stories, and
-          authentic connections.
+          authentic connections.`}
         </p>
 
         <h3 className='sr-only'>Growth and Team Formation</h3>
         <p>
-          From the beginning, her business showed promise, but it was this step
+          {` From the beginning, her business showed promise, but it was this step
           toward independence that sparked even more dynamic growth. Soon, the
           idea of inviting other talented artists into her space was born. The
           Aura team isn't just a collection of artists; we are a close-knit
@@ -38,15 +38,15 @@ export default function Home() {
           We draw inspiration from our interactions with others, and in return,
           we offer our full attention, creative dedication, and warm care to
           every client, ensuring that their unique needs are met while
-          maintaining the highest standards of hygiene.
+          maintaining the highest standards of hygiene.`}
         </p>
 
         <h3 className='sr-only'>Safety and Hygiene</h3>
         <p>
-          Anna's background in the medical field sets a high bar for sterile
+          {`  Anna's background in the medical field sets a high bar for sterile
           practices within our studio. Every team member shares this commitment
           to safety, so our clients can feel relaxed and confident throughout
-          the process.
+          the process.`}
         </p>
 
         <h3 className='sr-only'>Studio Atmosphere and Accessibility</h3>

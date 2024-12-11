@@ -38,7 +38,7 @@ export default function GalleryCarousel({ instagramSnaps }) {
     }
 
     return () => controls.stop();
-  }, [width, xTranslation, duration, rerender]);
+  }, [width, xTranslation, duration, rerender, mustFinish]);
 
   return (
     <div className='gallery__carousel-container'>
