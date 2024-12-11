@@ -1,0 +1,39 @@
+@use "../abstracts/variables" as v;
+@use "sass:map";
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  height: 100vh;
+  text-align: center;
+  background-color: map.get(v.$colors, sand);
+  color: map.get(v.$colors, moss);
+  font-size: 2rem;
+  // text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  line-height: 1.5;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 6rem;
+
+  a:first-of-type {
+    font-weight: bold;
+    font-family: map.get(v.$fonts, heading);
+    text-transform: uppercase;
+    font-size: 12rem;
+  }
+
+  a {
+    color: map.get(v.$colors, umber);
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: map.get(v.$colors, moss);
+    }
+  }
+}
