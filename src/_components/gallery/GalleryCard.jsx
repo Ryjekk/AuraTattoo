@@ -49,6 +49,7 @@ export default function GalleryCard({ instagramSnap }) {
               height={600}
               className='gallery__video'
               autoPlay={true}
+              playsInline={true}
               loop={true}
               muted={true}
             />

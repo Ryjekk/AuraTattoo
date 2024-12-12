@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Button from "@components/button/Button";
 import Markdown from "react-markdown";
-export default function GuestCard({ artist }) {
+export default function GuestCard({ artist, idx }) {
   const {
     name,
     returningArtist,
@@ -19,6 +19,7 @@ export default function GuestCard({ artist }) {
         width={400}
         height={450}
         className='artist-card__img'
+        priority={idx < 3}
       />
       <div className='artist-card__content'>
         <p className='artist-card__name'>
