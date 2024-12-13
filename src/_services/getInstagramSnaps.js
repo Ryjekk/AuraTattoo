@@ -8,7 +8,7 @@ export default async function getInstagramSnaps() {
     body: JSON.stringify({
       query: `
         query getInstagramSnaps {
-          instaSnaps {
+          instaSnaps(stage: PUBLISHED) {
     alt
     instagramLink
     id

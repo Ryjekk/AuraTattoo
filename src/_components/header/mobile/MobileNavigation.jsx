@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
@@ -8,7 +9,7 @@ import {
 } from "@components/header/animations";
 import { navLinks } from "@utils/navLinks";
 
-export const MobileNavigation = ({ mobileMenuOpen }) => {
+const MobileNavigation = ({ mobileMenuOpen }) => {
   const pathname = usePathname();
   const [activePath, setActivePath] = useState(pathname);
   useEffect(() => {
@@ -36,3 +37,5 @@ export const MobileNavigation = ({ mobileMenuOpen }) => {
     </motion.div>
   );
 };
+
+export default MobileNavigation;

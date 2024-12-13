@@ -3,9 +3,7 @@
 @use "../abstracts/functions" as f;
 @use "sass:map";
 .nav {
-  background-color: map.get(v.$colors, black);
-  color: #fff;
-  padding: map.get(v.$spacing, large) map.get(v.$spacing, large);
+  padding: map.get(v.$spacing, large);
   text-align: center;
   position: fixed;
   top: 0;
@@ -21,6 +19,7 @@
   }
 
   .logo {
+    color: inherit;
     text-transform: uppercase;
     font-size: map.get(v.$font-sizes, large);
     font-family: map.get(v.$fonts, heading);
@@ -48,9 +47,12 @@
     }
     a {
       transition: all 0.3s;
-      color: f.get-color(white, 0.3);
+      color: inherit;
       &:hover {
-        color: f.get-color(white, 0);
+        color: f.get-color(umber, 0);
+      }
+      &:active {
+        color: inherit;
       }
     }
 
@@ -60,10 +62,12 @@
       display: block;
       height: 0.02rem;
       position: absolute;
-      background-color: f.get-color(white, 0.3);
       bottom: 10%;
       margin-inline: auto;
       width: 100%;
+    }
+    &__active-indicator--mobile {
+      background-color: map.get(v.$colors, white);
     }
   }
   &__mobile-toggle {
@@ -77,7 +81,7 @@
     &__line {
       width: 30px;
       height: 2px;
-      background: #fff;
+      transition: background-color 0.4s;
       margin: 5px;
     }
   }

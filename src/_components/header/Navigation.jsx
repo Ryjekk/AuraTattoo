@@ -1,18 +1,10 @@
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { navLinks } from "@utils/navLinks";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
-
+import useScrollNavbar from "@hooks/useScrollNavbar";
 export const Navigation = () => {
-  const pathname = usePathname();
-
-  useEffect(() => {
-    setActivePath(pathname);
-  }, [pathname]);
-
-  const [activePath, setActivePath] = useState(pathname);
-  const isSelected = (link) => link.href === activePath;
+  const { pathname, textColor } = useScrollNavbar();
+  const isSelected = (link) => link.href === pathname;
 
   return (
     <motion.ul className='nav__links'>
@@ -23,6 +15,7 @@ export const Navigation = () => {
             <motion.div
               className='nav__link__active-indicator'
               layoutId='indicator'
+              style={{ backgroundColor: textColor }}
             ></motion.div>
           )}
         </motion.li>
