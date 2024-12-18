@@ -39,9 +39,7 @@ export default function Header() {
         <Logo />
         <Navigation />
         <SocialLinks />
-        {mobileMenuIsOpen && (
-          <MobileNavigation mobileMenuOpen={mobileMenuIsOpen} />
-        )}
+        <MobileNavigation mobileMenuOpen={mobileMenuIsOpen} />
         <HamburgerToggle
           mobileMenuOpen={mobileMenuIsOpen}
           setMobileMenuOpen={setMobileMenuIsOpen}

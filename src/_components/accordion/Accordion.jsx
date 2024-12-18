@@ -1,5 +1,4 @@
 "use client";
-
 import { AnimatePresence, motion } from "framer-motion";
 import Markdown from "react-markdown";
 import React from "react";
@@ -51,14 +50,19 @@ export function AccordionHeader({ children }) {
       onClick={() => onChangeIndex(index)}
     >
       {children}
-      <Arrow isActive={isActive} />
+      <motion.div
+        initial={false}
+        animate={{ rotate: isActive ? -180 : 0 }}
+        transition={{ duration: 0.2 }}
+      >
+        <Arrow isActive={isActive} />
+      </motion.div>
     </motion.div>
   );
 }
 
 export function AccordionPanel({ children }) {
   const { isActive } = useAccordion();
-
   return (
     <AnimatePresence initial={false}>
       {isActive && (

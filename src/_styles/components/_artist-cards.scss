@@ -35,7 +35,7 @@
     width: 100%;
     height: auto;
     object-fit: cover;
-    aspect-ratio: 1;
+    aspect-ratio: 2/3;
     margin-bottom: map.get(v.$spacing, medium);
     @include m.respond(sm) {
       aspect-ratio: 2/3;

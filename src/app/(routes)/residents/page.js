@@ -1,6 +1,5 @@
 import ArtistsList from "@components/artists/ArtistsList";
 import H1 from "@components/h1/H1";
-// import { residents } from "@utils/residents";
 import getResidents from "@services/getResidents";
 export default async function ResidentsPage() {
   const residents = await getResidents();

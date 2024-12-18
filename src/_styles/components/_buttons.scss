@@ -83,7 +83,7 @@
       }
     }
     &:focus {
-      color: map.get(v.$colors, white);
+      color: map.get(v.$colors, umber);
       &:before {
         transform: translateX(0);
         opacity: 0.9;
@@ -115,7 +115,7 @@
       }
     }
     &:focus {
-      color: map.get(v.$colors, black);
+      color: map.get(v.$colors, white);
       &:before {
         transform: translateX(0);
         opacity: 0.9;
