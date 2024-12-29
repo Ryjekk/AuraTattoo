@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { mobileLinkVariants } from "@components/header/animations";
 import Link from "next/link";
 const MobileLink = ({ name, href, isSelected }) => {

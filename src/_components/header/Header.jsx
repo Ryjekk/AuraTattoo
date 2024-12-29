@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import useScrollNavbar from "@hooks/useScrollNavbar";
 import { Navigation } from "@components/header/Navigation";
 import SocialLinks from "@components/shared/socialLinks/SocialLinks";
@@ -23,7 +23,6 @@ export default function Header() {
   return (
     <AnimatePresence>
       <motion.nav
-        // initial={true}
         animate={isVisible ? "visible" : "hidden"}
         variants={{
           visible: { y: 0 },

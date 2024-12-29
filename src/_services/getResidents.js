@@ -10,13 +10,23 @@ export default async function getResidents() {
         query GetResidents {
           residents {
               id
+              slug
               name
-              about
+              excerpt
+              bio
               instagramLink
-              image {
+              mainImage {
                      url
                      id
                     }
+              video {
+                     url
+                     id
+                    }
+              gallery {
+                     url
+                     id
+                    } 
                 }
             }
       `,

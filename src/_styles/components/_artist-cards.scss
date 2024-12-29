@@ -62,4 +62,11 @@
       }
     }
   }
+  &__buttons {
+    margin-top: map.get(v.$spacing, large);
+    display: flex;
+    gap: map.get(v.$spacing, small);
+    flex-direction: column;
+    width: 100%;
+  }
 }

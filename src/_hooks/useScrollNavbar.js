@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from "react";
-import { useScroll, useMotionValueEvent } from "framer-motion";
+import { useScroll, useMotionValueEvent } from "motion/react";
 import { usePathname } from "next/navigation";
 
 function useScrollNavbar() {
@@ -35,6 +35,7 @@ function useScrollNavbar() {
         return "#fff";
     }
   };
+
   const getTextColor = () => {
     switch (pathname) {
       case "/":

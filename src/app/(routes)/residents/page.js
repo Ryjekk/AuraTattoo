@@ -1,4 +1,4 @@
-import ArtistsList from "@components/artists/ArtistsList";
+import ResidentsList from "@components/artists/ResidentsList";
 import H1 from "@components/h1/H1";
 import getResidents from "@services/getResidents";
 export default async function ResidentsPage() {
@@ -6,7 +6,7 @@ export default async function ResidentsPage() {
   return (
     <div className='artists'>
       <H1>Resident Artists</H1>
-      {residents ? <ArtistsList artists={residents} /> : null}
+      {residents ? <ResidentsList artists={residents} /> : null}
     </div>
   );
 }

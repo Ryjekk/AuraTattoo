@@ -7,7 +7,8 @@
   padding: 10px 40px;
   cursor: pointer;
   transition: all 0.3s;
-  border-radius: map.get(v.$radius, small);
+  border-radius: map.get(v.$radius, medium);
+  text-align: center;
   width: 100%;
   position: relative;
   overflow: hidden;

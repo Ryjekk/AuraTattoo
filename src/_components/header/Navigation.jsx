@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { navLinks } from "@utils/navLinks";
 import Link from "next/link";
 import useScrollNavbar from "@hooks/useScrollNavbar";

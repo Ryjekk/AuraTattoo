@@ -3,7 +3,7 @@
 @use "../abstracts/functions" as f;
 @use "sass:map";
 .nav {
-  padding: map.get(v.$spacing, large);
+  padding: map.get(v.$spacing, medium);
   text-align: center;
   position: fixed;
   top: 0;
@@ -83,6 +83,7 @@
       height: 2px;
       transition: background-color 0.4s;
       margin: 5px;
+      background-color: map.get(v.$colors, white);
     }
   }
 
@@ -92,7 +93,7 @@
     right: 0;
     width: 100vw;
     height: 100vh;
-    background: map.get(v.$colors, black);
+    background: map.get(v.$colors, moss);
     z-index: 4;
     padding: map.get(v.$spacing, large);
     display: flex;

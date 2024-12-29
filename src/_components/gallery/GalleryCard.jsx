@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 export default function GalleryCard({ instagramSnap }) {
   const { alt, image, instagramLink, withVideo, videoPlaceholder } =
     instagramSnap;

@@ -1,4 +1,4 @@
-import ArtistsList from "@components/artists/ArtistsList";
+import ArtistsList from "@components/artists/GuestsList";
 import H1 from "@components/h1/H1";
 import getGuests from "@services/getGuests";
 export default async function GuestsPage() {
@@ -6,7 +6,7 @@ export default async function GuestsPage() {
   return (
     <div className='artists'>
       <H1>Guest Artists</H1>
-      {guests ? <ArtistsList artists={guests} isGuest /> : null}
+      {guests ? <ArtistsList artists={guests} /> : null}
     </div>
   );
 }
