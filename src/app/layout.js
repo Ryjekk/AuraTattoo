@@ -1,5 +1,6 @@
 import "@styles/main.scss";
 import localFont from "next/font/local";
+import { Lato } from "next/font/google";
 
 const OrpheusPro = localFont({
   src: "./fonts/OrpheusPro-regular.otf",
@@ -7,12 +8,13 @@ const OrpheusPro = localFont({
   variable: "--font-orpheous",
   display: "swap",
 });
-const AGaramondPro = localFont({
-  src: "./fonts/AGaramondPro-Regular.otf",
-  weight: "400",
-  variable: "--font-garamond",
+const lato = Lato({
+  weight: ["100", "300", "400", "700", "900"],
+  subsets: ["latin"],
+  variable: "--font-lato",
   display: "swap",
 });
+
 export const metadata = {
   title: "Aura Tattoo ",
   description: "The best tattoo shop in Reykjavik",
@@ -20,10 +22,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang='en'
-      className={`${OrpheusPro.variable} ${AGaramondPro.variable}`}
-    >
+    <html lang='en' className={`${OrpheusPro.variable} ${lato.variable}`}>
       <body className='main-wrapper'>{children}</body>
     </html>
   );
