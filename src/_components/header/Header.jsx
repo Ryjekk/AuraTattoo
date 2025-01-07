@@ -37,7 +37,7 @@ export default function Header() {
       >
         <Logo />
         <Navigation />
-        <SocialLinks />
+        {/*<SocialLinks />*/}
         <MobileNavigation mobileMenuOpen={mobileMenuIsOpen} />
         <HamburgerToggle
           mobileMenuOpen={mobileMenuIsOpen}

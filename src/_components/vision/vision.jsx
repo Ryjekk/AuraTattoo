@@ -3,7 +3,6 @@ import H1 from "@components/h1/H1";
 export default function Vision() {
   return (
     <section className='section vision content-center'>
-      <h2>Our Vision</h2>
       <blockquote className='vision__blockquote'>
         <p>
           At Aura, we believe in creating meaningful connections through the art
