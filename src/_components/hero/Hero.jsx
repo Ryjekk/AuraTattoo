@@ -7,7 +7,9 @@ export default function Hero() {
             <div className='hero__left'>
                 <div className='hero__left-text'>
                     <h1 className='headline'>AURA TATTOO</h1>
-                    <p>Skipholt 15 , 105 Reykjavik Iceland</p>
+                    <a href='https://maps.app.goo.gl/J9vr6UWEPDW1nowo7' target="_blank">
+                        <p>Skipholt 15 , 105 Reykjavik Iceland</p>
+                    </a>
                 </div>
                 <div className='hero__left-button'>
                     <Link href='/booking' className='tilted-button-wrapper'>
