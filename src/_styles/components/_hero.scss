@@ -1,63 +1,99 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
-@use "../abstracts/functions" as f;
 @use "sass:map";
-.hero {
+
+.hero__wrapper {
+  height: 100vh;
+  background-color: map.get(v.$colors, sand);
+  display: flex;
+  flex-direction: column;
+
+  @include m.respond(lg) {
+    flex-direction: row
+  }
+}
+
+// LEFT SIDE
+.hero__left {
+  flex: .5;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  overflow: hidden;
+  justify-content: center;
 
-  &--mini {
-    max-height: 50vh;
+  @include m.respond(lg) {
+    flex: 1;
   }
 
-  &--full {
-    max-height: 100vh;
-  }
-
-  &__bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: -1;
-  }
-
-  &__content {
-    z-index: 1;
-    color: f.get-color(white, 0.2);
-    max-width: min(90%, 70rem);
-    padding-inline: 1.5rem;
-    padding-block: 3rem;
-    margin-block: 100%;
+  &-text {
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    mix-blend-mode: luminosity;
 
-    @include m.respond(sm) {
-      padding-inline: 4.5rem;
+    h1, p {
+      color: map.get(v.$colors, moss);
     }
 
-    &--overlay {
-      background-color: f.get-color(umber, 0.6);
-      // backdrop-filter: blur(1px);
-    }
     h1 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-size: clamp(2rem, 5vw, 7rem);
+      letter-spacing: .5rem;
     }
 
     p {
-      font-size: map.get(v.$font-sizes, medium);
-      line-height: 1.6;
-      letter-spacing: 0.02rem;
+      display: inline;
+      border-bottom: 1px solid map.get(v.$colors, moss);
+      margin-top: 2rem;
     }
+  }
+
+  &-button {
+    margin-top: 2rem;
+
+    @include m.respond(lg) {
+      margin-left: 3rem;
+      align-self: flex-start;
+      position: absolute;
+      bottom: 5rem;
+    }
+  }
+}
+
+.tilted-button-wrapper {
+  display: inline-block;
+  transform: skew(-10deg);
+}
+
+.tilted-button {
+  text-transform: uppercase;
+  padding: .8rem 2rem .7rem 2rem;
+  color: map.get(v.$colors, moss);
+  border: 1px solid map.get(v.$colors, moss);
+  border-radius: .7rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  transform: skew(10deg);
+
+  &:hover {
+    background-color: map.get(v.$colors, moss);
+    color: map.get(v.$colors, sand);
+
+    &:before {
+      transform: translateX(0);
+    }
+  }
+}
+
+
+// RIGHT SIDE
+.hero__right {
+  position: relative;
+  flex: 1;
+  background-image: url(/hero.jpeg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  @include m.respond(lg) {
+    overflow: auto;
   }
 }
