@@ -1,5 +1,6 @@
 @use "../abstracts/reset";
 @use "../abstracts/variables" as *;
+@use "../abstracts/functions" as f;
 @use "sass:map";
 body {
   font-family: map.get($fonts, body), Arial, Helvetica, sans-serif;
@@ -13,22 +14,15 @@ body {
   font-weight: normal;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1 {
   font-family: map.get($fonts, heading);
   font-weight: 400;
-}
-
-h1 {
-  @include responsive-font(2rem);
+  @include responsive-font(4rem);
 }
 
 h2 {
   @include responsive-font(1.5rem);
+  font-weight: 300;
 }
 
 p {
@@ -38,6 +32,23 @@ p {
 a {
   color: map.get($colors, white);
   text-decoration: none;
+}
+input,
+textarea,
+select {
+  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  font-family: inherit;
+  font-size: 1rem;
+  padding: map.get($spacing, small);
+  border: none;
+  width: 100%;
+  border: 1px solid f.get-color(dark-gray, 0.8);
+  border-radius: map.get($radius, small);
+
+  &:focus {
+    outline: none;
+    border-color: map.get($colors, umber);
+  }
 }
 
 .sr-only {

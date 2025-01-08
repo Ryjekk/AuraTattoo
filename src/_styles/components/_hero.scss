@@ -9,13 +9,13 @@
   flex-direction: column;
 
   @include m.respond(lg) {
-    flex-direction: row
+    flex-direction: row;
   }
 }
 
 // LEFT SIDE
 .hero__left {
-  flex: .5;
+  flex: 0.5;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -29,13 +29,14 @@
   &-text {
     text-align: center;
 
-    h1, p {
+    h1,
+    p {
       color: map.get(v.$colors, moss);
     }
 
     h1 {
       font-size: clamp(2rem, 5vw, 7rem);
-      letter-spacing: .5rem;
+      letter-spacing: 0.5rem;
     }
 
     p {
@@ -57,17 +58,21 @@
   }
 }
 
-.tilted-button-wrapper {
-  display: inline-block;
+.tilted-button-wrapper::after {
+  display: flex;
+  justify-content: center;
   transform: skew(-10deg);
 }
 
+.icon-arrow {
+  display: inline;
+}
 .tilted-button {
   text-transform: uppercase;
-  padding: .8rem 2rem .7rem 2rem;
+  padding: 0.8rem 2rem 0.7rem 2rem;
   color: map.get(v.$colors, moss);
   border: 1px solid map.get(v.$colors, moss);
-  border-radius: .7rem;
+  border-radius: 0.7rem;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
   transform: skew(10deg);
@@ -81,7 +86,6 @@
     }
   }
 }
-
 
 // RIGHT SIDE
 .hero__right {
