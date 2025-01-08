@@ -14,7 +14,6 @@ export default function BookingForm({ residents, initialArtist }) {
     },
   });
 
-  console.log(residents);
   const [submitStatus, setSubmitStatus] = useState(null);
 
   const form = useRef();
@@ -52,6 +51,32 @@ export default function BookingForm({ residents, initialArtist }) {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className='form' ref={form}>
       <div className='form__input-group'>
+
+        <label htmlFor='artist'>Tattoo artist *</label>
+        <select
+          className={`form__input ${errors.artist ? "form__input--error" : ""}`}
+          id='artist'
+          type='text'
+          {...register("artist", { required: "Resident artist is required" })}
+          aria-invalid={errors.artist ? "true" : "false"}
+          aria-required='true'
+        >
+          {residents.map((resident) => (
+            <option key={resident.id} value={resident.slug}>
+              {resident.name}
+            </option>
+          ))}
+        </select>
+        <div className='form__error-box'>
+          {errors.artist && (
+            <span className='form__error' role='alert'>
+              {errors.artist?.message}
+            </span>
+          )}
+        </div>
+      </div>
+      <div className='form__input-group'>
+
         <label htmlFor='name'>Name *</label>
         <input
           className={`form__input ${errors.name ? "form__input--error" : ""}`}
@@ -189,32 +214,7 @@ export default function BookingForm({ residents, initialArtist }) {
           )}
         </div>
       </div>
-
-      <div className='form__input-group'>
-        <label htmlFor='artist'>Tattoo artist *</label>
-        <select
-          className={`form__input ${errors.artist ? "form__input--error" : ""}`}
-          id='artist'
-          type='text'
-          {...register("artist", { required: "Resident artist is required" })}
-          aria-invalid={errors.artist ? "true" : "false"}
-          aria-required='true'
-        >
-          {residents.map((resident) => (
-            <option key={resident.id} value={resident.slug}>
-              {resident.name}
-            </option>
-          ))}
-        </select>
-        <div className='form__error-box'>
-          {errors.artist && (
-            <span className='form__error' role='alert'>
-              {errors.artist?.message}
-            </span>
-          )}
-        </div>
-      </div>
-
+      
       <button type='submit' className='btn btn__umber'>
         Submit
       </button>
