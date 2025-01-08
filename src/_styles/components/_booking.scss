@@ -14,10 +14,6 @@
     text-align: center;
     width: 100%;
 
-    @include m.respond(md) {
-    }
-    @include m.respond(lg) {
-    }
   }
   &__section {
     background-color: map.get(v.$colors, sand);
@@ -51,11 +47,13 @@
   }
   &__header {
     margin-block: 6rem;
+
     margin-left: 0;
     max-width: 50rem;
 
     @include m.respond(md) {
       margin-left: auto;
+
       text-align: right;
     }
   }
@@ -72,12 +70,12 @@
 
   &__content {
     padding-inline: 2rem;
-    display: flex;
-    flex-direction: column;
+
 
     @include m.respond(sm) {
       padding-inline: 3rem;
     }
+
     @include m.respond(md) {
       padding-inline: 4rem;
     }

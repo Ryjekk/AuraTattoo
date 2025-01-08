@@ -4,11 +4,15 @@
 @use "sass:color";
 @use "sass:map";
 .btn {
-  padding: 10px 40px;
+  text-transform: uppercase;
+  padding: 0.2rem 1.6rem;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.3s;
-  border-radius: map.get(v.$radius, medium);
-  text-align: center;
+  border-radius: 2rem;
+  max-width: 20rem;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -29,7 +33,7 @@
   &__umber {
     color: map.get(v.$colors, umber);
     background-color: transparent;
-    border: 2px solid map.get(v.$colors, umber);
+    border: 1px solid map.get(v.$colors, umber);
 
     &::before {
       content: "";

@@ -51,6 +51,7 @@ export default function BookingForm({ residents, initialArtist }) {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className='form' ref={form}>
       <div className='form__input-group'>
+
         <label htmlFor='artist'>Tattoo artist *</label>
         <select
           className={`form__input ${errors.artist ? "form__input--error" : ""}`}
@@ -75,6 +76,7 @@ export default function BookingForm({ residents, initialArtist }) {
         </div>
       </div>
       <div className='form__input-group'>
+
         <label htmlFor='name'>Name *</label>
         <input
           className={`form__input ${errors.name ? "form__input--error" : ""}`}
@@ -212,7 +214,7 @@ export default function BookingForm({ residents, initialArtist }) {
           )}
         </div>
       </div>
-
+      
       <button type='submit' className='btn btn__umber'>
         Submit
       </button>
