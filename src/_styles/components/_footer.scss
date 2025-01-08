@@ -2,70 +2,53 @@
 @use "../abstracts/mixins" as m;
 @use "sass:map";
 .footer {
-  background-color: map.get(v.$colors, moss);
-  color: map.get(v.$colors, light-gray);
-  margin-top: auto;
-  padding: map.get(v.$spacing, large) 0 0 0;
-  &__contact-info {
-    font-style: normal;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: map.get(v.$spacing, medium);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+  color: map.get(v.$colors, sand);
+  padding: 4rem 3rem;
 
-    @include m.respond(sm) {
-      text-align: left;
-      padding: map.get(v.$spacing, large) 0;
-    }
+  @include m.respond(md) {
+    flex-direction: row;
+    padding: 4rem 15rem;
+  }
 
-    & > a {
-      color: map.get(v.$colors, light-gray);
-      text-decoration: none;
-      transition: color, 0.3s;
-      display: inline;
-      align-self: center;
-      @include m.respond(sm) {
-        align-self: flex-start;
-      }
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+  }
+}
 
-      &:hover {
-        opacity: 0.8;
-      }
-    }
+.footer-box {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
 
-    .social-links {
-      justify-content: center;
+  * {
+    font-weight: 300;
+    margin-bottom: .3rem;
+  }
 
-      @include m.respond(sm) {
-        justify-content: flex-start;
-      }
+  a {
+    text-transform: uppercase;
+    text-decoration: underline;
+
+    width: max-content;
+
+    &:hover {
+      color: map.get(v.$colors, umber) !important;
     }
   }
 
-  &__content {
-    @include m.content-margin;
-
-    & {
-      align-items: center;
-      justify-content: space-between;
-      display: flex;
-      flex-direction: column-reverse;
-    }
-
-    @include m.respond(sm) {
-      flex-direction: row;
-      align-items: start;
-    }
+  &-row {
+    flex-direction: row;
+    gap:.7rem;
   }
+}
 
-  &__links {
-    display: flex;
-    flex-direction: column;
-    gap: map.get(v.$spacing, medium);
-    padding: map.get(v.$spacing, large) 0;
-  }
-  &__legal {
-    font-size: small;
-    text-align: center;
-  }
+.social-link {
+  width: 1.5rem;
+  height: 1.5rem;
 }
