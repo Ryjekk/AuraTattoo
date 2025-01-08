@@ -2,6 +2,7 @@
 @use "../abstracts/mixins" as m;
 @use "sass:map";
 .footer {
+  border-top: 1px solid  map.get(v.$colors, dark-gray);;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

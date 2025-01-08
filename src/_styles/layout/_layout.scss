@@ -19,9 +19,6 @@
 .section {
   padding-block: max(5rem, 10vh);
 
-  &__gift-card {
-    background-color: map.get(v.$colors, sand);
-  }
   &__content {
     display: flex;
     flex-wrap: wrap;
@@ -39,6 +36,11 @@
     justify-content: center;
     margin-inline: auto;
     gap: min(2rem, 5vw);
+    color: map.get(v.$colors, sand);
+
+    a {
+      color: map.get(v.$colors, sand);
+    }
 
     @include m.respond(md) {
       text-align: left;
