@@ -1,13 +1,12 @@
 import Button from "@components/button/Button";
+import Image from "next/image";
 
 export default function ResidentCardMini({artist, idx}) {
     const {name, excerpt, mainImage, slug} = artist;
     return (
         <div className='artist-card'>
-            {/* TODO uncomment bg*/}
-            <div className='artist-card__img'
-                // style={{backgroundImage: `url(${mainImage.url})`}}
-            >
+            <div className='artist-card__img'>
+                <Image src={mainImage.url} alt='resident image' fill/>
                 <div className='artist-card__box'>
                     <h2>{name}</h2>
                     <Button link={`residents/${slug}`}>
