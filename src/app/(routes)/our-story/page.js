@@ -1,19 +1,9 @@
-import H1 from "@components/h1/H1";
-import Hero from "@components/hero/Hero";
 import Vision from "@components/vision/vision";
+import MiniHero from "@components/miniHero/MiniHero";
 export default function Home() {
   return (
     <main className='our-story'>
-      <Hero
-        content={"# Home Page"}
-        backgroundType={"image"}
-        backgroundSrc={"/main-bg-img.webp"}
-        priority={true}
-        mini={true}
-        withOverlay={false}
-      >
-        <H1 white={true}>Our Story</H1>
-      </Hero>
+      <MiniHero text='Our Story' subText='AuraTattoo in nutshell' image='/hero.jpeg'/>
       <Vision />
       <section className='section content-center'>
         <h2 className='sr-only'>About Aura Tattoo Studio</h2>

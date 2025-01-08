@@ -15,7 +15,7 @@
 
 // LEFT SIDE
 .hero__left {
-  flex: 0.5;
+  flex: 0.7;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -67,6 +67,7 @@
 .icon-arrow {
   display: inline;
 }
+
 .tilted-button {
   text-transform: uppercase;
   padding: 0.8rem 2rem 0.7rem 2rem;
