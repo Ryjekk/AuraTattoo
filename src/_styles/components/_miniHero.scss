@@ -1,0 +1,30 @@
+@use "../abstracts/mixins" as m;
+
+.miniHero__wrapper {
+  position: relative;
+  height: 20vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include m.respond(md) {
+    height: 30vh;
+  }
+
+  h1 {
+    z-index: 1;
+    @include m.respond(lg) {
+      font-size: 5rem;
+    }
+  }
+
+  p {
+    z-index: 1;
+    @include m.respond(lg) {
+      font-size: 1.5rem;
+    }
+  }
+}
+

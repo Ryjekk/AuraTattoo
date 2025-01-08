@@ -2,9 +2,6 @@
 @use "../abstracts/mixins" as m;
 @use "sass:map";
 
-/*
-  RESIDENTS
- */
 .artists-list {
   display: flex;
   gap: 2rem;
@@ -21,15 +18,11 @@
   width: 100%;
 
   &__img {
+    position: relative;
     margin: 0 auto;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    //TODO remove temp image
-    background-image: url(/temp.jpeg);
     height: 30rem;
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
     cursor: pointer;
 
     display: flex;
@@ -53,6 +46,7 @@
   }
 
   &__box {
+    z-index: 1;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -65,8 +59,6 @@
 }
 
 .guest__box {
-  box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.8 );
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
   background-color: map.get(v.$colors, sand);
 
   border-bottom-left-radius: 5px;

@@ -1,5 +1,6 @@
 import Button from "@components/button/Button";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 export default function GuestCard({artist, idx}) {
     const Markdown = dynamic(() => import("react-markdown"));
@@ -12,10 +13,9 @@ export default function GuestCard({artist, idx}) {
     } = artist;
     return (
         <div className='artist-card'>
-            {/* TODO uncomment bg*/}
             <div className='artist-card__img'
-                 style={{backgroundImage: `url(${image.url})`}}
             >
+                <Image src={image.url} alt='resident image' fill/>
                 <div className='artist-card__box guest__box'>
                     <h2>{name} <strong>({date})</strong></h2>
                     <Button link={instagramLink} target='blank'>
