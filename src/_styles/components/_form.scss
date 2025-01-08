@@ -1,0 +1,152 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+@use "../abstracts/functions" as f;
+@use "sass:map";
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-block: map.get(v.$spacing, large);
+  align-items: center;
+  @include m.respond(md) {
+    align-items: flex-end;
+  }
+  &__names {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include m.respond(md) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: map.get(v.$spacing, large);
+
+      .contact__form__input-group {
+        margin-block-end: 0;
+      }
+    }
+  }
+
+  &__input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-block: map.get(v.$spacing, none);
+    width: 100%;
+
+    @include m.respond(sm) {
+      align-items: flex-end;
+    }
+    @include m.respond(lg) {
+      max-width: 30rem;
+    }
+
+    label {
+      margin-block: map.get(v.$spacing, small);
+      font-size: map.get(v.$font-sizes, xsmall);
+      display: flex;
+      align-items: center;
+      gap: map.get(v.$spacing, small);
+      width: 100%;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding-block: map.get(v.$spacing, xsmall);
+    padding-inline: map.get(v.$spacing, small);
+    color: map.get(v.$colors, dark-gray);
+    // border-bottom: 1px solid f.get-color(dark-gray, 0.8);
+    background-color: f.get-color(white, 0.9);
+
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid f.get-color(dark-gray, 0.4);
+      background-color: f.get-color(white, 0.8);
+    }
+    &--error {
+      border-bottom: 1px solid map.get(v.$colors, error);
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    // margin-block-end: map.get(v.$spacing, large);
+  }
+
+  &__tooltip {
+    position: relative;
+    display: inline-block;
+    &__text {
+      visibility: hidden;
+      position: absolute;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      width: 220px;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s, visibility 0.3s;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: inherit;
+        backdrop-filter: blur(10px) brightness(1.5);
+        -webkit-backdrop-filter: blur(10px) brightness(1.5);
+        border-radius: inherit;
+        z-index: -1;
+      }
+
+      & span {
+        display: block;
+        text-align: left;
+        margin-bottom: 5px;
+      }
+    }
+    &__icon {
+      cursor: help;
+
+      &:hover + .form__tooltip__text {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__error-box,
+  &__submit-status {
+    height: map.get(v.$font-sizes, xsmall);
+  }
+  &__error,
+  &__submit-status__message--error {
+    color: f.get-color(error, 0.1);
+    font-size: map.get(v.$font-sizes, xsmall);
+  }
+  &__submit-status__message--success {
+    color: map.get(v.$colors, success);
+    font-size: map.get(v.$font-sizes, xsmall);
+  }
+
+  &__button {
+    margin-block: map.get(v.$spacing, small);
+    padding-block: map.get(v.$spacing, small);
+    padding-inline: map.get(v.$spacing, medium);
+    border: 1px solid map.get(v.$colors, primary);
+    border-radius: map.get(v.$radius, small);
+    background-color: map.get(v.$colors, primary);
+    color: map.get(v.$colors, white);
+    cursor: pointer;
+  }
+}

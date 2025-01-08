@@ -16,6 +16,7 @@ export default function ContactForm() {
   const onSubmit = (data) => {
     emailjs
       .sendForm(
+        //general service id and template id
         process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
         form.current,
@@ -41,19 +42,15 @@ export default function ContactForm() {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className='contact__form'
-      ref={form}
-    >
-      <div className='contact__form__names'>
-        <div className='contact__form__input-group'>
+    <form onSubmit={handleSubmit(onSubmit)} className='form' ref={form}>
+      <div className='form__names'>
+        <div className='form__input-group'>
           <label htmlFor='firstName'>
             First Name <span>*</span>
           </label>
           <input
-            className={`contact__form__input ${
-              errors.firstName ? "contact__form__input--error" : ""
+            className={`form__input ${
+              errors.firstName ? "form__input--error" : ""
             }`}
             id='firstName'
             type='text'
@@ -61,22 +58,22 @@ export default function ContactForm() {
             aria-invalid={errors.firstName ? "true" : "false"}
             aria-required='true'
           />
-          <div className='contact__form__error-box'>
+          <div className='form__error-box'>
             {errors.firstName && (
-              <span className='contact__form__error' role='alert'>
+              <span className='form__error' role='alert'>
                 {errors.firstName?.message}
               </span>
             )}
           </div>
         </div>
 
-        <div className='contact__form__input-group'>
+        <div className='form__input-group'>
           <label htmlFor='lastName'>
             Last Name <span>*</span>
           </label>
           <input
-            className={`contact__form__input ${
-              errors.lastName ? "contact__form__input--error" : ""
+            className={`form__input ${
+              errors.lastName ? "form__input--error" : ""
             }`}
             id='lastName'
             type='text'
@@ -84,9 +81,9 @@ export default function ContactForm() {
             aria-invalid={errors.lastName ? "true" : "false"}
             aria-required='true'
           />
-          <div className='contact__form__error-box'>
+          <div className='form__error-box'>
             {errors.lastName && (
-              <span className='contact__form__error' role='alert'>
+              <span className='form__error' role='alert'>
                 {errors.lastName?.message}
               </span>
             )}
@@ -94,14 +91,12 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <div className='contact__form__input-group'>
+      <div className='form__input-group'>
         <label htmlFor='email'>
           Email <span>*</span>
         </label>
         <input
-          className={`contact__form__input ${
-            errors.email ? "contact__form__input--error" : ""
-          }`}
+          className={`form__input ${errors.email ? "form__input--error" : ""}`}
           id='email'
           type='email'
           {...register("email", {
@@ -112,9 +107,9 @@ export default function ContactForm() {
           aria-invalid={errors.email ? "true" : "false"}
           aria-required='true'
         />
-        <div className='contact__form__error-box'>
+        <div className='form__error-box'>
           {errors.email && (
-            <span className='contact__form__error' role='alert'>
+            <span className='form__error' role='alert'>
               {errors.email.type === "required"
                 ? "Email is required"
                 : "Please enter a valid email address"}
@@ -123,13 +118,13 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <div className='contact__form__input-group'>
+      <div className='form__input-group'>
         <label htmlFor='subject'>
           Subject <span>*</span>
         </label>
         <input
-          className={`contact__form__input ${
-            errors.subject ? "contact__form__input--error" : ""
+          className={`form__input ${
+            errors.subject ? "form__input--error" : ""
           }`}
           id='subject'
           type='text'
@@ -137,22 +132,22 @@ export default function ContactForm() {
           aria-invalid={errors.subject ? "true" : "false"}
           aria-required='true'
         />
-        <div className='contact__form__error-box'>
+        <div className='form__error-box'>
           {errors.subject && (
-            <span className='contact__form__error' role='alert'>
+            <span className='form__error' role='alert'>
               {errors.subject?.message}
             </span>
           )}
         </div>
       </div>
 
-      <div className='contact__form__input-group'>
+      <div className='form__input-group'>
         <label htmlFor='message'>
           Message <span>*</span>
         </label>
         <textarea
-          className={`contact__form__textarea ${
-            errors.message ? "contact__form__textarea--error" : ""
+          className={`form__textarea ${
+            errors.message ? "form__textarea--error" : ""
           }`}
           id='message'
           rows='6'
@@ -160,9 +155,9 @@ export default function ContactForm() {
           aria-invalid={errors.message ? "true" : "false"}
           aria-required='true'
         />
-        <div className='contact__form__error-box'>
+        <div className='form__error-box'>
           {errors.message && (
-            <span className='contact__form__error' role='alert'>
+            <span className='form__error' role='alert'>
               {errors.message?.message}
             </span>
           )}
@@ -172,13 +167,13 @@ export default function ContactForm() {
       <button type='submit' className='btn btn__umber'>
         Submit
       </button>
-      <div className='contact__form__submit-status'>
+      <div className='form__submit-status'>
         {submitStatus && (
           <span
-            className={`contact__form__submit-status__message ${
+            className={`form__submit-status__message ${
               submitStatus.type === "success"
-                ? "contact__form__submit-status__message--success"
-                : "contact__form__submit-status__message--error"
+                ? "form__submit-status__message--success"
+                : "form__submit-status__message--error"
             }`}
           >
             {submitStatus.message}

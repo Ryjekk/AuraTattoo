@@ -1,0 +1,78 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
+@use "sass:map";
+.booking {
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: map.get(v.$colors, white) !important;
+    z-index: 2;
+    max-width: 50%;
+    text-align: center;
+    width: 100%;
+
+    @include m.respond(md) {
+    }
+    @include m.respond(lg) {
+    }
+  }
+  &__section {
+    background-color: map.get(v.$colors, sand);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @include m.respond(md) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &__image {
+    background-color: map.get(v.$colors, dark-gray);
+    filter: brightness(0.8);
+    object-fit: cover;
+    &-wrapper {
+      position: relative;
+      height: 420px;
+
+      @include m.respond(md) {
+        position: sticky;
+        top: 0;
+        right: 0;
+        order: 2;
+        height: 100vh;
+      }
+      // @include m.respond(lg) {
+      // }
+    }
+  }
+  &__header {
+    margin-block: 6rem;
+    text-align: left;
+
+    @include m.respond(md) {
+      text-align: right;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+  }
+
+  &__content {
+    padding-inline: 2rem;
+
+    @include m.respond(sm) {
+      padding-inline: 3rem;
+    }
+  }
+}
