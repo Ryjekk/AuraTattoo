@@ -3,7 +3,6 @@
 import { motion, AnimatePresence } from "motion/react";
 import useScrollNavbar from "@hooks/useScrollNavbar";
 import { Navigation } from "@components/header/Navigation";
-import SocialLinks from "@components/shared/socialLinks/SocialLinks";
 import { HamburgerToggle } from "./mobile/HamburgerToggle";
 import dynamic from "next/dynamic";
 import Logo from "./Logo";
@@ -37,7 +36,6 @@ export default function Header() {
       >
         <Logo />
         <Navigation />
-        {/*<SocialLinks />*/}
         <MobileNavigation mobileMenuOpen={mobileMenuIsOpen} />
         <HamburgerToggle
           mobileMenuOpen={mobileMenuIsOpen}

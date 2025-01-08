@@ -1,23 +1,40 @@
-import SocialLinks from "@components/shared/socialLinks/SocialLinks";
-import Button from "@components/button/Button";
+import Link from "next/link";
+
 export default function Footer() {
-  return (
-    <footer aria-labelledby='footer-heading' className='footer'>
-      <h2 id='footer-heading' className='sr-only'>
-        Footer
-      </h2>
-      <div className='footer__content'>
-        <address className='footer__contact-info'>
-          <SocialLinks />
-
-          <a href='tel:+354 780 7819'>+354 780 7819</a>
-
-          <p>Skipholt 15, 105 Reykjavik</p>
-        </address>
-      </div>
-      <div className='footer__legal'>
-        <p>© 2024 Aura Tattoo</p>
-      </div>
-    </footer>
-  );
+    return (
+        <footer aria-labelledby='footer-heading' className='footer'>
+            <div>
+                <h4>Location</h4>
+                <div className='footer-box'>
+                    <span>Skipholt 15</span>
+                    <span>105 Reykjavik</span>
+                </div>
+            </div>
+            <div>
+            <h4>Contact</h4>
+                <div className='footer-box'>
+                    <a href='tel:+354 780 7819'>+354 780 7819</a>
+                    <Link href='/contact'>Contact Us</Link>
+                    <Link href='/privacy'>Privacy and policy</Link>
+                </div>
+            </div>
+            <div>
+                <h4>Follow</h4>
+                <div className='footer-box footer-box-row'>
+                    <a href="https://www.instagram.com/aura.reykjavik/" target='_blank'
+                       rel='noopener noreferrer'>
+                        <img src="ico/fb.svg" alt="ig" className='social-link'/>
+                    </a>
+                    <a href="https://www.facebook.com/anikawr" target='_blank'
+                       rel='noopener noreferrer'>
+                        <img src="ico/ig.svg" alt="facebook" className='social-link'/>
+                    </a>
+                    <a href="mailto:hello@aurareykjavik.com?subject=Hello Aura" target='_blank'
+                       rel='noopener noreferrer'>
+                        <img src="ico/mail.svg" alt="mail" className='social-link'/>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    );
 }
