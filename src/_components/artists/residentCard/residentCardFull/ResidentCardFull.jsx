@@ -3,7 +3,7 @@ import Button from "@components/button/Button";
 import Markdown from "react-markdown";
 import Gallery from "@components/gallery/Gallery";
 export default function ResidentCardFull({ artist }) {
-  const { name, bio, mainImage, instagramLink, gallery, video } = artist;
+  const { name, bio, slug, mainImage, instagramLink, gallery, video } = artist;
   return (
     <div className='resident-card'>
       <div className='resident-card__content'>
@@ -36,7 +36,7 @@ export default function ResidentCardFull({ artist }) {
           <Button link={instagramLink} target='blank' color='black'>
             Check my IG
           </Button>
-          <Button link='/residents' color='black'>
+          <Button link={`/booking?artist=${slug}`} color='black'>
             Book now
           </Button>
         </div>
