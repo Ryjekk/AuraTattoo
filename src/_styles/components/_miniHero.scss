@@ -1,6 +1,9 @@
 @use "../abstracts/mixins" as m;
-
+@use "../abstracts/variables" as v;
+@use "sass:map";
 .miniHero__wrapper {
+  background-color: map.get(v.$colors, sand);
+
   position: relative;
   height: 20vh;
 

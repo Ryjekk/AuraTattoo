@@ -4,7 +4,12 @@ export default function Home() {
   return (
     <main className='our-story'>
       <MiniHero text='Our Story' subText='AuraTattoo in nutshell' image='/hero.jpeg'/>
-      <Vision />
+      <Vision text='At Aura, we believe in creating meaningful connections through the art
+          of tattooing. Our goal is to offer a peaceful, intimate space where
+          every client feels seen, cared for, and inspired. We combine
+          creativity with exceptional hygiene standards to ensure a safe and
+          unforgettable experience, crafting custom designs that reflect the
+          personal stories of those who who walk through our doors.' />
       <section className='section content-center'>
         <h2 className='sr-only'>About Aura Tattoo Studio</h2>
 
