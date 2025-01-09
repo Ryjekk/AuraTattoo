@@ -1,11 +1,7 @@
+"use client";
 import { useState, useCallback, useEffect } from "react";
 import { useScroll, useMotionValueEvent } from "motion/react";
-import {
-  usePathname,
-  useRouter,
-  useSearchParams,
-  useParams,
-} from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 
 function useScrollNavbar() {
   const [isVisible, setIsVisible] = useState(true);
@@ -21,9 +17,11 @@ function useScrollNavbar() {
   useEffect(() => {
     const update = () => {
       // set url from path in forward.
-      setURL(
-        window.location.href.substring(window.location.href.indexOf("/", 9))
-      );
+      if (typeof window !== "undefined") {
+        setURL(
+          window.location.href.substring(window.location.href.indexOf("/", 9))
+        );
+      }
     };
     window.addEventListener("hashchange", update);
     update(); // Initial fetch
