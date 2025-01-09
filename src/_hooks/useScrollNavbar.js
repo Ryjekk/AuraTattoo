@@ -1,15 +1,38 @@
 import { useState, useCallback, useEffect } from "react";
 import { useScroll, useMotionValueEvent } from "motion/react";
-import { usePathname } from "next/navigation";
+import {
+  usePathname,
+  useRouter,
+  useSearchParams,
+  useParams,
+} from "next/navigation";
 
 function useScrollNavbar() {
   const [isVisible, setIsVisible] = useState(true);
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
   const { scrollY } = useScroll();
   const pathname = usePathname();
+  const params = useSearchParams();
+  const searchParams = useSearchParams();
   const [isTransparent, setIsTransparent] = useState(
     pathname === "/" || pathname === "/booking" ? false : true
   );
+  const [url, setURL] = useState("");
+  useEffect(() => {
+    const update = () => {
+      // set url from path in forward.
+      setURL(
+        window.location.href.substring(window.location.href.indexOf("/", 9))
+      );
+    };
+    window.addEventListener("hashchange", update);
+    update(); // Initial fetch
+    if (url === "/#residents") {
+      setIsVisible(true);
+    }
+    setMobileMenuIsOpen(false);
+    return () => window.removeEventListener("hashchange", update);
+  }, [params]);
 
   const updateScroll = useCallback(
     (latest) => {
@@ -22,12 +45,17 @@ function useScrollNavbar() {
         setIsTransparent(latest < 100);
       }
     },
-    [scrollY, pathname]
+    [scrollY, pathname, params]
   );
 
   useEffect(() => {
+    if (mobileMenuIsOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
     updateScroll(scrollY.get());
-  }, [pathname]);
+  }, [searchParams, mobileMenuIsOpen]);
 
   useMotionValueEvent(scrollY, "change", updateScroll);
 
@@ -60,7 +88,7 @@ function useScrollNavbar() {
   };
 
   return {
-    pathname,
+    pathname: url,
     setMobileMenuIsOpen,
     mobileMenuIsOpen,
     isVisible,
