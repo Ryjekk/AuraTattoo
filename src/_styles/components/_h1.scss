@@ -1,10 +1,13 @@
 @use "../abstracts/functions" as f;
-
+@use "../abstracts/variables" as v;
+@use "sass:map";
 .headline {
   font-size: clamp(2rem, 5vw, 7rem);
   line-height: 1.2;
   color: f.get-color(umber, 0);
   text-align: center;
+  font-family: map.get(v.$fonts, heading);
+  font-weight: 100;
 
   &--white {
     color: f.get-color(white, 0.2);

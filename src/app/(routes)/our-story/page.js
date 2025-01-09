@@ -2,18 +2,24 @@ import Vision from "@components/vision/vision";
 import MiniHero from "@components/miniHero/MiniHero";
 export default function Home() {
   return (
-    <main className='our-story'>
-      <MiniHero text='Our Story' subText='AuraTattoo in nutshell' image='/hero.jpeg'/>
-      <Vision text='At Aura, we believe in creating meaningful connections through the art
+    <main className="our-story">
+      <MiniHero
+        text="Our Story"
+        subText="AuraTattoo in nutshell"
+        image="/images/main-bg-img.webp"
+      />
+      <Vision
+        text="At Aura, we believe in creating meaningful connections through the art
           of tattooing. Our goal is to offer a peaceful, intimate space where
           every client feels seen, cared for, and inspired. We combine
           creativity with exceptional hygiene standards to ensure a safe and
           unforgettable experience, crafting custom designs that reflect the
-          personal stories of those who who walk through our doors.' />
-      <section className='section content-center'>
-        <h2 className='sr-only'>About Aura Tattoo Studio</h2>
+          personal stories of those who who walk through our doors."
+      />
+      <section className="section content-center">
+        <h2 className="sr-only">About Aura Tattoo Studio</h2>
 
-        <h3 className='sr-only'>{`Aura's Origins`}</h3>
+        <h3 className="sr-only">{`Aura's Origins`}</h3>
         <p>
           {` Aura is a unique place on Reykjavik's tattoo scene, born from the
           vision of artist Anna, known by her pseudonym, Serene Nero (formerly
@@ -24,7 +30,7 @@ export default function Home() {
           authentic connections.`}
         </p>
 
-        <h3 className='sr-only'>Growth and Team Formation</h3>
+        <h3 className="sr-only">Growth and Team Formation</h3>
         <p>
           {` From the beginning, her business showed promise, but it was this step
           toward independence that sparked even more dynamic growth. Soon, the
@@ -37,7 +43,7 @@ export default function Home() {
           maintaining the highest standards of hygiene.`}
         </p>
 
-        <h3 className='sr-only'>Safety and Hygiene</h3>
+        <h3 className="sr-only">Safety and Hygiene</h3>
         <p>
           {`  Anna's background in the medical field sets a high bar for sterile
           practices within our studio. Every team member shares this commitment
@@ -45,7 +51,7 @@ export default function Home() {
           the process.`}
         </p>
 
-        <h3 className='sr-only'>Studio Atmosphere and Accessibility</h3>
+        <h3 className="sr-only">Studio Atmosphere and Accessibility</h3>
         <p>
           Our inclusive, cozy, homelike studio atmosphere, combined with our
           skilled artistic staff, keeps our clients coming back for more than
@@ -55,7 +61,7 @@ export default function Home() {
           spacious restroom that accommodates wheelchair users.
         </p>
 
-        <h3 className='sr-only'>Our Mission</h3>
+        <h3 className="sr-only">Our Mission</h3>
         <p>
           We strive to make every visit to our studio a moment of calm. We want
           each person who steps into our atelier to feel seen, relaxed, and

@@ -5,29 +5,21 @@
   background-color: map.get(v.$colors, sand);
 
   position: relative;
-  height: 20vh;
+  height: 20rem;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  @include m.respond(md) {
-    height: 30vh;
-  }
-
-  h1 {
+  h1,
+  h2 {
     z-index: 1;
-    @include m.respond(lg) {
-      font-size: 5rem;
-    }
+    @include v.responsive-font(5rem);
   }
 
   p {
     z-index: 1;
-    @include m.respond(lg) {
-      font-size: 1.5rem;
-    }
+    @include v.responsive-font(1.2rem);
   }
 }
-
