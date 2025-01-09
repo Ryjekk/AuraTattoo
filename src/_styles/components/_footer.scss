@@ -52,4 +52,8 @@
 .social-link {
   width: 1.5rem;
   height: 1.5rem;
+
+  &:hover {
+    opacity: .7;
+  }
 }
