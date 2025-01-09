@@ -34,7 +34,7 @@ export default function Header() {
           color: textColor,
         }}
       >
-        <Logo />
+        <Logo color={textColor} />
         <Navigation />
         <MobileNavigation mobileMenuOpen={mobileMenuIsOpen} />
         <HamburgerToggle

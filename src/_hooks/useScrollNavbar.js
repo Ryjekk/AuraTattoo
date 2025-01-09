@@ -4,21 +4,29 @@ import { usePathname } from "next/navigation";
 
 function useScrollNavbar() {
   const [isVisible, setIsVisible] = useState(true);
-  const [isTransparent, setIsTransparent] = useState(true);
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
   const { scrollY } = useScroll();
   const pathname = usePathname();
+  const [isTransparent, setIsTransparent] = useState(
+    pathname === "/" || pathname === "/booking" ? false : true
+  );
 
   const updateScroll = useCallback(
     (latest) => {
-      setIsVisible(latest < 150 || latest < scrollY.getPrevious());
-      setIsTransparent(latest < 100);
+      if (pathname === "/" || pathname === "/booking") {
+        setIsVisible(latest < 150 || latest < scrollY.getPrevious());
+        setIsTransparent(false);
+        return;
+      } else {
+        setIsVisible(latest < 150 || latest < scrollY.getPrevious());
+        setIsTransparent(latest < 100);
+      }
     },
-    [scrollY]
+    [scrollY, pathname]
   );
 
   useEffect(() => {
-    setMobileMenuIsOpen(false);
+    updateScroll(scrollY.get());
   }, [pathname]);
 
   useMotionValueEvent(scrollY, "change", updateScroll);
@@ -27,6 +35,8 @@ function useScrollNavbar() {
     switch (pathname) {
       case "/":
         return "#000";
+      case "/booking":
+        return "rgba(238, 233, 221, 1)";
       case "/our-story":
         return "#000";
       case "/faq":

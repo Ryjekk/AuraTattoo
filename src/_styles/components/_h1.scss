@@ -1,7 +1,7 @@
 @use "../abstracts/functions" as f;
 
 .headline {
-  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-size: clamp(2rem, 5vw, 7rem);
   line-height: 1.2;
   color: f.get-color(umber, 0);
   text-align: center;

@@ -13,7 +13,6 @@
     max-width: 50%;
     text-align: center;
     width: 100%;
-
   }
   &__section {
     background-color: map.get(v.$colors, sand);
@@ -53,7 +52,6 @@
 
     @include m.respond(md) {
       margin-left: auto;
-
       text-align: right;
     }
   }
@@ -70,7 +68,6 @@
 
   &__content {
     padding-inline: 2rem;
-
 
     @include m.respond(sm) {
       padding-inline: 3rem;

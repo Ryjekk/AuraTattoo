@@ -21,8 +21,8 @@ h1 {
 }
 
 h2 {
-  @include responsive-font(1.5rem);
   font-weight: 300;
+  @include responsive-font(1.5rem);
 }
 
 p {

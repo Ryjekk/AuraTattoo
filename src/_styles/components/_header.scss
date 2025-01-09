@@ -3,7 +3,8 @@
 @use "../abstracts/functions" as f;
 @use "sass:map";
 .nav {
-  padding: map.get(v.$spacing, medium);
+  padding-block: map.get(v.$spacing, medium);
+  padding-inline: map.get(v.$spacing, large);
   text-align: center;
   position: fixed;
   top: 0;
@@ -17,9 +18,12 @@
   @include m.respond(sm) {
     text-align: left;
   }
+  @include m.respond(md) {
+    padding-inline: map.get(v.$spacing, xlarge);
+  }
 
   .logo {
-    color: inherit;
+    // color: inherit;
     text-transform: uppercase;
     font-size: map.get(v.$font-sizes, large);
     font-family: map.get(v.$fonts, heading);
@@ -30,9 +34,10 @@
     display: none;
     list-style: none;
 
-    @include m.respond(sm) {
+    @include m.respond(md) {
       display: flex;
       align-items: center;
+      justify-content: flex-end;
       gap: map.get(v.$spacing, medium);
     }
     @include m.respond(md) {
@@ -41,6 +46,7 @@
   }
   &__link {
     position: relative;
+    font-size: 0.8rem;
     transition: color 0.3s;
     @include m.respond(sm) {
       align-self: flex-start;
@@ -74,7 +80,7 @@
     display: block;
     z-index: 4;
 
-    @include m.respond(sm) {
+    @include m.respond(md) {
       display: none;
     }
 
@@ -104,7 +110,7 @@
     color: #fff;
     transform-origin: top right;
 
-    @include m.respond(sm) {
+    @include m.respond(md) {
       display: none;
     }
 
