@@ -2,18 +2,18 @@ import Button from "@components/button/Button";
 import Image from "next/image";
 export default function GiftCard() {
   return (
-    <section className='section section__gift-card'>
-      <div className='section__content content-center'>
-        <div className='section__column'>
+    <section className="section section__gift-card">
+      <div className="section__content content-center">
+        <div className="section__column">
           <Image
-            src='/aura-logo.webp'
-            alt='Aura Logo'
+            src="/aura-logo.webp"
+            alt="Aura Logo"
             width={340}
             height={484}
           />
         </div>
 
-        <div className='section__column'>
+        <div className="section__column">
           <h2>Gift Card Certificate</h2>
           <p>
             Gift cards are printed on high-quality paper, offering a stylish and
@@ -25,7 +25,9 @@ export default function GiftCard() {
             your chosen artist in advance. Tattoos can be gifted at any desired
             price.
           </p>
-          <Button link='/contact'>Purchase a Gift Card</Button>
+          <Button link="/contact" color="umber">
+            contact us to find more{" "}
+          </Button>
         </div>
       </div>
     </section>

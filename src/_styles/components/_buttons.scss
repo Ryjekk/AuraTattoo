@@ -5,10 +5,10 @@
 @use "sass:map";
 .btn {
   text-transform: uppercase;
-  padding: 0.2rem 1.6rem;
+  padding: 0.3rem 1.6rem;
   cursor: pointer;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   transition: all 0.3s;
   border-radius: 2rem;
@@ -19,6 +19,15 @@
   z-index: 2;
   @include m.respond(sm) {
     width: auto;
+  }
+
+  svg {
+    mix-blend-mode: difference;
+    margin-left: 1rem;
+    margin-right: -1.3rem;
+    background-color: map.get(v.$colors, sand);
+    color: black;
+    border-radius: 50%;
   }
 
   &:focus,
@@ -96,9 +105,9 @@
     }
   }
   &__black {
-    color: map.get(v.$colors, black);
-    border: 2px solid map.get(v.$colors, black);
-    background-color: transparent;
+    color: map.get(v.$colors, sand);
+    border: 1px solid map.get(v.$colors, black);
+    background-color: black;
 
     &::before {
       content: "";
@@ -110,17 +119,17 @@
       inset: 0;
       transform: translateX(-100%);
       transition: transform 0.3s;
-      background-color: map.get(v.$colors, black);
+      background-color: map.get(v.$colors, sand);
     }
 
     &:hover {
-      color: map.get(v.$colors, white);
+      color: map.get(v.$colors, black);
       &:before {
         transform: translateX(0);
       }
     }
     &:focus {
-      color: map.get(v.$colors, white);
+      color: map.get(v.$colors, black);
       &:before {
         transform: translateX(0);
         opacity: 0.9;

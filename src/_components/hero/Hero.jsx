@@ -1,6 +1,6 @@
-import Link from "next/link";
 import IgWindow from "@components/hero/igWindow/IgWindow";
 import Image from "next/image";
+import Button, { ArrowRight } from "@components/button/Button";
 
 export default function Hero() {
   return (
@@ -13,12 +13,16 @@ export default function Hero() {
           </a>
         </div>
         <div className="hero__left-button">
-          <Link href="/booking" className="tilted-button-wrapper">
-            <span className="tilted-button">
-              Booking
-              <span> &#x2197;</span>
-            </span>
-          </Link>
+          <Button link="/booking">
+            Booking
+            <ArrowRight />
+            {/* <Image
+              src="/ico/right-arrow.svg"
+              alt="arrow-right"
+              width={24}
+              height={24}
+            /> */}
+          </Button>
         </div>
       </div>
 
