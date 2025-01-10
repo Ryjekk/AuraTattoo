@@ -1,0 +1,433 @@
+export default async function PrivacyAndPolicy() {
+    return (
+        <section className='section'>
+            <div className='content-center section accordion__panel'>
+                <h3>Privacy and Policy</h3>
+                <p>
+                    Last updated: January 1, 2025
+                </p>
+                <p>
+                    This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of
+                    Your information when You use the Service and tells You about Your privacy rights and how the law
+                    protects You.
+                </p>
+                <p>
+                    We use Your Personal data to provide and improve the Service. By using the Service, You agree to the
+                    collection and use of information in accordance with this Privacy Policy.
+                </p>
+                <br/>
+                <h3>Interpretation and Definition</h3>
+                <h4>Interpretation</h4>
+                <p>The words of which the initial letter is capitalized have meanings defined under the following
+                    conditions. The following definitions shall have the same meaning regardless of whether they appear
+                    in singular or in plural.</p>
+                <h4>Definitions</h4>
+                <p>For the purposes of this Privacy Policy:</p>
+                <ul>
+                    <li>
+                        <p>
+                            Company (referred to as either &quot;the
+                            Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers
+                            to Aura Reykjavik ehf., Skipholt 15, Reykjavík.
+                        </p>
+                        <p>
+                            For the purpose of the GDPR, the Company is the Data Controller.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Country refers to: Iceland
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Data Controller, for the purposes of the GDPR (General Data Protection Regulation), refers
+                            to the Company as the legal person which alone or jointly with others determines the
+                            purposes and means of the processing of Personal Data.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Device means any device that can access the Service such as a computer, a cellphone or a
+                            digital tablet.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Facebook Fan Page is a public profile named Aura Tattoo Reykjavik specifically created by
+                            the Company on the Facebook social network, accessible from <a
+                            href="https://m.facebook.com/anikawr/" rel="noopener noreferrer" target="_blank"
+                            style={{color: 'white'}}>https://m.facebook.com/anikawr/</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Personal Data is any information that relates to an identified or identifiable individual.
+                        </p>
+                        <p>
+                            For the purposes for GDPR, Personal Data means any information relating to You such as a
+                            name, an identification number, location data, online identifier or to one or more factors
+                            specific to the physical, physiological, genetic, mental, economic, cultural or social
+                            identity.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Service refers to the Website
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Service Provider means any natural or legal person who processes the data on behalf of the
+                            Company. It refers to third-party companies or individuals employed by the Company to
+                            facilitate the Service, to provide the Service on behalf of the Company, to perform services
+                            related to the Service or to assist the Company in analyzing how the Service is used.
+                            For the purpose of the GDPR, Service Providers are considered Data Processors.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Usage Data refers to data collected automatically, either generated by the use of the
+                            Service or from the Service infrastructure itself (for example, the duration of a page
+                            visit).
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Website refers to Aura Tattoo Reykjavik, accessible from <a
+                            href="https://www.aurareykjavik.com/" rel="noopener noreferrer" target="_blank"
+                            style={{color: 'white'}}>https://www.aurareykjavik.com/</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            You means the individual accessing or using the Service, or the company, or other legal
+                            entity on behalf of which such individual is accessing or using the Service, as applicable.
+                        </p>
+                        <p>
+                            Under GDPR (General Data Protection Regulation), You can be referred to as the Data Subject
+                            or as the User as you are the individual using the Service.
+                        </p>
+                    </li>
+                </ul>
+                <br/>
+                <h3>Collecting and Using Your Personal Data</h3>
+                <h4>Types of Data Collected</h4>
+                <h4>Personal Data</h4>
+                <p>
+                    While using Our Service, We may ask You to provide Us with certain personally identifiable
+                    information that can be used to contact or identify You. Personally identifiable information may
+                    include, but is not limited to:
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            Email address
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            First name and last name
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Phone number
+                        </p>
+                    </li>
+                </ul>
+                <h4>Usage Data</h4>
+                <p>
+                    Usage Data is collected automatically when using the Service.
+                </p>
+                <p>
+                    Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP
+                    address), browser type, browser version, the pages of our Service that You visit, the time and date
+                    of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.
+                </p>
+                <h4>Use of Your Personal Data</h4>
+                <p>
+                    The Company may use Personal Data for the following purposes:
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            To provide and maintain our Service, including to monitor the usage of our Service.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            For the performance of a contract: the development, compliance and undertaking of the
+                            purchase contract for the products, items or services You have purchased or of any other
+                            contract with Us through the Service.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            To contact You: To contact You by email, telephone calls, SMS, or other equivalent forms of
+                            electronic communication, such as a mobile application's push notifications regarding
+                            updates or informative communications related to the functionalities, products or contracted
+                            services, including the security updates, when necessary or reasonable for their
+                            implementation.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            To manage Your requests: To attend and manage Your requests to Us
+                        </p>
+                    </li>
+                </ul>
+                <h4>Retention of Your Personal Data</h4>
+                <p>
+                    The Company will retain Your Personal Data only for as long as is necessary for the purposes set out
+                    in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply
+                    with our legal obligations (for example, if we are required to retain your data to comply with
+                    applicable laws), resolve disputes, and enforce our legal agreements and policies.
+                </p>
+                <p>
+                    The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally
+                    retained for a shorter period of time, except when this data is used to strengthen the security or
+                    to improve the functionality of Our Service, or We are legally obligated to retain this data for
+                    longer time periods.
+                </p>
+                <h4>Transfer of Your Personal Data</h4>
+                <p>Your information, including Personal Data, is processed at the Company's operating offices and in any
+                    other places where the parties involved in the processing are located. It means that this
+                    information may be transferred to — and maintained on — computers located outside of Your state,
+                    province, country or other governmental jurisdiction where the data protection laws may differ than
+                    those from Your jurisdiction.</p>
+                <p>
+                    Your consent to this Privacy Policy followed by Your submission of such information represents Your
+                    agreement to that transfer.
+                </p>
+                <p>
+                    The Company will take all steps reasonably necessary to ensure that Your data is treated securely
+                    and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to
+                    an organization or a country unless there are adequate controls in place including the security of
+                    Your data and other personal information.
+                </p>
+                <h4>Disclosure of Your Personal Data</h4>
+                <h4>Law enforcement</h4>
+                <p>
+                    Under certain circumstances, the Company may be required to disclose Your Personal Data if required
+                    to do so by law or in response to valid requests by public authorities (e.g. a court or a government
+                    agency).
+                </p>
+                <h4>Other legal requirements</h4>
+                <p>The Company may disclose Your Personal Data in the good faith belief that such action is necessary
+                    to:</p>
+                <ul>
+                    <li>
+                        <p>
+                            Comply with a legal obligation
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Protect and defend the rights or property of the Company
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Prevent or investigate possible wrongdoing in connection with the Service
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Protect the personal safety of Users of the Service or the public
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Protect against legal liability
+                        </p>
+                    </li>
+                </ul>
+                <h4>Security of Your Personal Data</h4>
+                <p>
+                    The security of Your Personal Data is important to Us, but remember that no method of transmission
+                    over the Internet, or method of electronic storage is 100% secure. While We strive to use
+                    commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute
+                    security.
+                </p>
+                <br/>
+                <h3>Detailed Information on the Processing of Your Personal Data</h3>
+                <p>
+                    The Service Providers We use may have access to Your Personal Data. These third-party vendors
+                    collect, store, use, process and transfer information about Your activity on Our Service in
+                    accordance with their Privacy Policies.
+                </p>
+                <h4>Payments</h4>
+                <p>
+                    We may provide paid products and/or services within the Service. In that case, we may use
+                    third-party services for payment processing (e.g. payment processors).
+                </p>
+                <p>
+                    We will not store or collect Your payment card details. That information is provided directly to Our
+                    third-party payment processors whose use of Your personal information is governed by their Privacy
+                    Policy. These payment processors adhere to the standards set by PCI-DSS as managed by the PCI
+                    Security Standards Council, which is a joint effort of brands like Visa, Mastercard, American
+                    Express and Discover. PCI-DSS requirements help ensure the secure handling of payment information.
+                </p>
+                <h3>GDPR Privacy</h3>
+                <h4>Legal Basis for Processing Personal Data under GDPR</h4>
+                <p>We may process Personal Data under the following conditions:</p>
+                <ul>
+                    <li><p>Consent: You have given Your consent for processing Personal Data for one or more specific
+                        purposes.</p></li>
+                    <li><p>
+                        Performance of a contract: Provision of Personal Data is necessary for the performance of an
+                        agreement with You and/or
+                        for any pre-contractual obligations thereof.
+                    </p></li>
+                    <li><p>
+                        Legal obligations: Processing Personal Data is necessary for compliance with a legal obligation
+                        to which the Company is
+                        subject.</p></li>
+                    <li><p>
+                        Vital interests: Processing Personal Data is necessary in order to protect Your vital interests
+                        or of another natural
+                        person.
+                    </p>
+                    </li>
+                    <li><p>
+                        Public interests: Processing Personal Data is related to a task that is carried out in the
+                        public interest or in the
+                        exercise of official authority vested in the Company.
+                    </p></li>
+                    <li>
+                        <p>
+                            Legitimate interests: Processing Personal Data is necessary for the purposes of the
+                            legitimate interests pursued by the
+                            Company.
+                        </p></li>
+                </ul>
+                <p>In any case, the Company will gladly help to clarify the specific legal basis that applies to the
+                    processing, and in particular whether the provision of Personal Data is a statutory or contractual
+                    requirement, or a requirement necessary to enter into a contract.</p>
+                <h4>Your Rights under the GDPR</h4>
+                <p>The Company undertakes to respect the confidentiality of Your Personal Data and to guarantee You can
+                    exercise Your rights.</p>
+                <p>You have the right under this Privacy Policy, and by law if You are within the EU, to:</p>
+                <ul>
+                    <li>
+                        <p>
+                            Request access to Your Personal Data. The right to access, update or delete the information
+                            We have on You. Whenever
+                            made possible, you can access, update or request deletion of Your Personal Data directly
+                            within Your account settings
+                            section. If you are unable to perform these actions yourself, please contact Us to assist
+                            You. This also enables You to
+                            receive a copy of the Personal Data We hold about You.
+                        </p></li>
+                    <li><p>
+                        Request correction of the Personal Data that We hold about You. You have the right to have any
+                        incomplete or inaccurate
+                        information We hold about You corrected.
+                    </p></li>
+                    <li><p>
+                        Object to processing of Your Personal Data. This right exists where We are relying on a
+                        legitimate interest as the legal
+                        basis for Our processing and there is something about Your particular situation, which makes You
+                        want to object to our
+                        processing of Your Personal Data on this ground. You also have the right to object where We are
+                        processing Your Personal
+                        Data for direct marketing purposes.
+                    </p></li>
+                    <li>
+                        <p>
+                            Request erasure of Your Personal Data. You have the right to ask Us to delete or remove
+                            Personal Data when there is no
+                            good reason for Us to continue processing it.
+                        </p></li>
+                    <li><p>
+                        Request the transfer of Your Personal Data. We will provide to You, or to a third-party You have
+                        chosen, Your Personal
+                        Data in a structured, commonly used, machine-readable format. Please note that this right only
+                        applies to automated
+                        information which You initially provided consent for Us to use or where We used the information
+                        to perform a contract
+                        with You.
+                    </p></li>
+                    <li><p>
+                        Withdraw Your consent. You have the right to withdraw Your consent on using your Personal Data.
+                        If You withdraw Your
+                        consent, We may not be able to provide You with access to certain specific functionalities of
+                        the Service.
+                    </p></li>
+                </ul>
+                <h4>Exercising of Your GDPR Data Protection Rights</h4>
+                <p>You may exercise Your rights of access, rectification, cancellation and opposition by contacting Us.
+                    Please note that we may ask You to verify Your identity before responding to such requests. If You
+                    make a request, We will try our best to respond to You as soon as possible.</p>
+                <p>You have the right to complain to a Data Protection Authority about Our collection and use of Your
+                    Personal Data. For more information, if You are in the European Economic Area (EEA), please contact
+                    Your local data protection authority in the EEA.</p>
+                <h3>Facebook Fan Page</h3>
+                <h4>Data Controller for the Facebook Fan Page</h4>
+                <p>The Company is the Data Controller of Your Personal Data collected while using the Service. As
+                    operator of the Facebook Fan Page <a href="https://m.facebook.com/anikawr/"
+                                                         rel="noopener noreferrer" target="_blank"
+                                                         className='accordion__link'>https://m.facebook.com/anikawr/</a>,
+                    the Company and the operator of the social network Facebook are Joint Controllers.</p>
+                <p>The Company has entered into agreements with Facebook that define the terms for use of the Facebook
+                    Fan Page, among other things. These terms are mostly based on the Facebook Terms of Service: <a
+                        href="https://www.facebook.com/terms.php" rel="noopener noreferrer" target="_blank"
+                        className='accordion__link'>https://www.facebook.com/terms.php</a></p>
+                <p>Visit the Facebook Privacy Policy <a href="https://www.facebook.com/policy.php"
+                                                        rel="noopener noreferrer" target="_blank"
+                                                        className='accordion__link'>https://www.facebook.com/policy.php</a> for
+                    more information about how Facebook manages Personal data or contact Facebook online, or by mail:
+                    Facebook, Inc. ATTN, Privacy Operations, 1601 Willow Road, Menlo Park, CA 94025, United States.</p>
+                <h4>Facebook Insights</h4>
+                <p>We use the Facebook Insights function in connection with the operation of the Facebook Fan Page and
+                    on the basis of the GDPR, in order to obtain anonymized statistical data about Our users.</p>
+                <p>For this purpose, Facebook places a Cookie on the device of the user visiting Our Facebook Fan Page.
+                    Each Cookie contains a unique identifier code and remains active for a period of two years, except
+                    when it is deleted before the end of this period.</p>
+                <p>Facebook receives, records and processes the information stored in the Cookie, especially when the
+                    user visits the Facebook services, services that are provided by other members of the Facebook Fan
+                    Page and services by other companies that use Facebook services.</p>
+                <p>For more information on the privacy practices of Facebook, please visit Facebook Privacy Policy
+                    here: <a href="https://www.facebook.com/privacy/explanation" rel="noopener noreferrer"
+                             target="_blank" className='accordion__link'>https://www.facebook.com/privacy/explanation</a>
+                </p>
+                <h3>Children's Privacy</h3>
+                <p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally
+                    identifiable information from anyone under the age of 13. If You are a parent or guardian and You
+                    are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware
+                    that We have collected Personal Data from anyone under the age of 13 without verification of
+                    parental consent, We take steps to remove that information from Our servers.</p>
+                <p>If We need to rely on consent as a legal basis for processing Your information and Your country
+                    requires consent from a parent, We may require Your parent's consent before We collect and use that
+                    information.</p>
+                <h3>Links to Other Websites</h3>
+                <p>Our Service may contain links to other websites that are not operated by Us. If You click on a third
+                    party link, You will be directed to that third party's site. We strongly advise You to review the
+                    Privacy Policy of every site You visit.</p>
+                <p>We have no control over and assume no responsibility for the content, privacy policies or practices
+                    of any third party sites or services.</p>
+                <h3>Changes to this Privacy Policy</h3>
+                <p>We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the
+                    new Privacy Policy on this page.</p>
+                <p>We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming
+                    effective and update the &quot;Last updated&quot; date at the top of this Privacy Policy.</p>
+                <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy
+                    Policy are effective when they are posted on this page.</p>
+                <h3>Contact Us</h3>
+                <p>If you have any questions about this Privacy Policy, You can contact us:</p>
+                <ul>
+                    <li>
+                        <p>By email: aura.reykjavik@gmail.com</p>
+                    </li>
+                    <li>
+                        <p>By visiting this page on our website: <a href="https://www.aurareykjavik.com/"
+                                                                    rel="noopener noreferrer" target="_blank"
+                                                                    className='accordion__link'>https://www.aurareykjavik.com/</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    );
+}

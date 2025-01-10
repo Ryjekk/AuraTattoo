@@ -57,3 +57,14 @@
     }
   }
 }
+
+.accordion__link {
+  color: f.get-color(white, 0.4);
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  border-bottom: 1px dashed f.get-color(umber, 0.4);
+
+  &:hover {
+    color: f.get-color(umber, 0.4);
+  }
+}
