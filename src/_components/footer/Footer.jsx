@@ -13,9 +13,9 @@ export default function Footer() {
             <div>
             <h4>Contact</h4>
                 <div className='footer-box'>
-                    <a href='tel:+354 780 7819'>+354 780 7819</a>
-                    <Link href='/contact'>Contact Us</Link>
-                    <Link href='/privacy'>Privacy and policy</Link>
+                    <a href='tel:+354 780 7819' className='footer-link'>+354 780 7819</a>
+                    <Link href='/contact' className='footer-link'>Contact Us</Link>
+                    <Link href='/privacy' className='footer-link'>Privacy and policy</Link>
                 </div>
             </div>
             <div>

@@ -1,23 +1,28 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
 @use "sass:map";
+
 .footer {
-  border-top: 1px solid  map.get(v.$colors, dark-gray);;
+  border-top: 1px solid map.get(v.$colors, dark-gray);;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  gap: 1rem;
+  gap: 2rem;
   color: map.get(v.$colors, sand);
   padding: 4rem 3rem;
 
   @include m.respond(md) {
     flex-direction: row;
+  }
+
+  @include m.respond(xxl) {
     padding: 4rem 15rem;
   }
 
   h4 {
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 3px;
   }
 }
@@ -32,20 +37,20 @@
     margin-bottom: .3rem;
   }
 
-  a {
-    text-transform: uppercase;
-    text-decoration: underline;
-
-    width: max-content;
-
-    &:hover {
-      color: map.get(v.$colors, umber) !important;
-    }
-  }
-
   &-row {
     flex-direction: row;
-    gap:.7rem;
+    gap: .7rem;
+  }
+}
+
+.footer-link {
+  width: max-content;
+  color: map.get(v.$colors, sand);
+  border-bottom: 1px dashed f.get-color(umber, 0.4);
+  letter-spacing: 0.1rem;
+
+  &:hover {
+    color: map.get(v.$colors, umber);
   }
 }
 

@@ -10,15 +10,16 @@ $fonts: (
 
 //Font Sizes
 $font-sizes: (
+  // Extra small font size
   xsmall: clamp(0.75rem, 1.5vw, 0.875rem),
   // Small font size
   small: clamp(0.875rem, 1.5vw, 1rem),
-  medium: clamp(1rem, 1.5vw, 1.25rem),
   // Medium font size
-  large: clamp(1.25rem, 1.5vw, 1.5rem),
+  medium: clamp(1rem, 1.5vw, 1.25rem),
   // Large font size
-  xlarge: clamp(1.5rem, 2.5vw, 2.2rem),
+  large: clamp(1.25rem, 1.5vw, 1.5rem),
   // Extra large font size
+  xlarge: clamp(1.5rem, 2.5vw, 2.2rem),
 );
 
 // Color Definitions
