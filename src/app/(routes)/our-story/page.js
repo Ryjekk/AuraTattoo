@@ -5,8 +5,9 @@ export default function Home() {
     <main className="our-story">
       <MiniHero
         text="Our Story"
-        subText="AuraTattoo in nutshell"
+        subText="AuraTattoo in a nutshell"
         image="/images/main-bg-img.webp"
+        white={true}
       />
       <Vision
         text="At Aura, we believe in creating meaningful connections through the art
@@ -16,7 +17,7 @@ export default function Home() {
           unforgettable experience, crafting custom designs that reflect the
           personal stories of those who who walk through our doors."
       />
-      <section className="section content-center">
+      <section className="section content-center our-story__about">
         <h2 className="sr-only">About Aura Tattoo Studio</h2>
 
         <h3 className="sr-only">{`Aura's Origins`}</h3>

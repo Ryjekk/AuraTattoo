@@ -12,14 +12,19 @@
   justify-content: center;
   align-items: center;
 
+  img {
+    filter: brightness(0.7);
+  }
   h1,
   h2 {
     z-index: 1;
-    @include v.responsive-font(5rem);
+    @include v.responsive-font(4rem);
   }
 
   p {
     z-index: 1;
-    @include v.responsive-font(1.2rem);
+    @include v.responsive-font(1rem);
+    font-weight: 400;
+    letter-spacing: 0.2rem;
   }
 }
