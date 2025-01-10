@@ -63,6 +63,8 @@ function useScrollNavbar() {
         return "#000";
       case "/booking":
         return "rgba(238, 233, 221, 1)";
+      case "/vacancy":
+        return "rgba(238, 233, 221, 1)";
       case "/our-story":
         return "#000";
       case "/faq":

@@ -13,7 +13,8 @@
   &__names {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: stretch;
+    width: 100%;
 
     @include m.respond(md) {
       flex-direction: row;

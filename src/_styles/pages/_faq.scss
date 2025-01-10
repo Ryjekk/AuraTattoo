@@ -3,7 +3,6 @@
 @use "../abstracts/functions" as f;
 @use "sass:map";
 .faq {
-  mix-blend-mode: luminosity;
   background-color: map.get(v.$colors, moss);
   color: map.get(v.$colors, white);
   padding-block-start: 10rem;

@@ -3,8 +3,7 @@
 @use "../abstracts/functions" as f;
 @use "sass:map";
 .vacancy {
-  mix-blend-mode: luminosity;
-  background-color: map.get(v.$colors, white);
+  background-color: map.get(v.$colors, sand);
   color: map.get(v.$colors, moss);
   padding-block-start: 10rem;
   padding-block-end: 4rem;
@@ -18,7 +17,7 @@
 
   .accordion__panel {
     a {
-      color: f.get-color(black, 0.4);
+      color: f.get-color(umber, 0.4);
       font-weight: 600;
       letter-spacing: 0.1rem;
       border-bottom: 1px dashed f.get-color(umber, 0.4);
@@ -38,7 +37,7 @@
     li,
     ul,
     ol {
-      color: f.get-color(black, 0);
+      color: f.get-color(dark-gray, 0.2) !important;
     }
     p,
     ul,
