@@ -7,7 +7,7 @@
     padding-inline: map.get(v.$spacing, xlarge);
   }
   @include m.respond(lg) {
-    padding-inline: map.get(v.$spacing, xxlarge);
+    padding-block: max(10rem, 10vh);
   }
   h2 {
     text-align: left;
