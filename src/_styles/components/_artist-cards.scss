@@ -2,7 +2,7 @@
 @use "../abstracts/mixins" as m;
 @use "sass:map";
 
-.artists-list {
+.artists-list, .guests-list {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;

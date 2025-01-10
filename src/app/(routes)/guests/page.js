@@ -1,11 +1,15 @@
 import ArtistsList from "@components/artists/GuestsList";
-import H1 from "@components/h1/H1";
 import getGuests from "@services/getGuests";
+import MiniHero from "@components/miniHero/MiniHero";
 export default async function GuestsPage() {
   const guests = await getGuests();
   return (
-    <div className='artists'>
-      <H1>Guest Artists</H1>
+    <div>
+        <MiniHero
+            text="Guest Artists"
+            subText="Find out who will be joining us this year"
+            id="guests"
+        />
       {guests ? <ArtistsList artists={guests} /> : null}
     </div>
   );
