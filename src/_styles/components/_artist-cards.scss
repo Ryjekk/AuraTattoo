@@ -32,7 +32,7 @@
   }
 }
 
-.artist-card {
+.artist-card, .guest-card {
   width: 100%;
   min-width: 20rem;
 
@@ -40,17 +40,12 @@
     object-fit: cover;
     transition: all 0.3s ease-in-out;
 
-    // &:hover {
-    //   transform: scale(1.05);
-    // }
-
     &-wrapper {
       position: relative;
       margin: 0 auto;
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
       height: 30rem;
-      // cursor: pointer;
       overflow: hidden;
 
       display: flex;
@@ -161,14 +156,50 @@
   }
 }
 
-.guest__box {
-  background-color: map.get(v.$colors, sand);
 
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  strong {
-    font-family: sans-serif;
-    font-size: 1rem;
-    color: map.get(v.$colors, black);
+.guest-card {
+  &__box {
+    h2, span {
+      color: map.get(v.$colors, moss);
+    }
+  }
+
+  &__img-overlay {
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(238, 233, 221, .8),
+        rgba(238, 233, 221, 1)
+    );
+  }
+
+  &__img-wrapper {
+    &:hover {
+      .guest-card__link {
+        color: map.get(v.$colors, moss);
+        &:before {
+          transform: translateX(50%);
+        }
+      }
+      .guest-card__date {
+        color: map.get(v.$colors, moss);
+        transform: translateX(-50%) scale(1.2);
+      }
+    }
+    &:active {
+      .guest-card__link {
+        color: map.get(v.$colors, moss);
+        &:before {
+          transform: scaleX(200%) translateX(25%);
+        }
+      }
+    }
+  }
+
+  &__link {
+    color: map.get(v.$colors, moss);
+    &::before {
+      background-color: map.get(v.$colors, moss);
+    }
   }
 }

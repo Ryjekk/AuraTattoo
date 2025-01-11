@@ -8,8 +8,8 @@
   text-align: center;
   font-family: map.get(v.$fonts, heading);
   font-weight: 100;
+}
 
-  &--white {
-    color: f.get-color(white, 0.2);
-  }
+.text--white {
+  color: f.get-color(white, 0.2);
 }
