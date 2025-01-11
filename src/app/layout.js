@@ -1,7 +1,6 @@
 import "@styles/main.scss";
 import localFont from "next/font/local";
 import { Lato } from "next/font/google";
-import {Suspense} from "react";
 
 const OrpheusPro = localFont({
   src: "./fonts/OrpheusPro-regular.otf",
@@ -23,11 +22,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-      // TODO add a loading spinner or so
-      <Suspense fallback={<div>Loading data...</div>}>
-        <html lang='en' className={`${OrpheusPro.variable} ${lato.variable}`}>
-          <body className='main-wrapper'>{children}</body>
-        </html>
-      </Suspense>
+    <html lang='en' className={`${OrpheusPro.variable} ${lato.variable}`}>
+      <body className='main-wrapper'>{children}</body>
+    </html>
   );
 }
