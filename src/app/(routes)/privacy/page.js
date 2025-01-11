@@ -141,7 +141,7 @@ export default async function PrivacyAndPolicy() {
                     Usage Data is collected automatically when using the Service.
                 </p>
                 <p>
-                    Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP
+                    Usage Data may include information such as Your Device&#39;s Internet Protocol address (e.g. IP
                     address), browser type, browser version, the pages of our Service that You visit, the time and date
                     of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.
                 </p>
@@ -165,7 +165,7 @@ export default async function PrivacyAndPolicy() {
                     <li>
                         <p>
                             To contact You: To contact You by email, telephone calls, SMS, or other equivalent forms of
-                            electronic communication, such as a mobile application's push notifications regarding
+                            electronic communication, such as a mobile application&#39;s push notifications regarding
                             updates or informative communications related to the functionalities, products or contracted
                             services, including the security updates, when necessary or reasonable for their
                             implementation.
@@ -191,7 +191,7 @@ export default async function PrivacyAndPolicy() {
                     longer time periods.
                 </p>
                 <h4>Transfer of Your Personal Data</h4>
-                <p>Your information, including Personal Data, is processed at the Company's operating offices and in any
+                <p>Your information, including Personal Data, is processed at the Company&#39;s operating offices and in any
                     other places where the parties involved in the processing are located. It means that this
                     information may be transferred to — and maintained on — computers located outside of Your state,
                     province, country or other governmental jurisdiction where the data protection laws may differ than
@@ -392,18 +392,18 @@ export default async function PrivacyAndPolicy() {
                     here: <a href="https://www.facebook.com/privacy/explanation" rel="noopener noreferrer"
                              target="_blank" className='accordion__link'>https://www.facebook.com/privacy/explanation</a>
                 </p>
-                <h3>Children's Privacy</h3>
+                <h3>Children Privacy</h3>
                 <p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally
                     identifiable information from anyone under the age of 13. If You are a parent or guardian and You
                     are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware
                     that We have collected Personal Data from anyone under the age of 13 without verification of
                     parental consent, We take steps to remove that information from Our servers.</p>
                 <p>If We need to rely on consent as a legal basis for processing Your information and Your country
-                    requires consent from a parent, We may require Your parent's consent before We collect and use that
+                    requires consent from a parent, We may require Your parent&#39;s consent before We collect and use that
                     information.</p>
                 <h3>Links to Other Websites</h3>
                 <p>Our Service may contain links to other websites that are not operated by Us. If You click on a third
-                    party link, You will be directed to that third party's site. We strongly advise You to review the
+                    party link, You will be directed to that third party&#39;s site. We strongly advise You to review the
                     Privacy Policy of every site You visit.</p>
                 <p>We have no control over and assume no responsibility for the content, privacy policies or practices
                     of any third party sites or services.</p>
