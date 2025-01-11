@@ -14,8 +14,8 @@ export default function GiftCard() {
         </div>
 
         <div className="section__column">
-          <h2>Gift Card Certificate</h2>
-          <p>
+          <h2 className="giftcard__header">Gift Card Certificate</h2>
+          <p className="giftcard__text">
             Gift cards are printed on high-quality paper, offering a stylish and
             thoughtful gifting option for any occasion. Their premium material
             enhances presentation, making a lasting impression for birthdays,
@@ -26,7 +26,7 @@ export default function GiftCard() {
             price.
           </p>
           <Button link="/contact" color="umber">
-            contact us to find more{" "}
+            contact us to find more
           </Button>
         </div>
       </div>
