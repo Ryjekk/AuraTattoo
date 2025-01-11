@@ -1,7 +1,7 @@
 "use client";
 import { AnimatePresence, motion } from "motion/react";
 import Markdown from "react-markdown";
-import React from "react";
+import React, { useEffect } from "react";
 import AccordionContext, { useAccordion } from "@hooks/useAccordionContext";
 import Arrow from "@components/accordion/Arrow";
 export function Accordion({ children, multiple, defaultIndex }) {
@@ -37,8 +37,12 @@ export function Accordion({ children, multiple, defaultIndex }) {
   });
 }
 
-export function AccordionItem({ children }) {
-  return <div className='accordion__item '>{children}</div>;
+export function AccordionItem({ children, index }) {
+  return (
+    <div className="accordion__item" id={`qst-${index}`}>
+      {children}
+    </div>
+  );
 }
 
 export function AccordionHeader({ children }) {
@@ -72,7 +76,7 @@ export function AccordionPanel({ children }) {
           exit={{ height: 0, duration: 0.7 }}
           transition={{ type: "spring", duration: 0.4, bounce: 0 }}
         >
-          <div className='accordion__panel'>
+          <div className="accordion__panel">
             <Markdown>{children}</Markdown>
           </div>
         </motion.div>

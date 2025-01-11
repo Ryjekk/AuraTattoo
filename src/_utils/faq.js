@@ -1,5 +1,27 @@
 export const faqData = [
   {
+    question: "How should I prepare for a tattoo session?",
+    answer: `
+### Preparing for Your Tattoo Session
+
+#### Do's:
+- Bring government-issued ID
+- Hydrate yourself well
+- Get a good night's sleep and eat before the session
+- Wear clothes that allow access to the tattoo area
+- Bring snacks and drinks
+- Consider bringing slippers or warm socks (we're a shoe-free studio)
+
+#### Don'ts:
+- Don't drink alcohol or take drugs the night before
+- Don't arrive more than 5 minutes early
+- Don't bring additional visitors without prior agreement
+- Don't apply numbing cream without consulting your artist first
+
+**Remember:** A full-day session can be tiring, so avoid planning evening activities afterward.
+    `,
+  },
+  {
     question: "What is the tattoo aftercare process?",
     answer: `
 ### Tattoo Aftercare
@@ -33,28 +55,6 @@ export const faqData = [
 5. Replace the plastic film
 
 **Repeat every 2-3 hours for the first 2-3 days.**
-    `,
-  },
-  {
-    question: "How should I prepare for a tattoo session?",
-    answer: `
-### Preparing for Your Tattoo Session
-
-#### Do's:
-- Bring government-issued ID
-- Hydrate yourself well
-- Get a good night's sleep and eat before the session
-- Wear clothes that allow access to the tattoo area
-- Bring snacks and drinks
-- Consider bringing slippers or warm socks (we're a shoe-free studio)
-
-#### Don'ts:
-- Don't drink alcohol or take drugs the night before
-- Don't arrive more than 5 minutes early
-- Don't bring additional visitors without prior agreement
-- Don't apply numbing cream without consulting your artist first
-
-**Remember:** A full-day session can be tiring, so avoid planning evening activities afterward.
     `,
   },
   {
