@@ -148,4 +148,39 @@
       }
     }
   }
+  &__text {
+    color: map.get(v.$colors, umber);
+    overflow: hidden;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: color 0.3s;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 50%;
+      height: 0.1rem;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+      transform: translateX(-100%);
+      transition: all 0.3s;
+      background-color: f.get-color(umber, 0.3);
+    }
+
+    &:hover {
+      color: map.get(v.$colors, black);
+      &:before {
+        transform: translateX(50%);
+      }
+    }
+    &:active {
+      color: map.get(v.$colors, black);
+
+      &:before {
+        transform: scaleX(200%) translateX(25%);
+      }
+    }
+  }
 }

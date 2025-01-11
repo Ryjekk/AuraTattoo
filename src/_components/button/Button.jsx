@@ -5,6 +5,7 @@ export default function Button({ children, link, color, target, className }) {
     umber: "btn__umber",
     white: "btn__white",
     black: "btn__black",
+    text: "btn__text",
   };
   const buttonColor = colorMap[color] || "btn__black";
   const buttonTarget = target === "blank" ? "_blank" : "_self";

@@ -12,6 +12,8 @@ export default function ResidentCardMini({ artist, idx }) {
             alt={`${name} image`}
             fill
             className="artist-card__img"
+            placeholder="blur"
+            blurDataURL={mainImage.url}
           />
           <div className="artist-card__box">
             <h2>{name}</h2>

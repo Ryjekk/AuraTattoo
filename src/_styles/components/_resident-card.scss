@@ -5,7 +5,7 @@
 @use "sass:map";
 
 .resident-card {
-  background-color: white;
+  background-color: map.get(v.$colors, sand);
   overflow-x: hidden;
   display: grid;
   grid-template-columns: 1fr;
@@ -42,6 +42,7 @@
       gap: map.get(v.$spacing, medium);
       min-width: 300px;
       max-width: 400px;
+      margin-block-start: 2rem;
     }
   }
   &__main-img {
@@ -79,7 +80,7 @@
 
   &__buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: map.get(v.$spacing, small);
     margin-top: map.get(v.$spacing, small);
     @include m.respond(sm) {
@@ -98,7 +99,7 @@
     &-img {
       transition: all 0.3s;
       &:hover {
-        transform: scale(1.05)
+        transform: scale(1.05);
       }
     }
   }

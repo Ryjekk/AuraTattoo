@@ -47,21 +47,21 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="ico/fb.svg" alt="ig" className="social-link" />
+            <img src="/ico/fb.svg" alt="ig" className="social-link" />
           </a>
           <a
             href="https://www.facebook.com/anikawr"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="ico/ig.svg" alt="facebook" className="social-link" />
+            <img src="/ico/ig.svg" alt="facebook" className="social-link" />
           </a>
           <a
             href="mailto:hello@aurareykjavik.com?subject=Hello Aura"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="ico/mail.svg" alt="mail" className="social-link" />
+            <img src="/ico/mail.svg" alt="mail" className="social-link" />
           </a>
         </div>
       </div>

@@ -10,6 +10,8 @@ export default function GiftCard() {
             alt="Aura Logo"
             width={340}
             height={484}
+            placeholder="blur"
+            blurDataURL="/aura-logo.webp"
           />
         </div>
 

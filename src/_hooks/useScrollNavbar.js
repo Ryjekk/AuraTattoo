@@ -58,18 +58,22 @@ function useScrollNavbar() {
   useMotionValueEvent(scrollY, "change", updateScroll);
 
   const getBackgroundColor = () => {
-    switch (pathname) {
-      case "/":
+    switch (pathname.split("/")[1]) {
+      case "":
         return "#000";
-      case "/booking":
+      case "booking":
         return "rgba(238, 233, 221, 1)";
-      case "/vacancy":
+      case "vacancy":
         return "rgba(238, 233, 221, 1)";
-      case "/our-story":
+      case "residents":
+        return "rgba(238, 233, 221, 1)";
+      case "guests":
+        return "rgba(238, 233, 221, 1)";
+      case "our-story":
         return "#000";
-      case "/faq":
+      case "faq":
         return "rgba(64, 70, 61, 1)";
-      case "/privacy":
+      case "privacy":
         return "rgba(64, 70, 61, 1)";
       default:
         return "#fff";
