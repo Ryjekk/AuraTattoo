@@ -35,6 +35,7 @@
     flex-direction: column;
     justify-content: center;
     margin-inline: auto;
+    align-items: center;
     gap: min(2rem, 5vw);
     color: map.get(v.$colors, sand);
 

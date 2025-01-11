@@ -1,0 +1,25 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+@use "../abstracts/functions" as f;
+@use "sass:map";
+
+.giftcard {
+  &__header {
+    color: f.get-color(white, 0.2);
+    letter-spacing: 0.5rem;
+    font-weight: 300;
+    @include v.responsive-font(2rem);
+  }
+  &__text {
+    letter-spacing: 0.2rem;
+    font-weight: 100;
+    color: f.get-color(white, 0.2);
+    margin-block: 1rem;
+    @include v.responsive-font(0.8rem);
+  }
+}
+.section__column {
+  a {
+    justify-content: center !important;
+  }
+}
