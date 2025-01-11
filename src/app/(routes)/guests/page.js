@@ -7,7 +7,7 @@ export default async function GuestsPage() {
     <div>
         <MiniHero
             text="Guest Artists"
-            subText="Find out who will be joining us this year"
+            subText="Book your session directly with the artist"
             id="guests"
         />
       {guests ? <ArtistsList artists={guests} /> : null}
