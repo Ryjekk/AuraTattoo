@@ -175,7 +175,7 @@ export default function BookingForm({ residents, initialArtist }) {
       </div>
 
       <div className="form__input-group">
-        <label htmlFor="placement">Placement on the body</label>
+        <label htmlFor="placement">Placement on the body*</label>
         <input
           className={`form__input ${
             errors.placement ? "form__input--error" : ""
@@ -195,7 +195,7 @@ export default function BookingForm({ residents, initialArtist }) {
         </div>
       </div>
       <div className="form__input-group">
-        <label htmlFor="date">{`Desired date(s)`}</label>
+        <label htmlFor="date">{`Desired date(s)*`}</label>
         <input
           className={`form__input ${errors.date ? "form__input--error" : ""}`}
           id="date"
@@ -208,6 +208,29 @@ export default function BookingForm({ residents, initialArtist }) {
           {errors.date && (
             <span className="form__error" role="alert">
               {errors.date?.message}
+            </span>
+          )}
+        </div>
+      </div>
+
+      <div className="form__input-group">
+        <label htmlFor="howDidYouHear">How did you hear about us?* </label>
+        <textarea
+          className={`form__textarea ${
+            errors.idea ? "form__textarea--error" : ""
+          }`}
+          id="howDidYouHear"
+          rows="2"
+          {...register("howDidYouHear", {
+            required: "We really want to hear how you found us.",
+          })}
+          aria-invalid={errors.howDidYouHear ? "true" : "false"}
+          aria-required="true"
+        />
+        <div className="form__error-box">
+          {errors.howDidYouHear && (
+            <span className="form__error" role="alert">
+              {errors.howDidYouHear?.message}
             </span>
           )}
         </div>
