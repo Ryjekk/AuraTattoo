@@ -48,7 +48,6 @@
     max-width: 50rem;
 
     @include m.respond(md) {
-      margin-left: auto;
       text-align: right;
     }
 
