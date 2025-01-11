@@ -1,5 +1,10 @@
-const ContactHeader = () => {
-  return <h1 className='contact__header'>Contact Us</h1>;
-};
-
-export default ContactHeader;
+export default function ContactHeader() {
+  return (
+      <header className='column__header column__header--left'>
+          <h2 className='column__subtitle'>Contact us subtitle</h2>
+          <p className='column__text'>
+              Contact us text
+          </p>
+      </header>
+  );
+}
