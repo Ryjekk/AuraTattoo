@@ -73,36 +73,6 @@
   }
 }
 
-.tilted-button-wrapper::after {
-  display: flex;
-  justify-content: center;
-  transform: skew(-10deg);
-}
-
-.icon-arrow {
-  display: inline;
-}
-
-.tilted-button {
-  text-transform: uppercase;
-  padding: 0.8rem 2rem 0.7rem 2rem;
-  color: map.get(v.$colors, moss);
-  border: 1px solid map.get(v.$colors, moss);
-  border-radius: 0.7rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  transform: skew(10deg);
-
-  &:hover {
-    background-color: map.get(v.$colors, moss);
-    color: map.get(v.$colors, sand);
-
-    &:before {
-      transform: translateX(0);
-    }
-  }
-}
-
 // RIGHT SIDE
 .hero__right {
   position: relative;

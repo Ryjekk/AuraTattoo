@@ -15,13 +15,9 @@ export default function Hero() {
         <div className="hero__left-button">
           <Button link="/booking">
             Booking
-            <ArrowRight />
-            {/* <Image
-              src="/ico/right-arrow.svg"
-              alt="arrow-right"
-              width={24}
-              height={24}
-            /> */}
+            <div className="btn__icon-wrapper">
+              <ArrowRight />
+            </div>
           </Button>
         </div>
       </div>

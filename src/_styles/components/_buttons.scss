@@ -22,13 +22,17 @@
     width: auto;
   }
 
-  svg {
-    mix-blend-mode: difference;
+  &__icon-wrapper {
+    overflow: hidden;
     margin-left: 1rem;
     margin-right: -1.1rem;
-    background-color: map.get(v.$colors, sand);
-    color: black;
     border-radius: 50%;
+
+    svg {
+      mix-blend-mode: difference;
+      background-color: map.get(v.$colors, sand);
+      stroke: black;
+    }
   }
 
   &:focus,
