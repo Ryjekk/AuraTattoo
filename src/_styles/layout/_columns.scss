@@ -69,6 +69,15 @@
     letter-spacing: 0.05rem;
   }
 
+  &__link {
+    color: map.get(v.$colors, moss);
+    border-bottom: 1px dashed f.get-color(umber, 0.4);
+
+    &:hover {
+      color: map.get(v.$colors, umber);
+    }
+  }
+
   &__content {
     padding-inline: 2rem;
 
