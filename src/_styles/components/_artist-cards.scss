@@ -1,18 +1,32 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
 @use "sass:map";
 
-.artists-list, .guests-list {
-  display: flex;
+.artists-list,
+.guests-list {
+  display: grid;
   gap: 2rem;
-  flex-wrap: wrap;
   background-color: map.get(v.$colors, sand);
-  padding: 5rem 3rem;
+  padding: 5rem 1rem;
 
-  @include m.respond(lg) {
-    flex-wrap: nowrap;
+  @include m.respond(sm) {
+    padding: 5rem 2rem;
   }
-
+  @include m.respond(md) {
+    padding: 5rem 2rem;
+  }
+  @include m.respond(lg) {
+    padding: 5rem 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include m.respond(xl) {
+    padding: 5rem 6rem;
+  }
+  @include m.respond(xxl) {
+    padding: 5rem 5rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
   &--residents {
     padding-top: 0;
   }
@@ -20,19 +34,15 @@
 
 .artist-card {
   width: 100%;
+  min-width: 20rem;
 
   &__img {
     object-fit: cover;
+    transition: all 0.3s ease-in-out;
 
-    &:hover {
-      transform: scale(1.05);
-      transition: all 0.1s ease-in;
-
-      .artist-card__box h2 {
-        font-size: 2rem;
-        transition: font-size 0.1s ease-in;
-      }
-    }
+    // &:hover {
+    //   transform: scale(1.05);
+    // }
 
     &-wrapper {
       position: relative;
@@ -40,7 +50,7 @@
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
       height: 30rem;
-      cursor: pointer;
+      // cursor: pointer;
       overflow: hidden;
 
       display: flex;
@@ -48,20 +58,105 @@
       justify-content: flex-end;
 
       @include m.respond(xl) {
-        height: 40rem;
+        height: 30rem;
       }
+
+      &:hover {
+        .artist-card__img {
+          transform: scale(1.05);
+        }
+        .artist-card__link {
+          color: f.get-color(white, 0.2);
+          &:before {
+            transform: translateX(50%);
+          }
+        }
+        .artist-card__date {
+          color: f.get-color(white, 0.4);
+          transform: translateX(-50%) scale(1.2);
+        }
+      }
+      &:active {
+        .artist-card__link {
+          color: f.get-color(white, 0);
+          &:before {
+            transform: scaleX(200%) translateX(25%);
+          }
+        }
+      }
+    }
+
+    &-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.8)
+      );
+      z-index: 2;
     }
   }
 
   &__box {
-    z-index: 1;
+    z-index: 3;
     padding: 1rem;
     display: flex;
     flex-direction: column;
-
+    justify-content: space-around;
+    align-items: center;
+    pointer-events: none;
+    gap: 1rem;
     h2 {
-      margin-bottom: 1rem;
-      color: map.get(v.$colors, umber);
+      // margin-bottom: 1rem;
+      color: f.get-color(white, 0.2);
+      font-weight: 600;
+      font-size: 1.5rem;
+      letter-spacing: 0.5rem;
+    }
+    a {
+      pointer-events: all;
+    }
+  }
+  &__date {
+    mix-blend-mode: difference;
+    color: f.get-color(white, 0.2);
+    text-wrap-mode: nowrap;
+    font-weight: 100;
+    font-size: clamp(0.8rem, 2vw, 4rem);
+    letter-spacing: 0.4rem;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+  }
+
+  &__link {
+    color: f.get-color(white, 0.4);
+    position: relative;
+    overflow: hidden;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: color 0.3s;
+    text-transform: uppercase;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 50%;
+      height: 0.1rem;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+      transform: translateX(-100%);
+      transition: all 0.3s;
+      background-color: f.get-color(white, 0.3);
     }
   }
 }

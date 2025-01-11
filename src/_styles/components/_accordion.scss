@@ -20,28 +20,28 @@
   }
 
   &__panel {
-    padding: 20px;
-    @include v.responsive-font(0.8rem);
-    color: f.get-color(white, 0.2);
     font-weight: 100;
+    padding: 20px;
+    color: f.get-color(white, 0.2);
     letter-spacing: 0.05rem;
 
+    @include v.responsive-font(0.8rem);
     @include m.respond(sm) {
       padding: 20px 40px;
     }
     h3 {
       color: f.get-color(white, 0.2);
-      @include v.responsive-font(1.2rem);
       font-weight: 600;
       letter-spacing: 0.3rem;
       margin-block: clamp(0.5rem, 2vw, 1rem);
+      @include v.responsive-font(1.2rem);
     }
     h4 {
       color: f.get-color(white, 0.4);
-      @include v.responsive-font(1rem);
       font-weight: 400;
       letter-spacing: 0.1rem;
       margin-block: clamp(0.5rem, 2vw, 1rem);
+      @include v.responsive-font(1rem);
     }
     strong {
       color: f.get-color(white, 0.2);

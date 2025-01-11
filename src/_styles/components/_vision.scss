@@ -4,7 +4,7 @@
 @use "sass:map";
 .vision {
   @include m.respond(sm) {
-    padding-inline: map.get(v.$spacing, xlarge);
+    padding-inline: map.get(v.$spacing, xxlarge);
   }
   @include m.respond(lg) {
     padding-block: max(10rem, 10vh);

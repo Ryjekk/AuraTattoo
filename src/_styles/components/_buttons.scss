@@ -5,7 +5,8 @@
 @use "sass:map";
 .btn {
   text-transform: uppercase;
-  padding: 0.3rem 1.6rem;
+  padding: 0.5rem 1.6rem;
+  min-height: 2.3rem;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -24,7 +25,7 @@
   svg {
     mix-blend-mode: difference;
     margin-left: 1rem;
-    margin-right: -1.3rem;
+    margin-right: -1.1rem;
     background-color: map.get(v.$colors, sand);
     color: black;
     border-radius: 50%;
@@ -73,30 +74,34 @@
   }
 
   &__white {
-    color: map.get(v.$colors, white);
-    border: 1px solid f.get-color(white, 0.3);
+    color: f.get-color(white, 0.3);
     background-color: transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 100;
+    height: 2rem;
 
     &::before {
       content: "";
       display: block;
       position: absolute;
-      width: 100%;
-      height: 100%;
+      width: 50%;
+      height: 0.1rem;
       z-index: -1;
-      inset: 0;
+      bottom: 0.2rem;
+      left: 0;
       transform: translateX(-100%);
-      transition: transform 0.3s;
-      background-color: map.get(v.$colors, white);
+      transition: all 0.3s;
+      background-color: f.get-color(white, 0.3);
     }
 
     &:hover {
-      color: map.get(v.$colors, umber);
+      color: map.get(v.$colors, white);
+      font-size: 1.1rem;
       &:before {
-        transform: translateX(0);
+        transform: translateX(50%);
       }
     }
-    &:focus {
+    &:active {
       color: map.get(v.$colors, umber);
       &:before {
         transform: translateX(0);
@@ -105,7 +110,7 @@
     }
   }
   &__black {
-    color: map.get(v.$colors, sand);
+    color: map.get(v.$colors, transparent);
     border: 1px solid map.get(v.$colors, black);
     background-color: black;
 

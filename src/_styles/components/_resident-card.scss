@@ -6,6 +6,7 @@
 
 .resident-card {
   background-color: white;
+  overflow-x: hidden;
   display: grid;
   grid-template-columns: 1fr;
   gap: map.get(v.$spacing, large);
@@ -19,6 +20,28 @@
     align-items: center;
     @include m.respond(sm) {
       align-items: flex-end;
+    }
+  }
+  &__bio {
+    display: flex;
+    flex-direction: column;
+    gap: map.get(v.$spacing, small);
+    text-align: left;
+    font-weight: 300;
+    letter-spacing: 0.15rem;
+
+    a {
+      color: map.get(v.$colors, umber);
+      text-decoration: none;
+      font-weight: 900;
+      border-bottom: 1px dashed map.get(v.$colors, umber);
+    }
+
+    @include m.respond(sm) {
+      text-align: right;
+      gap: map.get(v.$spacing, medium);
+      min-width: 300px;
+      max-width: 400px;
     }
   }
   &__main-img {

@@ -28,8 +28,8 @@ export default function Hero() {
 
       <div className="hero__right">
         <Image
-          src="/images/hero.webp"
-          alt="hero"
+          src="/images/Serene_nero_Anna_tattooing.webp"
+          alt="Anna Serene.nero tattoo artist at work"
           fill
           style={{ objectFit: "cover" }}
           priority

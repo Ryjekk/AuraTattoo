@@ -23,8 +23,8 @@
 
   p {
     z-index: 1;
-    @include v.responsive-font(1rem);
     font-weight: 400;
     letter-spacing: 0.2rem;
+    @include v.responsive-font(1rem);
   }
 }

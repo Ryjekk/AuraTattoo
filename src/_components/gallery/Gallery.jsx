@@ -6,7 +6,7 @@ import Lightbox from "yet-another-react-lightbox";
 function renderNextImage({ alt = "", title, src }, { width, height }) {
   return (
     <div
-      className='resident-card__thumbnail-container'
+      className="resident-card__thumbnail-container"
       style={{
         aspectRatio: `${width} / ${height}`,
       }}
@@ -23,7 +23,7 @@ function renderNextImage({ alt = "", title, src }, { width, height }) {
             { viewport: "(max-width: 1279px)", size: "calc(100vw - 288px)" },
           ],
         }}
-        className='resident-card__thumbnail-img'
+        className="resident-card__thumbnail-img"
       />
     </div>
   );
@@ -57,6 +57,11 @@ export default function Gallery({ images }) {
       ) : null}
       <Lightbox
         index={index}
+        controller={{
+          closeOnPullDown: true,
+          closeOnPullUp: true,
+          closeOnBackdropClick: true,
+        }}
         render={{ image: renderNextImage }}
         open={index >= 0}
         close={() => setIndex(-1)}
