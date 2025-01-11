@@ -3,6 +3,7 @@
 @use "sass:map";
 .miniHero__wrapper {
   background-color: map.get(v.$colors, sand);
+  padding-inline: map.get(v.$spacing, medium);
 
   position: relative;
   height: 20rem;
@@ -11,6 +12,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
   img {
     filter: brightness(0.7);
