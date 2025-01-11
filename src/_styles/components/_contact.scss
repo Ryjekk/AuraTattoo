@@ -4,7 +4,7 @@
 @use "sass:map";
 .contact {
   &__content {
-    z-index: 9;
+    z-index: 3;
     margin-top: -10rem;
     @include m.respond(md) {
       margin-top: 0;
