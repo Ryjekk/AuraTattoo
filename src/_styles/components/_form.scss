@@ -57,9 +57,11 @@
     width: 100%;
     padding-block: map.get(v.$spacing, xsmall);
     padding-inline: map.get(v.$spacing, small);
+    padding: .7rem;
     color: map.get(v.$colors, dark-gray);
     // border-bottom: 1px solid f.get-color(dark-gray, 0.8);
     background-color: f.get-color(white, 0.9);
+
 
     &:focus {
       outline: none;

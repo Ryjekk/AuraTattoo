@@ -156,7 +156,7 @@ export default function BookingForm({ residents, initialArtist }) {
       </div>
 
       <div className="form__input-group">
-        <label htmlFor="size">Size in cm *</label>
+        <label htmlFor="size">Approx size in cm *</label>
         <input
           className={`form__input ${errors.size ? "form__input--error" : ""}`}
           id="size"
@@ -175,7 +175,7 @@ export default function BookingForm({ residents, initialArtist }) {
       </div>
 
       <div className="form__input-group">
-        <label htmlFor="placement">Placement</label>
+        <label htmlFor="placement">Placement on the body</label>
         <input
           className={`form__input ${
             errors.placement ? "form__input--error" : ""
