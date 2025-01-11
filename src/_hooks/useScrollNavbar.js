@@ -69,6 +69,8 @@ function useScrollNavbar() {
         return "#000";
       case "/faq":
         return "rgba(64, 70, 61, 1)";
+      case "/privacy":
+        return "rgba(64, 70, 61, 1)";
       default:
         return "#fff";
     }
@@ -81,6 +83,8 @@ function useScrollNavbar() {
       case "/our-story":
         return "#fff";
       case "/faq":
+        return "#fff";
+      case "/privacy":
         return "#fff";
       default:
         return "#000";
