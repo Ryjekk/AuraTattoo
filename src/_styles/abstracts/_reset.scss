@@ -7,6 +7,10 @@
   scroll-behavior: smooth;
 }
 
+*::selection {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
 html,
 body {
   height: 100%;

@@ -32,7 +32,8 @@
   }
 }
 
-.artist-card, .guest-card {
+.artist-card,
+.guest-card {
   width: 100%;
   min-width: 20rem;
 
@@ -158,17 +159,18 @@
 
 .guest-card {
   &__box {
-    h2, span {
+    h2,
+    span {
       color: map.get(v.$colors, moss);
     }
   }
 
   &__img-overlay {
     background: linear-gradient(
-        to bottom,
-        transparent 50%,
-        rgba(238, 233, 221, .8),
-        rgba(238, 233, 221, 1)
+      to bottom,
+      transparent 50%,
+      rgba(238, 233, 221, 0.8),
+      rgba(238, 233, 221, 1)
     );
   }
 

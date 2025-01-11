@@ -31,26 +31,38 @@
 
   &-text {
     text-align: center;
-
+    display: flex;
+    flex-direction: column;
     h1,
     p {
       color: map.get(v.$colors, moss);
     }
 
     h1 {
-      font-size: clamp(2rem, 5vw, 7rem);
-      letter-spacing: 0.5rem;
+      font-size: clamp(3rem, 5vw, 7rem);
+      letter-spacing: 1rem;
+      @include m.respond(xl) {
+        font-size: clamp(3rem, 5vw, 8rem);
+      }
     }
 
+    a {
+      margin-top: 2rem;
+    }
     p {
       display: inline;
-      border-bottom: 1px solid map.get(v.$colors, moss);
-      margin-top: 2rem;
+
+      letter-spacing: 0.2rem;
+      border-bottom: 1px dashed map.get(v.$colors, moss);
+      font-size: clamp(0.8rem, 5vw, 1rem);
+      @include m.respond(xl) {
+        font-size: clamp(1rem, 5vw, 1.2rem);
+      }
     }
   }
 
   &-button {
-    margin-top: 2rem;
+    margin-top: 4rem;
 
     @include m.respond(xl) {
       margin-left: 3rem;
