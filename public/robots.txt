@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://aurareykjavik.com
+
+# Sitemaps
+Sitemap: https://aurareykjavik.com/sitemap.xml
