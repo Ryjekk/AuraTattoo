@@ -1,6 +1,7 @@
 import Header from "@components/header/Header";
 import Footer from "@components/footer/Footer";
 import {Suspense} from "react";
+import Analytics from "../../_lib/TagManager";
 
 export const metadata = {
   title: "Aura Tattoo ",
@@ -10,6 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <Suspense>
+      <Analytics />
       <Header />
       <main className='content-wrapper'>{children}</main>
       <Footer />
