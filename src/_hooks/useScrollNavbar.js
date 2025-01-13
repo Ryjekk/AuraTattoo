@@ -65,6 +65,8 @@ function useScrollNavbar() {
         return "rgba(238, 233, 221, 1)";
       case "vacancy":
         return "rgba(238, 233, 221, 1)";
+      case "contact":
+        return "rgba(238, 233, 221, 1)";
       case "residents":
         return "rgba(238, 233, 221, 1)";
       case "guests":

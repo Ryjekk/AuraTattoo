@@ -47,11 +47,10 @@
     width: 100%;
     padding-block: map.get(v.$spacing, xsmall);
     padding-inline: map.get(v.$spacing, small);
-    padding: .7rem;
+    padding: 0.7rem;
     color: map.get(v.$colors, dark-gray);
     // border-bottom: 1px solid f.get-color(dark-gray, 0.8);
     background-color: f.get-color(white, 0.9);
-
 
     &:focus {
       outline: none;
@@ -133,14 +132,7 @@
     font-size: map.get(v.$font-sizes, xsmall);
   }
 
-  &__button {
-    margin-block: map.get(v.$spacing, small);
-    padding-block: map.get(v.$spacing, small);
-    padding-inline: map.get(v.$spacing, medium);
-    border: 1px solid map.get(v.$colors, primary);
-    border-radius: map.get(v.$radius, small);
-    background-color: map.get(v.$colors, primary);
-    color: map.get(v.$colors, white);
-    cursor: pointer;
+  button {
+    margin-block: map.get(v.$spacing, large);
   }
 }

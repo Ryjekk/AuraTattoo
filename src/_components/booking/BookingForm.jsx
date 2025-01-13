@@ -15,18 +15,23 @@ export default function BookingForm({ residents, initialArtist }) {
   });
 
   const [submitStatus, setSubmitStatus] = useState(null);
-
+  const artistKeyMap = {
+    malkaink: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY_MALKAINK,
+    eerieettt: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY_EERIEETTT,
+    sereneneroink: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY_SERENENEROINK,
+    curiousatattoo: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY_CURIOUSATATTOO,
+  };
   const form = useRef();
-  const onSubmit = (data) => {
+  const onSubmit = ({ artist }) => {
+    const key = artistKeyMap[artist];
     emailjs
       .sendForm(
         //  *   general service id and template id has to be updated for all users in emailJs *  //
-
-        "test",
+        "booking",
         "booking",
         form.current,
         {
-          publicKey: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY,
+          publicKey: key,
         }
       )
       .then(
