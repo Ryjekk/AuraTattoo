@@ -54,6 +54,8 @@
 
     &--left {
       @include m.respond(md) {
+        margin-left: initial;
+        margin-right: auto;
         text-align: left;
       }
     }

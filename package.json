@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -21,6 +22,7 @@
     "yet-another-react-lightbox": "^3.21.7"
   },
   "devDependencies": {
+    "next-sitemap": "^4.2.3",
     "eslint": "^9",
     "eslint-config-next": "15.1.0",
     "sass": "^1.82.0"
