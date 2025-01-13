@@ -18,7 +18,8 @@ export default function BookingForm({ residents, initialArtist }) {
   const artistKeyMap = {
     malkaink: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY_MALKAINK,
     eerieettt: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY_EERIEETTT,
-    sereneneroink: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY_SERENENEROINK,
+    sereneneroink:
+      process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY_SERENENEROINK_AND_CONTACT,
     curiousatattoo: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY_CURIOUSATATTOO,
   };
   const form = useRef();
@@ -27,7 +28,7 @@ export default function BookingForm({ residents, initialArtist }) {
     emailjs
       .sendForm(
         //  *   general service id and template id has to be updated for all users in emailJs *  //
-        "booking",
+        "service",
         "booking",
         form.current,
         {
