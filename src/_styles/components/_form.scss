@@ -133,6 +133,6 @@
   }
 
   button {
-    margin-block: map.get(v.$spacing, large);
+    margin-block-start: map.get(v.$spacing, large);
   }
 }
