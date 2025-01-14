@@ -12,7 +12,7 @@ export default async function getResidents() {
               id
               slug
               name
-              excerpt
+              order
               bio
               instagramLink
               mainImage {
