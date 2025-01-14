@@ -48,7 +48,7 @@
   &__main-img {
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 5px 5px 10px #c1c1c1, -5px -5px 10px #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   }
   &__avatar {
     &-container {
@@ -64,7 +64,7 @@
         height: 100%;
         overflow: hidden;
         border-radius: 8px;
-        box-shadow: 5px 5px 10px #c1c1c1, -5px -5px 10px #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
       }
     }
     &-video,

@@ -112,7 +112,7 @@ const IgWindow = () => {
             ></polygon>
           </svg>
         </div>
-        <h4 className="likes">
+        <div className="likes">
           <div className="likes-images">
             <Image
               src="/ig/leny.webp"
@@ -139,7 +139,7 @@ const IgWindow = () => {
           <span>
             Liked by <strong>Inuk</strong> and <strong>others</strong>
           </span>
-        </h4>
+        </div>
         <p className="post-time">2 minutes ago</p>
       </div>
     </div>

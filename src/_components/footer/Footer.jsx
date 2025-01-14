@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Image from "next/image";
 export default function Footer() {
   return (
     <footer aria-labelledby="footer-heading" className="footer">
@@ -47,21 +47,39 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/ico/fb.svg" alt="ig" className="social-link" />
+            <Image
+              src="/ico/fb.svg"
+              alt="ig"
+              className="social-link"
+              width={24}
+              height={24}
+            />
           </a>
           <a
             href="https://www.facebook.com/anikawr"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/ico/ig.svg" alt="facebook" className="social-link" />
+            <Image
+              src="/ico/ig.svg"
+              alt="facebook"
+              className="social-link"
+              width={24}
+              height={24}
+            />
           </a>
           <a
             href="mailto:hello@aurareykjavik.com?subject=Hello Aura"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/ico/mail.svg" alt="mail" className="social-link" />
+            <Image
+              src="/ico/mail.svg"
+              alt="mail"
+              className="social-link"
+              width={24}
+              height={24}
+            />
           </a>
         </div>
       </div>
