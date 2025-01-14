@@ -12,7 +12,13 @@ const MiniHero = ({
   return (
     <div className="miniHero__wrapper" id={id}>
       {image && (
-        <Image src={image} alt="bg" fill style={{ objectFit: "cover" }} />
+        <Image
+          src={image}
+          alt="bg"
+          fill
+          style={{ objectFit: "cover" }}
+          priority
+        />
       )}
       {main ? (
         <h1 className={`headline ${white ? "text--white" : ""}`}>{text}</h1>
