@@ -7,3 +7,4 @@ Host: https://aurareykjavik.com
 
 # Sitemaps
 Sitemap: https://aurareykjavik.com/sitemap.xml
+Sitemap: https://auratattooreykjavik.com/sitemap.xml
