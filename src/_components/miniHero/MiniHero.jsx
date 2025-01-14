@@ -8,6 +8,7 @@ const MiniHero = ({
   main = true,
   white = false,
   children,
+  blurURL,
 }) => {
   return (
     <div className="miniHero__wrapper" id={id}>
@@ -16,7 +17,9 @@ const MiniHero = ({
           src={image}
           alt="bg"
           fill
+          placeholder="blur"
           style={{ objectFit: "cover" }}
+          blurDataURL={blurURL}
           priority
         />
       )}
