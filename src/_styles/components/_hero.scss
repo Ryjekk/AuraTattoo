@@ -39,6 +39,8 @@
     }
 
     h1 {
+      font-family: map.get(v.$fonts, decorative);
+      font-weight: 400;
       font-size: clamp(3rem, 5vw, 7rem);
       letter-spacing: 1rem;
       @include m.respond(xl) {

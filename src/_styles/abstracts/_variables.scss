@@ -2,7 +2,8 @@
 @use "sass:map";
 // Font Definitions
 $fonts: (
-  heading: var(--font-orpheous),
+  heading: var(--font-playfair),
+  decorative: var(--font-orpheous),
   // Font for headings
   body: var(--font-lato),
   // Default font for body text

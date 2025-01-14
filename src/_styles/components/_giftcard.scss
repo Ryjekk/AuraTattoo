@@ -4,7 +4,22 @@
 @use "sass:map";
 
 .giftcard {
+  &__image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    min-height: 40rem;
+    transition: all 0.3s;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
   &__header {
+    font-family: map.get(v.$fonts, heading);
     color: f.get-color(white, 0.2);
     letter-spacing: 0.5rem;
     font-weight: 300;
@@ -12,7 +27,7 @@
   }
   &__text {
     letter-spacing: 0.2rem;
-    font-weight: 100;
+    font-weight: 300;
     color: f.get-color(white, 0.2);
     margin-block: 1rem;
     @include v.responsive-font(0.8rem);

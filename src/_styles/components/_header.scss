@@ -26,7 +26,7 @@
     // color: inherit;
     text-transform: uppercase;
     font-size: map.get(v.$font-sizes, large);
-    font-family: map.get(v.$fonts, heading);
+    font-family: map.get(v.$fonts, decorative);
   }
 
   &__links,
@@ -45,6 +45,8 @@
     }
   }
   &__link {
+    font-family: map.get(v.$fonts, heading);
+    // text-transform: uppercase;
     position: relative;
     font-size: 0.8rem;
     transition: color 0.3s;

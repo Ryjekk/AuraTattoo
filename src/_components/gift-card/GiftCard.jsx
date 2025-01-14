@@ -4,12 +4,13 @@ export default function GiftCard() {
   return (
     <section className="section section__gift-card">
       <div className="section__content content-center">
-        <div className="section__column">
+        <div className="section__column giftcard__image-wrapper">
           <Image
             src="/aura-logo.webp"
             alt="Aura Logo"
-            width={340}
-            height={484}
+            fill
+            // width={340}
+            // height={484}
             placeholder="blur"
             blurDataURL="/aura-logo.webp"
           />

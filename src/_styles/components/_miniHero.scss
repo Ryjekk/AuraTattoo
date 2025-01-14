@@ -19,14 +19,19 @@
   }
   h1,
   h2 {
+    font-family: map.get(v.$fonts, heading);
+    font-weight: 300;
+    letter-spacing: 0.6rem;
+    // text-transform: uppercase;
     z-index: 1;
     @include v.responsive-font(4rem);
   }
 
   p {
+    font-family: map.get(v.$fonts, heading);
     z-index: 1;
-    font-weight: 400;
+    font-weight: 200;
     letter-spacing: 0.2rem;
-    @include v.responsive-font(1rem);
+    @include v.responsive-font(1.4rem);
   }
 }

@@ -21,10 +21,14 @@ h1 {
 }
 
 h2 {
+  font-family: map.get($fonts, heading);
   font-weight: 300;
   @include responsive-font(1.5rem);
 }
 
+h4 {
+  font-family: map.get($fonts, heading);
+}
 p {
   margin-bottom: map.get($spacing, medium);
 }

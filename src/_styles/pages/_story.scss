@@ -23,8 +23,9 @@
   }
 
   &__about {
-    color: f.get-color(white, 0);
-    font-weight: 100;
+    color: f.get-color(white, 0.2);
+    font-weight: 300;
+    line-height: 1.5rem;
     letter-spacing: 0.1rem;
     padding-block: 2rem;
     padding-inline: 1rem;

@@ -1,6 +1,6 @@
 import "@styles/main.scss";
 import localFont from "next/font/local";
-import { Lato } from "next/font/google";
+import { Lato, Josefin_Sans } from "next/font/google";
 
 const OrpheusPro = localFont({
   src: "./fonts/OrpheusPro-regular.otf",
@@ -14,6 +14,12 @@ const lato = Lato({
   variable: "--font-lato",
   display: "swap",
 });
+const play = Josefin_Sans({
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
 
 export const metadata = {
   title: "Aura Tattoo ",
@@ -22,8 +28,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en' className={`${OrpheusPro.variable} ${lato.variable}`}>
-      <body className='main-wrapper'>{children}</body>
+    <html
+      lang="en"
+      className={`${OrpheusPro.variable} ${lato.variable} ${play.variable}`}
+    >
+      <body className="main-wrapper">{children}</body>
     </html>
   );
 }

@@ -109,28 +109,15 @@
     pointer-events: none;
     gap: 1rem;
     h2 {
-      // margin-bottom: 1rem;
-      color: f.get-color(white, 0.2);
+      font-family: map.get(v.$fonts, heading);
+      color: f.get-color(white, 0);
       font-weight: 600;
       font-size: 1.5rem;
       letter-spacing: 0.5rem;
     }
-    a {
-      pointer-events: all;
-    }
   }
   &__date {
-    mix-blend-mode: difference;
-    color: f.get-color(white, 0.2);
-    text-wrap-mode: nowrap;
-    font-weight: 100;
-    font-size: clamp(1.5rem, 2vw, 4rem);
     letter-spacing: 0.4rem;
-    position: absolute;
-    bottom: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: all 0.3s;
   }
 
   &__link {
@@ -184,7 +171,6 @@
       }
       .guest-card__date {
         color: map.get(v.$colors, moss);
-        transform: translateX(-50%) scale(1.2);
       }
     }
     &:active {
