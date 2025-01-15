@@ -3,6 +3,8 @@ import getResident from "@services/getResident";
 import ResidentCardFull from "@components/artists/residentCard/residentCardFull/ResidentCardFull";
 import MiniHero from "@components/miniHero/MiniHero";
 import Button from "@components/button/Button";
+export const revalidate = 60;
+export const dynamicParams = true;
 export async function generateStaticParams() {
   const residents = await getResidents();
   return residents.map((resident) => ({

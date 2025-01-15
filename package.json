@@ -22,9 +22,9 @@
     "yet-another-react-lightbox": "^3.21.7"
   },
   "devDependencies": {
-    "next-sitemap": "^4.2.3",
     "eslint": "^9",
     "eslint-config-next": "15.1.0",
+    "next-sitemap": "^4.2.3",
     "sass": "^1.82.0"
   }
 }
