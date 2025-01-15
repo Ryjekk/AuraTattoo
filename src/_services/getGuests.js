@@ -11,11 +11,8 @@ export default async function getGuests() {
           guests {
               id
               name
-              returningArtist
-              about
               date
               instagramLink
-              bookingDetails
               image {
                      url
                      id
