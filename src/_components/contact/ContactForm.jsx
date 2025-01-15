@@ -17,7 +17,7 @@ export default function ContactForm() {
     emailjs
       .sendForm(
         //general service id and template id
-        "service",
+        "aura",
         "contact",
         form.current,
         {
