@@ -15,12 +15,7 @@ export default async function Home() {
         text="Aura Reykjavik is a contemporary tattoo studio situated in the heart of Reykjavik, Iceland. The studio prides itself on providing a welcoming and professional atmosphere. We are highly regarded for our unwavering commitment to quality and excellence, along with a personalized customer experience tailored for everyone seeking unique, custom tattoos in a serene and soothing environment."
         subText="To book a tattoo appointment, please contact our artists directly, ensuring that your journey from concept to creation is seamless and tailored to your needs."
       />
-      <MiniHero
-        text="Residents"
-        subText="Book with the best"
-        id="residents"
-        main={false}
-      />
+      <MiniHero text="Residents" id="residents" main={false} />
       <ResidentsList artists={residents} />
       <GiftCard />
     </main>

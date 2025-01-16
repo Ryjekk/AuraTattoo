@@ -24,7 +24,7 @@
     letter-spacing: 0.6rem;
     // text-transform: uppercase;
     z-index: 1;
-    @include v.responsive-font(4rem);
+    font-size: clamp(2rem, 5vw, 4rem);
   }
 
   p {
@@ -32,6 +32,6 @@
     z-index: 1;
     font-weight: 200;
     letter-spacing: 0.2rem;
-    @include v.responsive-font(1.4rem);
+    font-size: clamp(1rem, 2vw, 1.5rem);
   }
 }
