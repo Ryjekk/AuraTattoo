@@ -34,7 +34,11 @@ function useScrollNavbar() {
 
   const updateScroll = useCallback(
     (latest) => {
-      if (pathname === "/" || pathname === "/booking") {
+      if (
+        pathname === "/" ||
+        pathname === "/booking" ||
+        pathname === "/contact"
+      ) {
         setIsVisible(latest < 150 || latest < scrollY.getPrevious());
         setIsTransparent(false);
         return;
@@ -60,7 +64,7 @@ function useScrollNavbar() {
   const getBackgroundColor = () => {
     switch (pathname.split("/")[1]) {
       case "":
-        return "#000";
+        return "rgba(238, 233, 221, 1)";
       case "booking":
         return "rgba(238, 233, 221, 1)";
       case "vacancy":
@@ -72,7 +76,7 @@ function useScrollNavbar() {
       case "guests":
         return "rgba(238, 233, 221, 1)";
       case "our-story":
-        return "#000";
+        return "rgba(64, 70, 61, 1)";
       case "faq":
         return "rgba(64, 70, 61, 1)";
       case "privacy":
@@ -84,8 +88,6 @@ function useScrollNavbar() {
 
   const getTextColor = () => {
     switch (pathname) {
-      case "/":
-        return "#fff";
       case "/our-story":
         return "#fff";
       case "/faq":

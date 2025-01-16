@@ -48,7 +48,7 @@
     font-family: map.get(v.$fonts, heading);
     // text-transform: uppercase;
     position: relative;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     transition: color 0.3s;
     @include m.respond(sm) {
       align-self: flex-start;

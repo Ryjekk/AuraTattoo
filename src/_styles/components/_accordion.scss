@@ -55,6 +55,18 @@
       list-style-type: "-     ";
       margin-block: clamp(0.5rem, 2vw, 1rem);
     }
+
+    a {
+      color: f.get-color(white, 0.4);
+      font-weight: 600;
+      letter-spacing: 0.1rem;
+      border-bottom: 1px dashed f.get-color(white, 0.2);
+      transition: color 0.15s ease-in-out;
+
+      &:hover {
+        color: f.get-color(white, 0.1);
+      }
+    }
   }
 }
 

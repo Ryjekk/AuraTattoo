@@ -18,13 +18,14 @@
 
   .accordion__panel {
     a {
-      color: f.get-color(umber, 0.4);
+      color: f.get-color(umber, 0.2);
       font-weight: 600;
       letter-spacing: 0.1rem;
       border-bottom: 1px dashed f.get-color(umber, 0.4);
+      transition: color 0.15s ease-in-out;
 
       &:hover {
-        color: f.get-color(umber, 0.4);
+        color: f.get-color(umber, 0);
       }
     }
 
