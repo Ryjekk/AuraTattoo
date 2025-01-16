@@ -17,7 +17,7 @@ export default async function getResident(slug) {
               instagramLink
               name
               slug
-              gallery {
+              gallery1:gallery {
                 url
                 blurUrl: url(transformation: {image: {blur: {amount: 10}}})
                 thumbUrl: url(transformation: {image: {resize: {height: 400, width: 400}}})
@@ -26,6 +26,15 @@ export default async function getResident(slug) {
                 height
                 fileName
               }
+                gallery2: gallery(skip:10){
+                 url
+                blurUrl: url(transformation: {image: {blur: {amount: 10}}})
+                thumbUrl: url(transformation: {image: {resize: {height: 400, width: 400}}})
+                id
+                  width
+                height
+                fileName
+                }
               mainImage {
                 url(transformation: {image: {resize: {height: 880, width: 620}}})
                 id
@@ -39,6 +48,9 @@ export default async function getResident(slug) {
       `,
     }),
   });
-  const { data } = await response.json();
+  let { data } = await response.json();
+
+  let gallery = data?.resident?.gallery1.concat(data?.resident?.gallery2);
+  data.resident.gallery = gallery;
   return data?.resident;
 }

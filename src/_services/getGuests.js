@@ -22,7 +22,7 @@ export default async function getGuests() {
       `,
     }),
     next: {
-      revalidate: 300,
+      revalidate: 3600,
     },
   });
   const { data } = await response.json();

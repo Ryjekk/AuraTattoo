@@ -31,7 +31,10 @@ export default async function getResidents() {
             }
       `,
     }),
+    next: {
+      revalidate: 3600,
+    },
   });
   const { data } = await response.json();
-  return data.residents;
+  return data.residents.sort((a, b) => a.order - b.order);
 }
