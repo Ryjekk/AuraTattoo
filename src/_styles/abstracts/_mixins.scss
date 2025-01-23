@@ -9,7 +9,7 @@
     lg: large,
     xl: xlarge,
     xxl: xxlarge,
-  ); // Map of aliases to map keys
+  );
   $breakpoint-key: map.get($breakpoints, $breakpoint);
   $breakpoint-value: if(
     $breakpoint-key,

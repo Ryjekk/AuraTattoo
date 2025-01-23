@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<br/>
+<div align="center">
+<h3 align="center">Aura Tattoo</h3>
+<img src="public/logo.png" alt="Logo" width="220" height="340">
+<p align="center">
+<a href="https://auratattooreykjavik.com/">View Demo.</a>
+</p>
+</div>
 
-## Getting Started
+## About The Project
 
-First, run the development server:
+![Product Screenshot](/public/screenshot.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Aura Tattoo is a website for a tattoo studio in Reykjavik, Iceland. The website is built with Next.js and Sass. It is a simple and clean design that is easy to navigate. The website is fully responsive and works on all devices. The website is hosted on Netlify and uses Hygraph as a Headless CMS solution. All forms are handled by EmailJs.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Built With
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- [Next](https://nextjs.org)
+- [Sass](https://sass-lang.com)
+- [EmailJs](https://www.emailjs.com)
+- [React Hook Form](https://react-hook-form.com)
+- [Motion](https://motion.dev/)
+- [Netlify](https://www.netlify.com)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Collaborators
 
-## Learn More
+Sebastian Lenart - [LenySebski](https://github.com/LenySebski)
 
-To learn more about Next.js, take a look at the following resources:
+Inuk Ryjewski - [Ryjekk](https://github.com/Ryjekk)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Project Link: [Repo](https://github.com/Ryjekk/AuraTattoo)

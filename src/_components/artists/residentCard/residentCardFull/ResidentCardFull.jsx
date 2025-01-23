@@ -1,9 +1,8 @@
 import Image from "next/image";
-import Button from "@components/button/Button";
 import Markdown from "react-markdown";
 import Gallery from "@components/gallery/Gallery";
 export default function ResidentCardFull({ artist }) {
-  const { name, bio, slug, mainImage, instagramLink, gallery, video } = artist;
+  const { name, bio, mainImage, gallery, video } = artist;
   return (
     <div className="resident-card">
       <div className="resident-card__content">
@@ -18,7 +17,6 @@ export default function ResidentCardFull({ artist }) {
               playsInline={true}
               loop={true}
               muted={true}
-              // poster={mainImage.url}
               type="video/mp4"
             />
           ) : (
@@ -30,16 +28,7 @@ export default function ResidentCardFull({ artist }) {
             />
           )}
         </div>
-        {/* <h1 className="resident-card__name">{name}</h1> */}
         <Markdown className="resident-card__bio">{bio}</Markdown>
-        {/* <div className="resident-card__buttons">
-          <Button link={instagramLink} target="blank" color="black">
-            Check my IG
-          </Button>
-          <Button link={`/booking?artist=${slug}`} color="black">
-            Book now
-          </Button>
-        </div> */}
       </div>
       <div className="resident-card__gallery">
         <Gallery images={gallery} />

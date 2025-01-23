@@ -9,8 +9,6 @@ export default function GiftCard() {
             src="/aura-logo.webp"
             alt="Aura Logo"
             fill
-            // width={340}
-            // height={484}
             placeholder="blur"
             blurDataURL="/aura-logo.webp"
           />

@@ -1,29 +1,18 @@
-/* _variables.scss */
 @use "sass:map";
-// Font Definitions
 $fonts: (
   heading: var(--font-playfair),
   decorative: var(--font-orpheous),
-  // Font for headings
   body: var(--font-lato),
-  // Default font for body text
 );
 
-//Font Sizes
 $font-sizes: (
-  // Extra small font size
   xsmall: clamp(0.75rem, 1.5vw, 0.875rem),
-  // Small font size
   small: clamp(0.875rem, 1.5vw, 1rem),
-  // Medium font size
   medium: clamp(1rem, 1.5vw, 1.25rem),
-  // Large font size
   large: clamp(1.25rem, 1.5vw, 1.5rem),
-  // Extra large font size
-  xlarge: clamp(1.5rem, 2.5vw, 2.2rem)
+  xlarge: clamp(1.5rem, 2.5vw, 2.2rem),
 );
 
-// Color Definitions
 $colors: (
   black: rgba(6, 5, 7, 1),
   moss: rgba(64, 70, 61, 1),
@@ -39,76 +28,51 @@ $colors: (
   success: rgba(25, 135, 84, 1),
 );
 
-// Spacing Definitions
 $spacing: (
   none: 0,
   xsmall: 0.25rem,
-  // No spacing
   small: 0.5rem,
-  // Small spacing
   medium: 1rem,
-  // Medium spacing
   large: 2rem,
-  // Large spacing
   xlarge: 3rem,
-  // Extra large spacing
   xxlarge: 8rem,
 );
 
-// Border Radius Definitions
 $radius: (
   small: 0.25rem,
-  // Small radius
   medium: 0.5rem,
-  // Medium radius
   large: 1rem,
-  // Large radius
   pill: 50rem,
-  // Pill-shaped radius
 );
 
-// Shadow Definitions
 $shadows: (
   light: 0 2px 10px rgba(0, 0, 0, 0.1),
-  // Light shadow
   medium: 0 4px 15px rgba(0, 0, 0, 0.2),
-  // Medium shadow
   heavy: 0 8px 25px rgba(0, 0, 0, 0.3),
-  // Heavy shadow
 );
 
-// Breakpoint Definitions
 $breakpoints: (
   small: 576px,
-  // Small devices (phones)
   medium: 768px,
-  // Medium devices (tablets)
   large: 992px,
-  // Large devices (desktops)
   xlarge: 1200px,
-  // Extra large devices (large desktops)
   xxlarge: 1600px,
 );
 
-// Mixin for Responsive Font Sizes
 @mixin responsive-font($size) {
   font-size: $size;
 
   @media (min-width: map.get($breakpoints, medium)) {
     font-size: $size * 1.1;
-    // Increase font size for medium devices
   }
 
   @media (min-width: map.get($breakpoints, large)) {
-    font-size: $size * 1.2; // Further increase font size for large devices
   }
 }
 
-// Mixin for Responsive bottom margin
 @mixin content-margin {
   margin: map.get($spacing, large) 0;
 
   @media (min-width: map.get($breakpoints, medium)) {
-    margin: map.get($spacing, xlarge) 0; // Increase margin for medium devices
   }
 }
