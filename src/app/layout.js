@@ -1,7 +1,7 @@
 import "@styles/main.scss";
 import localFont from "next/font/local";
 import { Lato, Josefin_Sans } from "next/font/google";
-import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 const OrpheusPro = localFont({
   src: "./fonts/OrpheusPro-regular.otf",
   weight: "100 300 400 600",
@@ -33,8 +33,6 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${OrpheusPro.variable} ${lato.variable} ${play.variable}`}
     >
-      <GoogleTagManager gtmId={gtmID} />
-
       <body className="main-wrapper">
         <noscript>
           <iframe
@@ -45,8 +43,8 @@ export default function RootLayout({ children }) {
           ></iframe>
         </noscript>
         {children}
+        <GoogleTagManager gtmId={gtmID} />
       </body>
-      <GoogleAnalytics gaId="G-6KJ5LQ9DLV" />
     </html>
   );
 }
