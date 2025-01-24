@@ -4,6 +4,7 @@
 <img src="public/logo.png" alt="Logo" width="220" height="340">
 <p align="center">
 <a href="https://auratattooreykjavik.com/">View Demo.</a>
+<span> Status: [![Netlify Status](https://api.netlify.com/api/v1/badges/0666032a-5fec-4524-b57e-6da3943739d7/deploy-status)](https://app.netlify.com/sites/icelandi/deploys)</span>
 </p>
 </div>
 
