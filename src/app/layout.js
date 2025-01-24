@@ -1,7 +1,7 @@
 import "@styles/main.scss";
 import localFont from "next/font/local";
 import { Lato, Josefin_Sans } from "next/font/google";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 const OrpheusPro = localFont({
   src: "./fonts/OrpheusPro-regular.otf",
   weight: "100 300 400 600",
@@ -46,6 +46,7 @@ export default function RootLayout({ children }) {
         </noscript>
         {children}
       </body>
+      <GoogleAnalytics gaId="G-6KJ5LQ9DLV" />
     </html>
   );
 }
