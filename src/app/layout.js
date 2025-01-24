@@ -1,8 +1,6 @@
 import "@styles/main.scss";
 import localFont from "next/font/local";
 import { Lato, Josefin_Sans } from "next/font/google";
-import { GoogleTagManager } from "@next/third-parties/google";
-import CookieConsent from "@components/cookieConsent/CookieConsent";
 const OrpheusPro = localFont({
   src: "./fonts/OrpheusPro-regular.otf",
   weight: "100 300 400 600",
@@ -33,10 +31,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${OrpheusPro.variable} ${lato.variable} ${play.variable}`}
     >
-      <body className="main-wrapper">
-        {children}
-        <CookieConsent />
-      </body>
+      <body className="main-wrapper">{children}</body>
     </html>
   );
 }
