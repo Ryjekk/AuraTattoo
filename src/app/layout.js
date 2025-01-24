@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${OrpheusPro.variable} ${lato.variable} ${play.variable}`}
     >
-      <GoogleTagManager gtmId="GTM-WP5F6MVH" />
+      <GoogleTagManager gtmId="GTM-KD268FGV" />
       <body className="main-wrapper">{children}</body>
     </html>
   );
