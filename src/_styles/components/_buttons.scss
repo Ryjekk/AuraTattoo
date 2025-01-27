@@ -183,4 +183,22 @@
       }
     }
   }
+  &__submit {
+    width: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+
+    &-loading {
+      pointer-events: none;
+      cursor: not-allowed;
+      background-color: map.get(v.$colors, umber);
+      color: map.get(v.$colors, white);
+      border: none;
+      &:hover {
+        background-color: map.get(v.$colors, umber);
+      }
+    }
+  }
 }

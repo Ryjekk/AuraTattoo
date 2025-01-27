@@ -11,9 +11,17 @@ export default function ContactForm() {
   } = useForm();
 
   const [submitStatus, setSubmitStatus] = useState(null);
-
+  const submitStatusClasses = {
+    loading: "form__submit-status__message--loading",
+    success: "form__submit-status__message--success",
+    error: "form__submit-status__message--error",
+  };
   const form = useRef();
   const onSubmit = (data) => {
+    setSubmitStatus({
+      type: "loading",
+      message: "Sending your message...",
+    });
     emailjs
       .sendForm(
         //general service id and template id
@@ -144,16 +152,24 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <button type="submit" className="btn btn__umber">
-        Submit
+      <button
+        type="submit"
+        className={`btn btn__umber btn__submit ${
+          submitStatus?.type === "loading" ? "btn__submit-loading" : ""
+        }`}
+      >
+        {submitStatus?.type === "loading" ? (
+          <PulseLoader color="#fff" size={8} />
+        ) : (
+          "Submit"
+        )}
       </button>
       <div className="form__submit-status">
         {submitStatus && (
           <span
             className={`form__submit-status__message ${
-              submitStatus.type === "success"
-                ? "form__submit-status__message--success"
-                : "form__submit-status__message--error"
+              submitStatusClasses[submitStatus.type] ||
+              "form__submit-status__message--error"
             }`}
           >
             {submitStatus.message}

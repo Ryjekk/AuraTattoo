@@ -131,6 +131,10 @@
     color: map.get(v.$colors, success);
     font-size: map.get(v.$font-sizes, xsmall);
   }
+  &__submit-status__message--loading {
+    color: map.get(v.$colors, umber);
+    font-size: map.get(v.$font-sizes, xsmall);
+  }
 
   button {
     margin-block-start: map.get(v.$spacing, large);

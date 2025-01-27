@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
+import { PulseLoader } from "react-spinners";
 import emailjs from "@emailjs/browser";
 import Image from "next/image";
 export default function BookingForm({ residents, initialArtist }) {
@@ -14,6 +15,12 @@ export default function BookingForm({ residents, initialArtist }) {
     },
   });
 
+  const submitStatusClasses = {
+    loading: "form__submit-status__message--loading",
+    success: "form__submit-status__message--success",
+    error: "form__submit-status__message--error",
+  };
+
   const [submitStatus, setSubmitStatus] = useState(null);
   const artistKeyMap = {
     malkaink: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY_MALKAINK,
@@ -25,6 +32,10 @@ export default function BookingForm({ residents, initialArtist }) {
   const form = useRef();
   const onSubmit = ({ artist }) => {
     const key = artistKeyMap[artist];
+    setSubmitStatus({
+      type: "loading",
+      message: "Sending your message...",
+    });
     emailjs
       .sendForm(
         //  *   general service id and template id has to be updated for all users in emailJs *  //
@@ -242,17 +253,28 @@ export default function BookingForm({ residents, initialArtist }) {
         </div>
       </div>
 
-      <button type="submit" className="btn btn__umber">
-        Submit
+      <button
+        type="submit"
+        className={`btn btn__umber btn__submit ${
+          submitStatus?.type === "loading" ? "btn__submit-loading" : ""
+        }`}
+      >
+        {submitStatus?.type === "loading" ? (
+          <PulseLoader color="#fff" size={8} />
+        ) : (
+          "Submit"
+        )}
       </button>
       <div className="form__submit-status">
         {submitStatus && (
           <span
-            className={`form__submit-status__message ${
-              submitStatus.type === "success"
-                ? "form__submit-status__message--success"
-                : "form__submit-status__message--error"
-            }`}
+            className={`form__submit-status__message 
+            ${
+              submitStatusClasses[submitStatus.type] ||
+              "form__submit-status__message--error"
+            }
+              
+              `}
           >
             {submitStatus.message}
           </span>
