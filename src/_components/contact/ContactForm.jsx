@@ -2,6 +2,7 @@
 import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
+import { PulseLoader } from "react-spinners";
 
 export default function ContactForm() {
   const {
