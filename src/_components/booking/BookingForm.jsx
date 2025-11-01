@@ -11,7 +11,7 @@ export default function BookingForm({ residents, initialArtist }) {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      artist: initialArtist || residents[0].slug,
+      artist: ""
     },
   });
 
@@ -23,15 +23,23 @@ export default function BookingForm({ residents, initialArtist }) {
 
   const [submitStatus, setSubmitStatus] = useState(null);
   const artistKeyMap = {
-    malkaink: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY_MALKAINK,
     eerieettt: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY_EERIEETTT,
     sereneneroink:
       process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY_SERENENEROINK_AND_CONTACT,
     curiousatattoo: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY_CURIOUSATATTOO,
+    getka: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY_GETKATATTO,
   };
+
   const form = useRef();
   const onSubmit = ({ artist }) => {
-    const key = artistKeyMap[artist];
+
+    let key;
+    if (artist === 'getka-tattoo') {
+      key = artistKeyMap['getka'];
+    } else {
+      key = artistKeyMap[artist];
+    }
+
     setSubmitStatus({
       type: "loading",
       message: "Sending your message...",
@@ -76,7 +84,11 @@ export default function BookingForm({ residents, initialArtist }) {
           {...register("artist", { required: "Resident artist is required" })}
           aria-invalid={errors.artist ? "true" : "false"}
           aria-required="true"
+          defaultValue=""
         >
+          <option value="" disabled>
+            Select artist
+          </option>
           {residents.map((resident) => (
             <option key={resident.id} value={resident.slug}>
               {resident.name}
