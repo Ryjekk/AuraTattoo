@@ -26,7 +26,6 @@ export default function BookingForm({ residents, initialArtist }) {
     eerieettt: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY_EERIEETTT,
     sereneneroink:
       process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY_SERENENEROINK_AND_CONTACT,
-    curiosatattoo: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY_SIGURROS,
     getka: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY_GETKATATTO,
     malkaink: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY_MALKA,
   };
